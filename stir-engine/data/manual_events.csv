@@ -1,0 +1,6 @@
+event_date,headline,source,event_class,direction,severity_tier,confidence,is_crisis_override,notes
+2025-02-15,US and Israeli forces strike Iranian nuclear facilities,Reuters,geopolitical_shock,dovish,5,0.85,True,Strait of Hormuz risk; oil supply disruption; growth negative
+2026-03-04,Iran declares Strait of Hormuz closed to commercial shipping,Reuters,geopolitical_shock,dovish,5,0.95,True,Formal closure; oil supply shock; stagflation risk; rate cut pressure builds
+2026-03-19,"Fed holds rates at 3.50-3.75%, flags two-sided risks",Federal Reserve,cb_communication,neutral,3,0.9,False,Hold unanimous; two-sided language confirms paralysis
+2026-04-07,US-Iran ceasefire announced; Hormuz reopening expected within weeks,Reuters,geopolitical_shock,hawkish,4,0.7,False,Partial de-escalation; hawkish because removes rate cut pressure; confidence lower due to fragility
+2026-04-10,US and Iran exchange fire in Strait despite ceasefire,Reuters,geopolitical_shock,dovish,4,0.8,True,Ceasefire violated; partially cancels the April 7 hawkish impulse

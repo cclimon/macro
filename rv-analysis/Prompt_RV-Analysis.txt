@@ -1,0 +1,137 @@
+Build a Python module for realized volatility analysis with the following spec:
+
+INPUT:
+- currency_pair: str only (e.g. "EURUSD")
+- The analysis runs automatically across ALL five tenors: 1W, 2W, 1M, 3M, 6M
+
+DATA SOURCE — Bloomberg only (blpapi):
+- OHLC daily data: fetch PX_OPEN, PX_HIGH, PX_LOW, PX_LAST
+  for the currency pair (e.g. "EURUSD Curncy")
+- Implied volatility: fetch ATM vol from Bloomberg using this HARDCODED ticker map:
+
+  TENOR_MAP = {
+      "1W":  {"iv_ticker": "{PAIR}V1W Curncy",  "window": 5  },
+      "2W":  {"iv_ticker": "{PAIR}V2W Curncy",  "window": 10 },
+      "1M":  {"iv_ticker": "{PAIR}V1M Curncy",  "window": 21 },
+      "3M":  {"iv_ticker": "{PAIR}V3M Curncy",  "window": 63 },
+      "6M":  {"iv_ticker": "{PAIR}V6M Curncy",  "window": 126},
+  }
+
+  Where {PAIR} is replaced at runtime with the currency_pair input.
+  Example: pair="EURUSD", tenor="3M" → IV ticker   = "EURUSDV3M Curncy"
+                                      → OHLC ticker  = "EURUSD Curncy"
+                                      → rolling window = 63 days
+
+- Date range: configurable via --start and --end CLI args, default last 3 years
+- OHLC data is fetched ONCE and reused across all tenor calculations
+- Each IV ticker is fetched once per tenor
+- All Bloomberg calls go through a single blpapi BDH wrapper in bbg_connector.py
+
+CALCULATIONS — run for each tenor independently:
+1. Yang-Zhang Realized Volatility (using OHLC)
+   - Full Yang-Zhang estimator (overnight + open-to-close + Rogers-Satchell components)
+   - Rolling window from TENOR_MAP
+   - Annualize ×√252
+
+2. Close-to-Close EWMA Volatility (RiskMetrics)
+   - Lambda = 0.94
+   - Log returns on PX_LAST
+   - Annualize ×√252
+
+3. Spreads
+   - Spread_YZ   = Implied Vol − Yang-Zhang RV
+   - Spread_EWMA = Implied Vol − EWMA RV
+
+4. Percentile rank of each spread
+   - Rolling percentile rank over 1Y (252 days) and 2Y (504 days) lookbacks
+
+OUTPUTS — one full dashboard PER tenor (5 dashboards total)
+  Each dashboard: 4 stacked panels, shared x-axis
+  Height ratios: [3, 2, 2, 1.5]
+  Saved as PNG: "{PAIR}_{TENOR}_vol_analysis.png"
+
+— CHART STYLE (apply to all dashboards) —
+  - White background (facecolor="white") on figure and all axes
+  - Light grey horizontal gridlines only (alpha=0.3), no vertical gridlines
+  - All spines light grey (#cccccc)
+  - Font: DejaVu Sans, labels size 10, title size 12
+  - Save as PNG, dpi=150, bbox_inches="tight", facecolor="white"
+
+Panel 1 — Vol History
+  - Lines: Yang-Zhang RV (blue, solid)
+           EWMA RV (orange, solid)
+           Implied Vol (green, solid, lw=1.8)
+  - Y-axis in % (e.g. 8.5%)
+  - Title: "{PAIR} {TENOR} — Realized vs Implied Volatility"
+  - Legend top-right
+
+Panel 2 — Spread to Implied
+  - Plot Spread_YZ and Spread_EWMA over time
+  - Zero line: black, lw=1.2
+  - Fill between spread and zero:
+      green (alpha=0.15) where spread > 0  → IV rich
+      red   (alpha=0.15) where spread < 0  → IV cheap
+  - Y-axis labeled "Vol Points (%)"
+
+Panel 3 — Percentile Rank of Spread
+  - 4 lines: YZ_1Y  (blue, solid),   YZ_2Y  (blue, dashed)
+             EWMA_1Y (orange, solid), EWMA_2Y (orange, dashed)
+  - Y-axis 0–100
+  - Horizontal dashed reference lines at 25, 50, 75 (grey, alpha=0.6)
+  - Legend shows current value: e.g. "YZ Spread 1Y [73rd]"
+
+Panel 4 — Text Snapshot (no axes, white background)
+  Render with ax.text(), monospace font, left-aligned, no border
+  Display as of the LAST available date:
+
+  SNAPSHOT — {PAIR} {TENOR}   as of {last_date}
+  ─────────────────────────────────────────────
+  Implied Vol        :   X.XX%
+  Yang-Zhang RV      :   X.XX%
+  EWMA RV            :   X.XX%
+  Spread YZ          :   X.XX vol pts   [Nth pct / 2Y]
+  Spread EWMA        :   X.XX vol pts   [Nth pct / 2Y]
+  Signal YZ          :   IV RICH / IV CHEAP / NEUTRAL
+  Signal EWMA        :   IV RICH / IV CHEAP / NEUTRAL
+  ─────────────────────────────────────────────
+
+  Signal logic (based on 2Y percentile):
+    percentile > 75  → "IV RICH"    (color: darkgreen)
+    percentile < 25  → "IV CHEAP"   (color: darkred)
+    else             → "NEUTRAL"    (color: grey)
+
+  Each signal value rendered in its own color using multiple ax.text() calls
+
+STRUCTURE:
+- /vol_analysis/
+    - bbg_connector.py     # blpapi BDH wrapper + connection handler
+    - data_fetcher.py      # ticker builder, Bloomberg pulls, data cleaning
+    - estimators.py        # Yang-Zhang and EWMA functions
+    - spread_analysis.py   # spread + rolling percentile rank
+    - plotter.py           # 4-panel dashboard, called once per tenor
+    - config.py            # TENOR_MAP, plot style constants, signal thresholds
+    - main.py              # CLI entry point, loops over all tenors
+
+MAIN LOOP (in main.py):
+  for tenor in TENOR_MAP:
+      fetch IV data for this tenor
+      compute YZ RV, EWMA RV using shared OHLC data
+      compute spreads and percentiles
+      generate and save dashboard as PNG
+      print tenor snapshot to console
+
+CLI:
+  python main.py --pair EURUSD
+  python main.py --pair EURUSD --start 2020-01-01 --end 2024-12-31
+
+REQUIREMENTS:
+- blpapi, pandas, numpy, matplotlib
+- TENOR_MAP, signal thresholds (25/75), plot style in config.py
+- All functions documented with docstrings
+- Forward fill missing data max 2 days, then drop remaining NaNs
+- No yfinance or any non-Bloomberg data source anywhere in the code
+- Console output prints the text snapshot for each tenor after processing
+
+REPO: https://github.com/cclimon/macro
+Local path: C:\Users\CCM\OneDrive - Centile Partners Advisory Ltd\Documents\06_Models_&RISK\GitRepo\RVanalysis
+Create if it doe snot exist.

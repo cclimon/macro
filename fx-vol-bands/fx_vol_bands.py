@@ -24,6 +24,7 @@ Usage examples
 import argparse
 import sys
 import os
+from pathlib import Path
 
 # Force UTF-8 output on Windows so box-drawing / arrow chars print correctly
 if hasattr(sys.stdout, "reconfigure"):
@@ -772,7 +773,7 @@ def main() -> None:
     # ── Output ────────────────────────────────────────────────────────────────
     parser.add_argument("--out-csv",   default=None, help="Output CSV path (default: output/PAIR_YYYYMMDD.csv)")
     parser.add_argument("--out-chart", default=None, help="Output chart path (default: output/PAIR_YYYYMMDD.png)")
-    parser.add_argument("--out-dir",   default="output", help="Output directory (default: output/)")
+    parser.add_argument("--out-dir",   default=str(Path(__file__).resolve().parent.parent / "output" / "fx-vol-bands"), help="Output directory")
     parser.add_argument("--no-chart",  action="store_true", help="Skip chart generation")
 
     args = parser.parse_args()

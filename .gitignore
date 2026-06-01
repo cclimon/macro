@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (real keys — keep .env.example)
+.env
+!**/.env.example
+
+# Generated outputs (charts, CSVs, logs)
+output/
+
+# Data caches (downloaded from APIs)
+data/cache/
+*.parquet
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
