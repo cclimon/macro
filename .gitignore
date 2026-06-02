@@ -33,3 +33,6 @@ Thumbs.db
 
 # Claude Code
 .claude/
+
+# Local notes (content covered by README)
+MODELS-RUN-HOWTO.txt

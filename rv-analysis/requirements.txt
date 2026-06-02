@@ -1,0 +1,9 @@
+pandas>=2.1.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+scipy>=1.12.0
+
+# Bloomberg Python API — required for all live data fetching.
+# Install from the Bloomberg-provided wheel, e.g.:
+#   pip install --index-url=https://bcms.bloomberg.com/pip/simple blpapi
+# blpapi>=3.23.0
