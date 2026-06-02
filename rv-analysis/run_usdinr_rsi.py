@@ -1,3 +1,4 @@
+import argparse
 import blpapi
 import pandas as pd
 import numpy as np
@@ -10,12 +11,26 @@ from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
 
+# ── CLI ─────────────────────────────────────────────────────────────────────
+_parser = argparse.ArgumentParser(description='RSI mean-reversion backtest')
+_parser.add_argument('--pair',        default='USDINR', type=str.upper,
+                     help='FX pair, e.g. EURUSD (default: USDINR)')
+_parser.add_argument('--rsi-period',  default=14,  type=int,   help='RSI lookback period (default: 14)')
+_parser.add_argument('--sell-thresh', default=75,  type=float, help='RSI level to enter short (default: 75)')
+_parser.add_argument('--cover-thresh',default=55,  type=float, help='RSI level to exit short (default: 55)')
+_parser.add_argument('--lookback',    default=5,   type=int,   help='Backtest window in years (default: 5)')
+_args = _parser.parse_args()
+
+# Bloomberg tickers that need a non-standard suffix
+_BBG_OVERRIDES = {'USDINR': 'USDINR REGN Curncy'}
+
 # ── Parameters ─────────────────────────────────────────────────────────────
-SECURITY      = 'USDINR REGN Curncy'
-RSI_PERIOD    = 14
-SELL_THRESH   = 75
-COVER_THRESH  = 55
-LOOKBACK_YRS  = 5
+PAIR         = _args.pair
+SECURITY     = _BBG_OVERRIDES.get(PAIR, f'{PAIR} Curncy')
+RSI_PERIOD   = _args.rsi_period
+SELL_THRESH  = _args.sell_thresh
+COVER_THRESH = _args.cover_thresh
+LOOKBACK_YRS = _args.lookback
 
 END_DATE   = date.today()
 START_DATE = END_DATE - timedelta(days=365 * LOOKBACK_YRS + 60)
@@ -164,7 +179,7 @@ avg_dur_win  = closed.loc[closed['success'],  'duration_days'].mean()
 avg_dur_loss = closed.loc[~closed['success'], 'duration_days'].mean()
 
 print('\n' + '='*50)
-print(f'  USDINR RSI Strategy  |  {LOOKBACK_YRS}-Year Backtest')
+print(f'  {PAIR} RSI Strategy  |  {LOOKBACK_YRS}-Year Backtest')
 print('='*50)
 metrics = [
     ('Total Signals (closed)',        n_total),
@@ -197,11 +212,11 @@ Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
 
 fig, axes = plt.subplots(3, 1, figsize=(16, 14), sharex=True,
                           gridspec_kw={'height_ratios': [3, 2, 2]})
-fig.suptitle(f'USDINR – RSI({RSI_PERIOD}) Mean-Reversion  |  Sell >{SELL_THRESH} / Cover <{COVER_THRESH}',
+fig.suptitle(f'{PAIR} – RSI({RSI_PERIOD}) Mean-Reversion  |  Sell >{SELL_THRESH} / Cover <{COVER_THRESH}',
              fontsize=14, fontweight='bold')
 
 ax1 = axes[0]
-ax1.plot(df.index, df['Close'], color='steelblue', lw=1.2, label='USDINR')
+ax1.plot(df.index, df['Close'], color='steelblue', lw=1.2, label=PAIR)
 if len(tdf):
     wins  = tdf[tdf['success'] == True]
     loses = tdf[tdf['success'] == False]
@@ -237,7 +252,7 @@ ax3.grid(alpha=0.3)
 ax3.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
 plt.xticks(rotation=30)
 plt.tight_layout()
-out1 = OUT_DIR + r'\USDINR_RSI_backtest.png'
+out1 = str(Path(OUT_DIR) / f'{PAIR}_RSI_backtest.png')
 plt.savefig(out1, dpi=150, bbox_inches='tight')
 plt.close()
 print(f'\nChart saved -> {out1}')
@@ -266,7 +281,7 @@ if len(closed):
     ax.set_ylabel('P&L (%)')
     ax.grid(alpha=0.3)
     plt.tight_layout()
-    out2 = OUT_DIR + r'\USDINR_RSI_distribution.png'
+    out2 = str(Path(OUT_DIR) / f'{PAIR}_RSI_distribution.png')
     plt.savefig(out2, dpi=150, bbox_inches='tight')
     plt.close()
     print(f'Chart saved -> {out2}')
