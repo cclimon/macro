@@ -23,6 +23,9 @@ function Home() {
           </li>
         ))}
       </ul>
+      <p style={{ marginTop: 48, fontSize: 11, color: '#999', borderTop: '1px solid #e0e0e0', paddingTop: 16 }}>
+        Centile Partners is a trading name of Kepler Cheuvreux S.A. (FCA Firm Reference Number 958983) and Kepler Cheuvreux Agency Inc (NFA ID: 0560205)
+      </p>
     </div>
   )
 }
