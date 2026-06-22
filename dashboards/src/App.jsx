@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import IsraelGov from './pages/IsraelGov'
+import TicDashboard from './pages/TicDashboard'
 import centileLogo from './assets/centileLogo.png'
 
 const dashboards = [
   { path: '/israel-gov', label: 'Israel Government Set-up' },
+  { path: '/tic-dashboard', label: 'TIC Dashboard' },
 ]
 
 function Home() {
@@ -36,6 +38,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/israel-gov" element={<IsraelGov />} />
+        <Route path="/tic-dashboard" element={<TicDashboard />} />
       </Routes>
     </BrowserRouter>
   )
