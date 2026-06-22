@@ -8,7 +8,7 @@ const dashboards = [
 function Home() {
   return (
     <div style={{ fontFamily: 'sans-serif', maxWidth: 800, margin: '60px auto', padding: '0 24px' }}>
-      <h1>Macro Dashboards</h1>
+      <h1>Centile Macro Dashboards</h1>
       <ul style={{ listStyle: 'none', padding: 0, marginTop: 32 }}>
         {dashboards.map(({ path, label }) => (
           <li key={path} style={{ marginBottom: 16 }}>
