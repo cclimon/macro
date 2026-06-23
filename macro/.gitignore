@@ -1,3 +1,5 @@
 __pycache__/
 *.py[cod]
 .env
+# Override root *.parquet rule — cache files must be committed for Streamlit Cloud
+!data/cache/*.parquet
