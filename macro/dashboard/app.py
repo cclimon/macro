@@ -10,8 +10,9 @@ from datetime import datetime
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from main import run_eod
 from config.pairs import G10_PAIRS
+from data.cache import load_signals, CACHE_DIR
+import pytz
 
 # ── Page config ───────────────────────────────────────────────────────────────
 
@@ -100,7 +101,6 @@ def style_label(val):
 
 with st.sidebar:
     st.markdown(f"### 📡 G10 FX Signals")
-    st.markdown(f"*As of: {datetime.today().strftime('%d %b %Y')}*")
     st.divider()
 
     pair_filter = st.multiselect(
@@ -110,33 +110,39 @@ with st.sidebar:
     )
     st.divider()
 
-    run_btn = st.button("🔄 Refresh Data (EOD)", use_container_width=True)
-    st.caption("Pulls live data from Bloomberg terminal.")
+    # Data timestamp
+    ts_file = CACHE_DIR / "last_updated.txt"
+    if ts_file.exists():
+        from datetime import datetime as _dt
+        ts_raw = ts_file.read_text().strip()
+        ts_utc = _dt.fromisoformat(ts_raw).replace(tzinfo=pytz.utc)
+        ts_london = ts_utc.astimezone(pytz.timezone("Europe/London"))
+        st.caption(f"Data as of: **{ts_london.strftime('%d %b %Y %H:%M')} London**")
+    else:
+        st.caption("Data as of: —")
     st.divider()
     st.caption("Signals are isolated. Scoring / weighting in next phase.")
 
 
 # ── Data loading ──────────────────────────────────────────────────────────────
 
-@st.cache_data(ttl=3600, show_spinner="Fetching Bloomberg data …")
-def load_signals():
-    return run_eod()
-
-if run_btn:
-    st.cache_data.clear()
+@st.cache_data(ttl=3600, show_spinner="Loading cached signals …")
+def _load():
+    return load_signals()
 
 try:
-    data = load_signals()
+    data  = _load()
     tech  = data["technical"].loc[data["technical"].index.isin(pair_filter)]
     carry = data["carry"].loc[data["carry"].index.isin(pair_filter)]
     macro = data["macro"].loc[data["macro"].index.isin(pair_filter)]
     spot  = data["spot"]
     as_of = data["as_of"]
     load_ok = True
+except FileNotFoundError:
+    st.warning("No data found. Run `python main.py` first to generate the EOD data.")
+    st.stop()
 except Exception as e:
-    st.error(f"Bloomberg connection error: {e}")
-    st.info("Make sure the Bloomberg terminal is open and blpapi is installed.")
-    load_ok = False
+    st.error(f"Error loading cached signals: {e}")
     st.stop()
 
 
@@ -146,7 +152,7 @@ st.markdown(f"## 📡 G10 FX Signal Dashboard")
 col1, col2, col3 = st.columns(3)
 col1.metric("Universe", f"{len(pair_filter)} pairs")
 col2.metric("Pillars", "3 (Tech · Carry · Macro)")
-col3.metric("As of", as_of.strftime("%d %b %Y %H:%M"))
+col3.metric("As of", as_of.strftime("%d %b %Y %H:%M") if hasattr(as_of, "strftime") else str(as_of))
 st.divider()
 
 # ── Tabs ──────────────────────────────────────────────────────────────────────
@@ -174,6 +180,8 @@ with tab_tech:
         "bb_pct_b":    "BB %B",
         "adx_14":      "ADX(14)",
         "adx_strength":"Trend",
+        "zscore_1m":   "Z-score 1m",
+        "zscore_3m":   "Z-score 3m",
         "zscore_1y":   "Z-score 1Y",
     }
     t_disp = tech.rename(columns=display_cols)[list(display_cols.values())]
@@ -184,7 +192,7 @@ with tab_tech:
         for col in ["RSI Zone", "MACD", "SMA 20/50", "SMA 50/200", "Trend"]:
             if col in df.columns:
                 styles[col] = df[col].apply(style_label)
-        for col in ["ROC 1m %", "ROC 3m %", "Z-score 1Y"]:
+        for col in ["ROC 1m %", "ROC 3m %", "Z-score 1m", "Z-score 3m", "Z-score 1Y"]:
             if col in df.columns:
                 styles[col] = df[col].apply(
                     lambda v: f"color:{BULL_COLOR};font-weight:600" if (not pd.isna(v) and v > 0)
@@ -199,7 +207,9 @@ with tab_tech:
                 "ROC 1m %": "{:+.2f}%",
                 "ROC 3m %": "{:+.2f}%",
                 "BB %B":    "{:.3f}",
-                "ADX(14)":  "{:.1f}",
+                "ADX(14)":    "{:.1f}",
+                "Z-score 1m": "{:+.2f}",
+                "Z-score 3m": "{:+.2f}",
                 "Z-score 1Y": "{:+.2f}",
             },
             na_rep="N/A",
@@ -217,8 +227,10 @@ with tab_tech:
         | **SMA Cross** | Short MA vs long MA — Bull if short above long |
         | **ROC** | Rate of change over 1m / 3m lookback |
         | **BB %B** | Position within Bollinger Bands (0=lower, 1=upper, 0.5=mid) |
-        | **ADX** | Trend strength. >25 = trending, >40 = strong |
-        | **Z-score 1Y** | Current price vs 1-year mean in standard deviations |
+        | **ADX** | Trend strength. >25 = trending, >40 = strong. Uses real High/Low |
+        | **Z-score 1m** | Current price vs 21-day rolling mean in standard deviations |
+        | **Z-score 3m** | Current price vs 63-day rolling mean in standard deviations |
+        | **Z-score 1Y** | Current price vs 252-day rolling mean in standard deviations |
         """)
 
 

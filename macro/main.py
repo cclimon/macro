@@ -22,6 +22,7 @@ from data.bloomberg import (
 from signals.technical import build_technical_signals
 from signals.carry import build_carry_signals
 from signals.macro import build_macro_signals
+from data.cache import save_signals
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
@@ -38,16 +39,18 @@ def run_eod() -> dict:
 
         # ── 1. Spot history ───────────────────────────────────────────────────
         logger.info("Fetching spot history …")
-        spot_df = fetch_spot_history(
+        spot_data = fetch_spot_history(
             bbg,
             list(SPOT_TICKERS.values()),
             days=HIST_DAYS,
         )
-        # Rename columns from "EURUSD Curncy" → "EURUSD"
-        spot_df.columns = [c.replace(" Curncy", "") for c in spot_df.columns]
+        spot_close = spot_data["close"]
+        spot_high  = spot_data["high"]
+        spot_low   = spot_data["low"]
+        spot_df = spot_close   # alias used by carry, charts, and return dict
 
         # Latest spot
-        spot_latest = spot_df.iloc[-1].rename(index=lambda x: x)
+        spot_latest = spot_close.iloc[-1].rename(index=lambda x: x)
 
         # ── 2. FX forwards ────────────────────────────────────────────────────
         logger.info("Fetching FX forwards …")
@@ -76,7 +79,7 @@ def run_eod() -> dict:
 
         # ── 6. Build signals ──────────────────────────────────────────────────
         logger.info("Building technical signals …")
-        tech_df = build_technical_signals(spot_df)
+        tech_df = build_technical_signals(spot_close, spot_high, spot_low)
 
         logger.info("Building carry signals …")
         carry_df = build_carry_signals(
@@ -99,13 +102,16 @@ def run_eod() -> dict:
 
     logger.info("All signals built. Pairs: %d", len(tech_df))
 
-    return {
+    signals = {
         "spot": spot_df,
         "technical": tech_df,
         "carry": carry_df,
         "macro": macro_df,
         "as_of": datetime.today(),
     }
+    save_signals(signals)
+    logger.info("Signals saved to cache.")
+    return signals
 
 
 if __name__ == "__main__":
