@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24 17:44",
+  "updated_at": "2026-06-24 17:53",
   "source": "auto",
   "series": [
     {
@@ -7,5010 +7,5000 @@
       "reserves": null,
       "onrrp": 435.916,
       "tga": null,
-      "sofr_iorb": -8495.0,
+      "sofr_iorb": -9.0,
       "bank_credit": null,
       "dealer_net": null,
-      "move": 95.2
+      "move": null
     },
     {
       "date": "2024-06-25",
       "reserves": null,
       "onrrp": 466.31,
       "tga": null,
-      "sofr_iorb": -8580.0,
+      "sofr_iorb": -7.0,
       "bank_credit": null,
       "dealer_net": null,
-      "move": 96.97
+      "move": null
     },
     {
       "date": "2024-06-26",
       "reserves": 3302647.0,
       "onrrp": 490.156,
       "tga": 765417.0,
-      "sofr_iorb": -8892.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.62,
       "dealer_net": null,
-      "move": 97.91
+      "move": null
     },
     {
       "date": "2024-06-27",
       "reserves": 3302647.0,
       "onrrp": 531.692,
       "tga": 765417.0,
-      "sofr_iorb": -8786.999999999998,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.62,
       "dealer_net": null,
-      "move": 95.69
+      "move": null
     },
     {
       "date": "2024-06-28",
       "reserves": 3302647.0,
       "onrrp": 664.57,
       "tga": 765417.0,
-      "sofr_iorb": -8865.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.62,
       "dealer_net": null,
-      "move": 98.59
+      "move": null
     },
     {
       "date": "2024-07-01",
       "reserves": 3302647.0,
       "onrrp": 451.783,
       "tga": 765417.0,
-      "sofr_iorb": -9185.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 2.62,
       "dealer_net": null,
-      "move": 106.23
+      "move": null
     },
     {
       "date": "2024-07-02",
       "reserves": 3302647.0,
       "onrrp": 443.369,
       "tga": 765417.0,
-      "sofr_iorb": -9205.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.62,
       "dealer_net": null,
-      "move": 107.51
+      "move": null
     },
     {
       "date": "2024-07-03",
       "reserves": 3184180.0,
       "onrrp": 425.898,
       "tga": 761373.0,
-      "sofr_iorb": -9512.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.61,
       "dealer_net": null,
-      "move": 102.83
+      "move": null
     },
     {
       "date": "2024-07-05",
       "reserves": 3184180.0,
       "onrrp": 390.632,
       "tga": 761373.0,
-      "sofr_iorb": -9282.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.61,
       "dealer_net": null,
-      "move": 98.78
+      "move": null
     },
     {
       "date": "2024-07-08",
       "reserves": 3184180.0,
       "onrrp": 415.257,
       "tga": 761373.0,
-      "sofr_iorb": -9104.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.61,
       "dealer_net": null,
-      "move": 97.96
+      "move": null
     },
     {
       "date": "2024-07-09",
       "reserves": 3184180.0,
       "onrrp": 423.152,
       "tga": 761373.0,
-      "sofr_iorb": -9244.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.61,
       "dealer_net": null,
-      "move": 95.62
+      "move": null
     },
     {
       "date": "2024-07-10",
       "reserves": 3341977.0,
       "onrrp": 422.147,
       "tga": 736402.0,
-      "sofr_iorb": -8878.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.63,
       "dealer_net": null,
-      "move": 92.97
+      "move": null
     },
     {
       "date": "2024-07-11",
       "reserves": 3341977.0,
       "onrrp": 403.708,
       "tga": 736402.0,
-      "sofr_iorb": -9138.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.63,
       "dealer_net": null,
-      "move": 89.67
+      "move": null
     },
     {
       "date": "2024-07-12",
       "reserves": 3341977.0,
       "onrrp": 406.59,
       "tga": 736402.0,
-      "sofr_iorb": -9185.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.63,
       "dealer_net": null,
-      "move": 86.79
+      "move": null
     },
     {
       "date": "2024-07-15",
       "reserves": 3341977.0,
       "onrrp": 413.28,
       "tga": 736402.0,
-      "sofr_iorb": -9242.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.63,
       "dealer_net": null,
-      "move": 94.5
+      "move": null
     },
     {
       "date": "2024-07-16",
       "reserves": 3341977.0,
       "onrrp": 409.594,
       "tga": 736402.0,
-      "sofr_iorb": -9120.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.63,
       "dealer_net": null,
-      "move": 93.87
+      "move": null
     },
     {
       "date": "2024-07-17",
       "reserves": 3331425.0,
       "onrrp": 399.401,
       "tga": 751593.0,
-      "sofr_iorb": -8892.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.68,
       "dealer_net": null,
-      "move": 91.0
+      "move": null
     },
     {
       "date": "2024-07-18",
       "reserves": 3331425.0,
       "onrrp": 391.652,
       "tga": 751593.0,
-      "sofr_iorb": -9001.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.68,
       "dealer_net": null,
-      "move": 91.97
+      "move": null
     },
     {
       "date": "2024-07-19",
       "reserves": 3331425.0,
       "onrrp": 379.801,
       "tga": 751593.0,
-      "sofr_iorb": -8914.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.68,
       "dealer_net": null,
-      "move": 94.29
+      "move": null
     },
     {
       "date": "2024-07-22",
       "reserves": 3331425.0,
       "onrrp": 395.901,
       "tga": 751593.0,
-      "sofr_iorb": -8811.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.68,
       "dealer_net": null,
-      "move": 94.45
+      "move": null
     },
     {
       "date": "2024-07-23",
       "reserves": 3331425.0,
       "onrrp": 389.837,
       "tga": 751593.0,
-      "sofr_iorb": -8569.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.68,
       "dealer_net": null,
-      "move": 95.04
+      "move": null
     },
     {
       "date": "2024-07-24",
       "reserves": 3308580.0,
       "onrrp": 399.121,
       "tga": 774315.0,
-      "sofr_iorb": -8697.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.78,
       "dealer_net": null,
-      "move": 94.81
+      "move": null
     },
     {
       "date": "2024-07-25",
       "reserves": 3308580.0,
       "onrrp": 377.433,
       "tga": 774315.0,
-      "sofr_iorb": -8621.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.78,
       "dealer_net": null,
-      "move": 99.08
+      "move": null
     },
     {
       "date": "2024-07-26",
       "reserves": 3308580.0,
       "onrrp": 381.257,
       "tga": 774315.0,
-      "sofr_iorb": -8823.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.78,
       "dealer_net": null,
-      "move": 97.76
+      "move": null
     },
     {
       "date": "2024-07-29",
       "reserves": 3308580.0,
       "onrrp": 385.281,
       "tga": 774315.0,
-      "sofr_iorb": -8759.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.78,
       "dealer_net": null,
-      "move": 98.65
+      "move": null
     },
     {
       "date": "2024-07-30",
       "reserves": 3308580.0,
       "onrrp": 367.054,
       "tga": 774315.0,
-      "sofr_iorb": -8521.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.78,
       "dealer_net": null,
-      "move": 100.42
+      "move": null
     },
     {
       "date": "2024-07-31",
       "reserves": 3293519.0,
       "onrrp": 413.2,
       "tga": 786486.0,
-      "sofr_iorb": -8681.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 2.89,
       "dealer_net": null,
-      "move": 99.41
+      "move": null
     },
     {
       "date": "2024-08-01",
       "reserves": 3293519.0,
       "onrrp": 348.885,
       "tga": 786486.0,
-      "sofr_iorb": -8874.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.89,
       "dealer_net": null,
-      "move": 101.82
+      "move": null
     },
     {
       "date": "2024-08-02",
       "reserves": 3293519.0,
       "onrrp": 338.473,
       "tga": 786486.0,
-      "sofr_iorb": -9000.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.89,
       "dealer_net": null,
-      "move": 112.26
+      "move": null
     },
     {
       "date": "2024-08-05",
       "reserves": 3293519.0,
       "onrrp": 316.246,
       "tga": 786486.0,
-      "sofr_iorb": -9007.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.89,
       "dealer_net": null,
-      "move": 121.22
+      "move": null
     },
     {
       "date": "2024-08-06",
       "reserves": 3293519.0,
       "onrrp": 291.958,
       "tga": 786486.0,
-      "sofr_iorb": -8873.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.89,
       "dealer_net": null,
-      "move": 119.24
+      "move": null
     },
     {
       "date": "2024-08-07",
       "reserves": 3351662.0,
       "onrrp": 286.66,
       "tga": 770931.0,
-      "sofr_iorb": -8754.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.86,
       "dealer_net": null,
-      "move": 112.69
+      "move": null
     },
     {
       "date": "2024-08-08",
       "reserves": 3351662.0,
       "onrrp": 303.159,
       "tga": 770931.0,
-      "sofr_iorb": -8625.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.86,
       "dealer_net": null,
-      "move": 110.42
+      "move": null
     },
     {
       "date": "2024-08-09",
       "reserves": 3351662.0,
       "onrrp": 312.198,
       "tga": 770931.0,
-      "sofr_iorb": -8774.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.86,
       "dealer_net": null,
-      "move": 108.26
+      "move": null
     },
     {
       "date": "2024-08-12",
       "reserves": 3351662.0,
       "onrrp": 328.641,
       "tga": 770931.0,
-      "sofr_iorb": -8603.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.86,
       "dealer_net": null,
-      "move": 118.26
+      "move": null
     },
     {
       "date": "2024-08-13",
       "reserves": 3351662.0,
       "onrrp": 324.494,
       "tga": 770931.0,
-      "sofr_iorb": -8611.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.86,
       "dealer_net": null,
-      "move": 118.44
+      "move": null
     },
     {
       "date": "2024-08-14",
       "reserves": 3346138.0,
       "onrrp": 328.472,
       "tga": 794120.0,
-      "sofr_iorb": -8405.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.93,
       "dealer_net": null,
-      "move": 106.34
+      "move": null
     },
     {
       "date": "2024-08-15",
       "reserves": 3346138.0,
       "onrrp": 307.141,
       "tga": 794120.0,
-      "sofr_iorb": -8244.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.93,
       "dealer_net": null,
-      "move": 103.74
+      "move": null
     },
     {
       "date": "2024-08-16",
       "reserves": 3346138.0,
       "onrrp": 330.317,
       "tga": 794120.0,
-      "sofr_iorb": -8166.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.93,
       "dealer_net": null,
-      "move": 102.81
+      "move": null
     },
     {
       "date": "2024-08-19",
       "reserves": 3346138.0,
       "onrrp": 333.583,
       "tga": 794120.0,
-      "sofr_iorb": -8376.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.93,
       "dealer_net": null,
-      "move": 110.13
+      "move": null
     },
     {
       "date": "2024-08-20",
       "reserves": 3346138.0,
       "onrrp": 310.819,
       "tga": 794120.0,
-      "sofr_iorb": -8447.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.93,
       "dealer_net": null,
-      "move": 111.57
+      "move": null
     },
     {
       "date": "2024-08-21",
       "reserves": 3355586.0,
       "onrrp": 321.329,
       "tga": 736494.0,
-      "sofr_iorb": -8727.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.03,
       "dealer_net": null,
-      "move": 111.38
+      "move": null
     },
     {
       "date": "2024-08-22",
       "reserves": 3355586.0,
       "onrrp": 316.777,
       "tga": 736494.0,
-      "sofr_iorb": -8612.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.03,
       "dealer_net": null,
-      "move": 108.5
+      "move": null
     },
     {
       "date": "2024-08-23",
       "reserves": 3355586.0,
       "onrrp": 312.896,
       "tga": 736494.0,
-      "sofr_iorb": -8505.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.03,
       "dealer_net": null,
-      "move": 105.63
+      "move": null
     },
     {
       "date": "2024-08-26",
       "reserves": 3355586.0,
       "onrrp": 353.557,
       "tga": 736494.0,
-      "sofr_iorb": -8918.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.03,
       "dealer_net": null,
-      "move": 106.66
+      "move": null
     },
     {
       "date": "2024-08-27",
       "reserves": 3355586.0,
       "onrrp": 344.045,
       "tga": 736494.0,
-      "sofr_iorb": -9027.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.03,
       "dealer_net": null,
-      "move": 109.22
+      "move": null
     },
     {
       "date": "2024-08-28",
       "reserves": 3313566.0,
       "onrrp": 388.89,
       "tga": 745851.0,
-      "sofr_iorb": -8911.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 2.95,
       "dealer_net": null,
-      "move": 108.76
+      "move": null
     },
     {
       "date": "2024-08-29",
       "reserves": 3313566.0,
       "onrrp": 383.434,
       "tga": 745851.0,
-      "sofr_iorb": -9049.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 2.95,
       "dealer_net": null,
-      "move": 106.7
+      "move": null
     },
     {
       "date": "2024-08-30",
       "reserves": 3313566.0,
       "onrrp": 433.13,
       "tga": 745851.0,
-      "sofr_iorb": -9000.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 2.95,
       "dealer_net": null,
-      "move": 107.77
+      "move": null
     },
     {
       "date": "2024-09-03",
       "reserves": 3313566.0,
       "onrrp": 349.808,
       "tga": 745851.0,
-      "sofr_iorb": -8396.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 2.95,
       "dealer_net": null,
-      "move": 114.2
+      "move": null
     },
     {
       "date": "2024-09-04",
       "reserves": 3243002.0,
       "onrrp": 337.312,
       "tga": 733959.0,
-      "sofr_iorb": -8312.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.0,
       "dealer_net": null,
-      "move": 119.15
+      "move": null
     },
     {
       "date": "2024-09-05",
       "reserves": 3243002.0,
       "onrrp": 291.091,
       "tga": 733959.0,
-      "sofr_iorb": -8261.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.0,
       "dealer_net": null,
-      "move": 114.81
+      "move": null
     },
     {
       "date": "2024-09-06",
       "reserves": 3243002.0,
       "onrrp": 299.271,
       "tga": 733959.0,
-      "sofr_iorb": -8378.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.0,
       "dealer_net": null,
-      "move": 107.24
+      "move": null
     },
     {
       "date": "2024-09-09",
       "reserves": 3243002.0,
       "onrrp": 292.158,
       "tga": 733959.0,
-      "sofr_iorb": -8352.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.0,
       "dealer_net": null,
-      "move": 104.61
+      "move": null
     },
     {
       "date": "2024-09-10",
       "reserves": 3243002.0,
       "onrrp": 281.392,
       "tga": 733959.0,
-      "sofr_iorb": -8286.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.0,
       "dealer_net": null,
-      "move": 108.36
+      "move": null
     },
     {
       "date": "2024-09-11",
       "reserves": 3320818.0,
       "onrrp": 279.215,
       "tga": 755958.0,
-      "sofr_iorb": -8509.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.04,
       "dealer_net": null,
-      "move": 103.79
+      "move": null
     },
     {
       "date": "2024-09-12",
       "reserves": 3320818.0,
       "onrrp": 294.464,
       "tga": 755958.0,
-      "sofr_iorb": -8664.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.04,
       "dealer_net": null,
-      "move": 98.03
+      "move": null
     },
     {
       "date": "2024-09-13",
       "reserves": 3320818.0,
       "onrrp": 284.951,
       "tga": 755958.0,
-      "sofr_iorb": -8427.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.04,
       "dealer_net": null,
-      "move": 100.6
+      "move": null
     },
     {
       "date": "2024-09-16",
       "reserves": 3320818.0,
       "onrrp": 239.386,
       "tga": 755958.0,
-      "sofr_iorb": -8279.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 3.04,
       "dealer_net": null,
-      "move": 101.22
+      "move": null
     },
     {
       "date": "2024-09-17",
       "reserves": 3320818.0,
       "onrrp": 256.337,
       "tga": 755958.0,
-      "sofr_iorb": -8395.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 3.04,
       "dealer_net": null,
-      "move": 101.58
+      "move": null
     },
     {
       "date": "2024-09-18",
       "reserves": 3313281.0,
       "onrrp": 305.831,
       "tga": 771194.0,
-      "sofr_iorb": -8346.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.15,
       "dealer_net": null,
-      "move": 98.61
+      "move": null
     },
     {
       "date": "2024-09-19",
       "reserves": 3313281.0,
       "onrrp": 311.777,
       "tga": 771194.0,
-      "sofr_iorb": -8590.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.15,
       "dealer_net": null,
-      "move": 92.64
+      "move": null
     },
     {
       "date": "2024-09-20",
       "reserves": 3313281.0,
       "onrrp": 339.316,
       "tga": 771194.0,
-      "sofr_iorb": -8479.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.15,
       "dealer_net": null,
-      "move": 91.0
+      "move": null
     },
     {
       "date": "2024-09-23",
       "reserves": 3313281.0,
       "onrrp": 380.372,
       "tga": 771194.0,
-      "sofr_iorb": -8254.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.15,
       "dealer_net": null,
-      "move": 93.87
+      "move": null
     },
     {
       "date": "2024-09-24",
       "reserves": 3313281.0,
       "onrrp": 388.977,
       "tga": 771194.0,
-      "sofr_iorb": -8749.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.15,
       "dealer_net": null,
-      "move": 93.3
+      "move": null
     },
     {
       "date": "2024-09-25",
       "reserves": 3169149.0,
       "onrrp": 416.193,
       "tga": 806771.0,
-      "sofr_iorb": -8905.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.19,
       "dealer_net": null,
-      "move": 91.64
+      "move": null
     },
     {
       "date": "2024-09-26",
       "reserves": 3169149.0,
       "onrrp": 424.916,
       "tga": 806771.0,
-      "sofr_iorb": -9080.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.19,
       "dealer_net": null,
-      "move": 90.14
+      "move": null
     },
     {
       "date": "2024-09-27",
       "reserves": 3169149.0,
       "onrrp": 436.518,
       "tga": 806771.0,
-      "sofr_iorb": -9410.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.19,
       "dealer_net": null,
-      "move": 92.53
+      "move": null
     },
     {
       "date": "2024-09-30",
       "reserves": 3169149.0,
       "onrrp": 465.638,
       "tga": 806771.0,
-      "sofr_iorb": -9956.0,
+      "sofr_iorb": 6.0,
       "bank_credit": 3.19,
       "dealer_net": null,
-      "move": 94.61
+      "move": null
     },
     {
       "date": "2024-10-01",
       "reserves": 3169149.0,
       "onrrp": 375.221,
       "tga": 806771.0,
-      "sofr_iorb": -9823.0,
+      "sofr_iorb": 15.0,
       "bank_credit": 3.19,
       "dealer_net": null,
-      "move": 104.14
+      "move": null
     },
     {
       "date": "2024-10-02",
       "reserves": 3089598.0,
       "onrrp": 383.398,
       "tga": 798277.0,
-      "sofr_iorb": -9809.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 3.26,
       "dealer_net": null,
-      "move": 102.17
+      "move": null
     },
     {
       "date": "2024-10-03",
       "reserves": 3089598.0,
       "onrrp": 341.248,
       "tga": 798277.0,
-      "sofr_iorb": -9901.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.26,
       "dealer_net": null,
-      "move": 101.16
+      "move": null
     },
     {
       "date": "2024-10-04",
       "reserves": 3089598.0,
       "onrrp": 330.012,
       "tga": 798277.0,
-      "sofr_iorb": -9855.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.26,
       "dealer_net": null,
-      "move": 100.15
+      "move": null
     },
     {
       "date": "2024-10-07",
       "reserves": 3089598.0,
       "onrrp": 322.948,
       "tga": 798277.0,
-      "sofr_iorb": -10042.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.26,
       "dealer_net": null,
-      "move": 124.23
+      "move": null
     },
     {
       "date": "2024-10-08",
       "reserves": 3089598.0,
       "onrrp": 325.355,
       "tga": 798277.0,
-      "sofr_iorb": -9490.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.26,
       "dealer_net": null,
-      "move": 123.77
+      "move": null
     },
     {
       "date": "2024-10-09",
       "reserves": 3186207.0,
       "onrrp": 343.448,
       "tga": 802115.0,
-      "sofr_iorb": -9504.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.25,
       "dealer_net": null,
-      "move": 122.39
+      "move": null
     },
     {
       "date": "2024-10-10",
       "reserves": 3186207.0,
       "onrrp": 322.587,
       "tga": 802115.0,
-      "sofr_iorb": -9461.000000000002,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.25,
       "dealer_net": null,
-      "move": 116.56
+      "move": null
     },
     {
       "date": "2024-10-11",
       "reserves": 3186207.0,
       "onrrp": 331.735,
       "tga": 802115.0,
-      "sofr_iorb": -9657.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.25,
       "dealer_net": null,
-      "move": 118.47
+      "move": null
     },
     {
       "date": "2024-10-15",
       "reserves": 3186207.0,
       "onrrp": 286.398,
       "tga": 802115.0,
-      "sofr_iorb": -9601.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 3.25,
       "dealer_net": null,
-      "move": 127.23
+      "move": null
     },
     {
       "date": "2024-10-16",
       "reserves": 3209877.0,
       "onrrp": 272.028,
       "tga": 791792.0,
-      "sofr_iorb": -9573.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 3.45,
       "dealer_net": null,
-      "move": 121.86
+      "move": null
     },
     {
       "date": "2024-10-17",
       "reserves": 3209877.0,
       "onrrp": 262.21,
       "tga": 791792.0,
-      "sofr_iorb": -9109.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.45,
       "dealer_net": null,
-      "move": 122.14
+      "move": null
     },
     {
       "date": "2024-10-18",
       "reserves": 3209877.0,
       "onrrp": 259.892,
       "tga": 791792.0,
-      "sofr_iorb": -9286.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.45,
       "dealer_net": null,
-      "move": 123.13
+      "move": null
     },
     {
       "date": "2024-10-21",
       "reserves": 3209877.0,
       "onrrp": 261.044,
       "tga": 791792.0,
-      "sofr_iorb": -9294.999999999998,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.45,
       "dealer_net": null,
-      "move": 128.95
+      "move": null
     },
     {
       "date": "2024-10-22",
       "reserves": 3209877.0,
       "onrrp": 237.76,
       "tga": 791792.0,
-      "sofr_iorb": -9166.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.45,
       "dealer_net": null,
-      "move": 129.26
+      "move": null
     },
     {
       "date": "2024-10-23",
       "reserves": 3230145.0,
       "onrrp": 270.839,
       "tga": 829991.0,
-      "sofr_iorb": -9051.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.51,
       "dealer_net": null,
-      "move": 129.05
+      "move": null
     },
     {
       "date": "2024-10-24",
       "reserves": 3230145.0,
       "onrrp": 202.798,
       "tga": 829991.0,
-      "sofr_iorb": -9124.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.51,
       "dealer_net": null,
-      "move": 127.48
+      "move": null
     },
     {
       "date": "2024-10-25",
       "reserves": 3230145.0,
       "onrrp": 227.0,
       "tga": 829991.0,
-      "sofr_iorb": -9307.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.51,
       "dealer_net": null,
-      "move": 128.4
+      "move": null
     },
     {
       "date": "2024-10-28",
       "reserves": 3230145.0,
       "onrrp": 251.032,
       "tga": 829991.0,
-      "sofr_iorb": -9496.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.51,
       "dealer_net": null,
-      "move": 130.92
+      "move": null
     },
     {
       "date": "2024-10-29",
       "reserves": 3230145.0,
       "onrrp": 244.841,
       "tga": 829991.0,
-      "sofr_iorb": -9463.999999999998,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.51,
       "dealer_net": null,
-      "move": 131.87
+      "move": null
     },
     {
       "date": "2024-10-30",
       "reserves": 3236958.0,
       "onrrp": 228.946,
       "tga": 835237.0,
-      "sofr_iorb": -9426.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.57,
       "dealer_net": null,
-      "move": 130.8
+      "move": null
     },
     {
       "date": "2024-10-31",
       "reserves": 3236958.0,
       "onrrp": 201.278,
       "tga": 835237.0,
-      "sofr_iorb": -9394.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 3.57,
       "dealer_net": null,
-      "move": 135.18
+      "move": null
     },
     {
       "date": "2024-11-01",
       "reserves": 3236958.0,
       "onrrp": 155.476,
       "tga": 835237.0,
-      "sofr_iorb": -9230.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 3.57,
       "dealer_net": null,
-      "move": 132.58
+      "move": null
     },
     {
       "date": "2024-11-04",
       "reserves": 3236958.0,
       "onrrp": 171.885,
       "tga": 835237.0,
-      "sofr_iorb": -9435.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.57,
       "dealer_net": null,
-      "move": 136.25
+      "move": null
     },
     {
       "date": "2024-11-05",
       "reserves": 3236958.0,
       "onrrp": 144.243,
       "tga": 835237.0,
-      "sofr_iorb": -9578.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.57,
       "dealer_net": null,
-      "move": 130.43
+      "move": null
     },
     {
       "date": "2024-11-06",
       "reserves": 3274120.0,
       "onrrp": 177.871,
       "tga": 842051.0,
-      "sofr_iorb": -9432.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.49,
       "dealer_net": null,
-      "move": 117.64
+      "move": null
     },
     {
       "date": "2024-11-07",
       "reserves": 3274120.0,
       "onrrp": 159.002,
       "tga": 842051.0,
-      "sofr_iorb": -9571.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.49,
       "dealer_net": null,
-      "move": 104.08
+      "move": null
     },
     {
       "date": "2024-11-08",
       "reserves": 3274120.0,
       "onrrp": 163.621,
       "tga": 842051.0,
-      "sofr_iorb": -9326.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.49,
       "dealer_net": null,
-      "move": 99.85
+      "move": null
     },
     {
       "date": "2024-11-12",
       "reserves": 3274120.0,
       "onrrp": 178.814,
       "tga": 842051.0,
-      "sofr_iorb": -9149.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.49,
       "dealer_net": null,
-      "move": 108.55
+      "move": null
     },
     {
       "date": "2024-11-13",
       "reserves": 3244149.0,
       "onrrp": 238.106,
       "tga": 832186.0,
-      "sofr_iorb": -9136.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 102.08
+      "move": null
     },
     {
       "date": "2024-11-14",
       "reserves": 3244149.0,
       "onrrp": 214.509,
       "tga": 832186.0,
-      "sofr_iorb": -8936.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 99.43
+      "move": null
     },
     {
       "date": "2024-11-15",
       "reserves": 3244149.0,
       "onrrp": 172.4,
       "tga": 832186.0,
-      "sofr_iorb": -8777.000000000002,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 102.47
+      "move": null
     },
     {
       "date": "2024-11-18",
       "reserves": 3244149.0,
       "onrrp": 200.03,
       "tga": 832186.0,
-      "sofr_iorb": -9019.999999999998,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 102.01
+      "move": null
     },
     {
       "date": "2024-11-19",
       "reserves": 3244149.0,
       "onrrp": 200.664,
       "tga": 832186.0,
-      "sofr_iorb": -9112.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 105.12
+      "move": null
     },
     {
       "date": "2024-11-20",
       "reserves": 3286885.0,
       "onrrp": 217.793,
       "tga": 751873.0,
-      "sofr_iorb": -9067.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 106.69
+      "move": null
     },
     {
       "date": "2024-11-21",
       "reserves": 3286885.0,
       "onrrp": 188.567,
       "tga": 751873.0,
-      "sofr_iorb": -9109.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 101.9
+      "move": null
     },
     {
       "date": "2024-11-22",
       "reserves": 3286885.0,
       "onrrp": 204.254,
       "tga": 751873.0,
-      "sofr_iorb": -8972.999999999998,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 99.14
+      "move": null
     },
     {
       "date": "2024-11-25",
       "reserves": 3286885.0,
       "onrrp": 186.749,
       "tga": 751873.0,
-      "sofr_iorb": -9165.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 99.96
+      "move": null
     },
     {
       "date": "2024-11-26",
       "reserves": 3286885.0,
       "onrrp": 148.823,
       "tga": 751873.0,
-      "sofr_iorb": -9164.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 3.63,
       "dealer_net": null,
-      "move": 99.18
+      "move": null
     },
     {
       "date": "2024-11-27",
       "reserves": 3227674.0,
       "onrrp": 169.815,
       "tga": 775250.0,
-      "sofr_iorb": -9190.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 3.75,
       "dealer_net": null,
-      "move": 97.74
+      "move": null
     },
     {
       "date": "2024-11-29",
       "reserves": 3227674.0,
       "onrrp": 197.627,
       "tga": 775250.0,
-      "sofr_iorb": -9260.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.75,
       "dealer_net": null,
-      "move": 95.22
+      "move": null
     },
     {
       "date": "2024-12-02",
       "reserves": 3227674.0,
       "onrrp": 135.858,
       "tga": 775250.0,
-      "sofr_iorb": -9304.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 3.75,
       "dealer_net": null,
-      "move": 97.81
+      "move": null
     },
     {
       "date": "2024-12-03",
       "reserves": 3227674.0,
       "onrrp": 161.572,
       "tga": 775250.0,
-      "sofr_iorb": -9365.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 3.75,
       "dealer_net": null,
-      "move": 95.6
+      "move": null
     },
     {
       "date": "2024-12-04",
       "reserves": 3225075.0,
       "onrrp": 162.866,
       "tga": 789516.0,
-      "sofr_iorb": -9391.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.78,
       "dealer_net": null,
-      "move": 92.25
+      "move": null
     },
     {
       "date": "2024-12-05",
       "reserves": 3225075.0,
       "onrrp": 131.964,
       "tga": 789516.0,
-      "sofr_iorb": -9259.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 3.78,
       "dealer_net": null,
-      "move": 91.48
+      "move": null
     },
     {
       "date": "2024-12-06",
       "reserves": 3225075.0,
       "onrrp": 130.014,
       "tga": 789516.0,
-      "sofr_iorb": -9249.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 3.78,
       "dealer_net": null,
-      "move": 83.2
+      "move": null
     },
     {
       "date": "2024-12-09",
       "reserves": 3225075.0,
       "onrrp": 153.029,
       "tga": 789516.0,
-      "sofr_iorb": -9454.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 3.78,
       "dealer_net": null,
-      "move": 85.63
+      "move": null
     },
     {
       "date": "2024-12-10",
       "reserves": 3225075.0,
       "onrrp": 174.842,
       "tga": 789516.0,
-      "sofr_iorb": -9443.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 3.78,
       "dealer_net": null,
-      "move": 90.1
+      "move": null
     },
     {
       "date": "2024-12-11",
       "reserves": 3264559.0,
       "onrrp": 180.12,
       "tga": 775067.0,
-      "sofr_iorb": -9392.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 4.0,
       "dealer_net": null,
-      "move": 82.4
+      "move": null
     },
     {
       "date": "2024-12-12",
       "reserves": 3264559.0,
       "onrrp": 165.025,
       "tga": 775067.0,
-      "sofr_iorb": -9508.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 4.0,
       "dealer_net": null,
-      "move": 82.66
+      "move": null
     },
     {
       "date": "2024-12-13",
       "reserves": 3264559.0,
       "onrrp": 135.777,
       "tga": 775067.0,
-      "sofr_iorb": -9296.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.0,
       "dealer_net": null,
-      "move": 85.66
+      "move": null
     },
     {
       "date": "2024-12-16",
       "reserves": 3264559.0,
       "onrrp": 110.753,
       "tga": 775067.0,
-      "sofr_iorb": -9358.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 4.0,
       "dealer_net": null,
-      "move": 90.88
+      "move": null
     },
     {
       "date": "2024-12-17",
       "reserves": 3264559.0,
       "onrrp": 118.093,
       "tga": 775067.0,
-      "sofr_iorb": -9286.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 4.0,
       "dealer_net": null,
-      "move": 90.42
+      "move": null
     },
     {
       "date": "2024-12-18",
       "reserves": 3282229.0,
       "onrrp": 131.651,
       "tga": 767932.0,
-      "sofr_iorb": -9060.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 4.01,
       "dealer_net": null,
-      "move": 87.21
+      "move": null
     },
     {
       "date": "2024-12-19",
       "reserves": 3282229.0,
       "onrrp": 112.417,
       "tga": 767932.0,
-      "sofr_iorb": -9030.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 4.01,
       "dealer_net": null,
-      "move": 90.41
+      "move": null
     },
     {
       "date": "2024-12-20",
       "reserves": 3282229.0,
       "onrrp": 98.356,
       "tga": 767932.0,
-      "sofr_iorb": -8950.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 4.01,
       "dealer_net": null,
-      "move": 91.75
+      "move": null
     },
     {
       "date": "2024-12-23",
       "reserves": 3282229.0,
       "onrrp": 116.004,
       "tga": 767932.0,
-      "sofr_iorb": -9023.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 4.01,
       "dealer_net": null,
-      "move": 95.85
+      "move": null
     },
     {
       "date": "2024-12-24",
       "reserves": 3282229.0,
       "onrrp": 180.989,
       "tga": 767932.0,
-      "sofr_iorb": -9001.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 4.01,
       "dealer_net": null,
-      "move": 96.95
+      "move": null
     },
     {
       "date": "2024-12-25",
       "reserves": 3247382.0,
       "onrrp": 180.989,
       "tga": 764770.0,
-      "sofr_iorb": -9001.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 96.95
+      "move": null
     },
     {
       "date": "2024-12-26",
       "reserves": 3247382.0,
       "onrrp": 196.818,
       "tga": 764770.0,
-      "sofr_iorb": -8966.0,
+      "sofr_iorb": 13.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 95.2
+      "move": null
     },
     {
       "date": "2024-12-27",
       "reserves": 3247382.0,
       "onrrp": 268.739,
       "tga": 764770.0,
-      "sofr_iorb": -8760.0,
+      "sofr_iorb": 6.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 94.8
+      "move": null
     },
     {
       "date": "2024-12-30",
       "reserves": 3247382.0,
       "onrrp": 260.743,
       "tga": 764770.0,
-      "sofr_iorb": -8944.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 99.08
+      "move": null
     },
     {
       "date": "2024-12-31",
       "reserves": 3247382.0,
       "onrrp": 473.46,
       "tga": 764770.0,
-      "sofr_iorb": -8944.000000000002,
+      "sofr_iorb": 9.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 98.8
+      "move": null
     },
     {
       "date": "2025-01-01",
       "reserves": 3095997.0,
       "onrrp": 473.46,
       "tga": 719873.0,
-      "sofr_iorb": -8944.000000000002,
+      "sofr_iorb": 9.0,
       "bank_credit": 3.98,
       "dealer_net": null,
-      "move": 98.8
+      "move": null
     },
     {
       "date": "2025-01-02",
       "reserves": 3095997.0,
       "onrrp": 239.858,
       "tga": 719873.0,
-      "sofr_iorb": -8988.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 3.98,
       "dealer_net": null,
-      "move": 96.67
+      "move": null
     },
     {
       "date": "2025-01-03",
       "reserves": 3095997.0,
       "onrrp": 237.377,
       "tga": 719873.0,
-      "sofr_iorb": -8766.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 3.98,
       "dealer_net": null,
-      "move": 93.35
+      "move": null
     },
     {
       "date": "2025-01-06",
       "reserves": 3095997.0,
       "onrrp": 231.926,
       "tga": 719873.0,
-      "sofr_iorb": -8628.0,
+      "sofr_iorb": -13.0,
       "bank_credit": 3.98,
       "dealer_net": null,
-      "move": 97.89
+      "move": null
     },
     {
       "date": "2025-01-07",
       "reserves": 3095997.0,
       "onrrp": 208.296,
       "tga": 719873.0,
-      "sofr_iorb": -8629.0,
+      "sofr_iorb": -13.0,
       "bank_credit": 3.98,
       "dealer_net": null,
-      "move": 102.78
+      "move": null
     },
     {
       "date": "2025-01-08",
       "reserves": 3254743.0,
       "onrrp": 185.144,
       "tga": 652636.0,
-      "sofr_iorb": -8607.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 100.76
+      "move": null
     },
     {
       "date": "2025-01-09",
       "reserves": 3254743.0,
       "onrrp": 168.225,
       "tga": 652636.0,
-      "sofr_iorb": -8649.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 99.73
+      "move": null
     },
     {
       "date": "2025-01-10",
       "reserves": 3254743.0,
       "onrrp": 178.8,
       "tga": 652636.0,
-      "sofr_iorb": -8627.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 96.57
+      "move": null
     },
     {
       "date": "2025-01-13",
       "reserves": 3254743.0,
       "onrrp": 183.669,
       "tga": 652636.0,
-      "sofr_iorb": -8768.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 103.51
+      "move": null
     },
     {
       "date": "2025-01-14",
       "reserves": 3254743.0,
       "onrrp": 160.219,
       "tga": 652636.0,
-      "sofr_iorb": -8906.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 4.08,
       "dealer_net": null,
-      "move": 101.99
+      "move": null
     },
     {
       "date": "2025-01-15",
       "reserves": 3340816.0,
       "onrrp": 119.977,
       "tga": 641225.0,
-      "sofr_iorb": -8912.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 4.14,
       "dealer_net": null,
-      "move": 93.1
+      "move": null
     },
     {
       "date": "2025-01-16",
       "reserves": 3340816.0,
       "onrrp": 94.489,
       "tga": 641225.0,
-      "sofr_iorb": -9097.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 4.14,
       "dealer_net": null,
-      "move": 92.72
+      "move": null
     },
     {
       "date": "2025-01-17",
       "reserves": 3340816.0,
       "onrrp": 118.327,
       "tga": 641225.0,
-      "sofr_iorb": -9158.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 4.14,
       "dealer_net": null,
-      "move": 95.6
+      "move": null
     },
     {
       "date": "2025-01-21",
       "reserves": 3340816.0,
       "onrrp": 96.015,
       "tga": 641225.0,
-      "sofr_iorb": -9236.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 4.14,
       "dealer_net": null,
-      "move": 96.78
+      "move": null
     },
     {
       "date": "2025-01-22",
       "reserves": 3332278.0,
       "onrrp": 123.981,
       "tga": 677282.0,
-      "sofr_iorb": -9154.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 4.42,
       "dealer_net": null,
-      "move": 89.9
+      "move": null
     },
     {
       "date": "2025-01-23",
       "reserves": 3332278.0,
       "onrrp": 132.031,
       "tga": 677282.0,
-      "sofr_iorb": -9159.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.42,
       "dealer_net": null,
-      "move": 88.51
+      "move": null
     },
     {
       "date": "2025-01-24",
       "reserves": 3332278.0,
       "onrrp": 104.972,
       "tga": 677282.0,
-      "sofr_iorb": -9208.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.42,
       "dealer_net": null,
-      "move": 86.75
+      "move": null
     },
     {
       "date": "2025-01-27",
       "reserves": 3332278.0,
       "onrrp": 92.863,
       "tga": 677282.0,
-      "sofr_iorb": -9207.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.42,
       "dealer_net": null,
-      "move": 95.05
+      "move": null
     },
     {
       "date": "2025-01-28",
       "reserves": 3332278.0,
       "onrrp": 112.76,
       "tga": 677282.0,
-      "sofr_iorb": -9123.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.42,
       "dealer_net": null,
-      "move": 92.83
+      "move": null
     },
     {
       "date": "2025-01-29",
       "reserves": 3224785.0,
       "onrrp": 121.842,
       "tga": 784206.0,
-      "sofr_iorb": -9256.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.34,
       "dealer_net": null,
-      "move": 90.73
+      "move": null
     },
     {
       "date": "2025-01-30",
       "reserves": 3224785.0,
       "onrrp": 125.965,
       "tga": 784206.0,
-      "sofr_iorb": -9313.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 4.34,
       "dealer_net": null,
-      "move": 90.54
+      "move": null
     },
     {
       "date": "2025-01-31",
       "reserves": 3224785.0,
       "onrrp": 187.913,
       "tga": 784206.0,
-      "sofr_iorb": -9363.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 4.34,
       "dealer_net": null,
-      "move": 91.76
+      "move": null
     },
     {
       "date": "2025-02-03",
       "reserves": 3224785.0,
       "onrrp": 97.781,
       "tga": 784206.0,
-      "sofr_iorb": -9187.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.34,
       "dealer_net": null,
-      "move": 94.15
+      "move": null
     },
     {
       "date": "2025-02-04",
       "reserves": 3224785.0,
       "onrrp": 85.654,
       "tga": 784206.0,
-      "sofr_iorb": -9239.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.34,
       "dealer_net": null,
-      "move": 90.28
+      "move": null
     },
     {
       "date": "2025-02-05",
       "reserves": 3177065.0,
       "onrrp": 78.788,
       "tga": 805593.0,
-      "sofr_iorb": -9107.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.4,
       "dealer_net": null,
-      "move": 94.68
+      "move": null
     },
     {
       "date": "2025-02-06",
       "reserves": 3177065.0,
       "onrrp": 79.983,
       "tga": 805593.0,
-      "sofr_iorb": -9272.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 4.4,
       "dealer_net": null,
-      "move": 93.9
+      "move": null
     },
     {
       "date": "2025-02-07",
       "reserves": 3177065.0,
       "onrrp": 95.248,
       "tga": 805593.0,
-      "sofr_iorb": -9286.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.4,
       "dealer_net": null,
-      "move": 93.13
+      "move": null
     },
     {
       "date": "2025-02-10",
       "reserves": 3177065.0,
       "onrrp": 99.653,
       "tga": 805593.0,
-      "sofr_iorb": -9291.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.4,
       "dealer_net": null,
-      "move": 87.68
+      "move": null
     },
     {
       "date": "2025-02-11",
       "reserves": 3177065.0,
       "onrrp": 76.446,
       "tga": 805593.0,
-      "sofr_iorb": -9144.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.4,
       "dealer_net": null,
-      "move": 85.58
+      "move": null
     },
     {
       "date": "2025-02-12",
       "reserves": 3220027.0,
       "onrrp": 67.67,
       "tga": 828102.0,
-      "sofr_iorb": -9261.000000000002,
+      "sofr_iorb": -8.0,
       "bank_credit": 4.54,
       "dealer_net": null,
-      "move": 86.58
+      "move": null
     },
     {
       "date": "2025-02-13",
       "reserves": 3220027.0,
       "onrrp": 67.82,
       "tga": 828102.0,
-      "sofr_iorb": -9122.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.54,
       "dealer_net": null,
-      "move": 84.57
+      "move": null
     },
     {
       "date": "2025-02-14",
       "reserves": 3220027.0,
       "onrrp": 58.77,
       "tga": 828102.0,
-      "sofr_iorb": -9098.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.54,
       "dealer_net": null,
-      "move": 84.67
+      "move": null
     },
     {
       "date": "2025-02-18",
       "reserves": 3220027.0,
       "onrrp": 77.817,
       "tga": 828102.0,
-      "sofr_iorb": -9182.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 4.54,
       "dealer_net": null,
-      "move": 84.51
+      "move": null
     },
     {
       "date": "2025-02-19",
       "reserves": 3270082.0,
       "onrrp": 73.196,
       "tga": 790062.0,
-      "sofr_iorb": -9207.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.76,
       "dealer_net": null,
-      "move": 83.86
+      "move": null
     },
     {
       "date": "2025-02-20",
       "reserves": 3270082.0,
       "onrrp": 63.207,
       "tga": 790062.0,
-      "sofr_iorb": -9356.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.76,
       "dealer_net": null,
-      "move": 86.26
+      "move": null
     },
     {
       "date": "2025-02-21",
       "reserves": 3270082.0,
       "onrrp": 68.983,
       "tga": 790062.0,
-      "sofr_iorb": -9332.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.76,
       "dealer_net": null,
-      "move": 91.83
+      "move": null
     },
     {
       "date": "2025-02-24",
       "reserves": 3270082.0,
       "onrrp": 76.818,
       "tga": 790062.0,
-      "sofr_iorb": -9321.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.76,
       "dealer_net": null,
-      "move": 88.44
+      "move": null
     },
     {
       "date": "2025-02-25",
       "reserves": 3270082.0,
       "onrrp": 96.0,
       "tga": 790062.0,
-      "sofr_iorb": -9136.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.76,
       "dealer_net": null,
-      "move": 96.61
+      "move": null
     },
     {
       "date": "2025-02-26",
       "reserves": 3327249.0,
       "onrrp": 126.058,
       "tga": 681161.0,
-      "sofr_iorb": -9138.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.79,
       "dealer_net": null,
-      "move": 97.52
+      "move": null
     },
     {
       "date": "2025-02-27",
       "reserves": 3327249.0,
       "onrrp": 182.148,
       "tga": 681161.0,
-      "sofr_iorb": -9049.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 4.79,
       "dealer_net": null,
-      "move": 96.27
+      "move": null
     },
     {
       "date": "2025-02-28",
       "reserves": 3327249.0,
       "onrrp": 234.422,
       "tga": 681161.0,
-      "sofr_iorb": -8927.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 4.79,
       "dealer_net": null,
-      "move": 104.46
+      "move": null
     },
     {
       "date": "2025-03-03",
       "reserves": 3327249.0,
       "onrrp": 119.987,
       "tga": 681161.0,
-      "sofr_iorb": -8654.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.79,
       "dealer_net": null,
-      "move": 105.65
+      "move": null
     },
     {
       "date": "2025-03-04",
       "reserves": 3327249.0,
       "onrrp": 135.257,
       "tga": 681161.0,
-      "sofr_iorb": -8728.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.79,
       "dealer_net": null,
-      "move": 108.87
+      "move": null
     },
     {
       "date": "2025-03-05",
       "reserves": 3312625.0,
       "onrrp": 139.493,
       "tga": 548331.0,
-      "sofr_iorb": -8616.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.94,
       "dealer_net": null,
-      "move": 104.32
+      "move": null
     },
     {
       "date": "2025-03-06",
       "reserves": 3312625.0,
       "onrrp": 129.269,
       "tga": 548331.0,
-      "sofr_iorb": -8673.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 4.94,
       "dealer_net": null,
-      "move": 108.95
+      "move": null
     },
     {
       "date": "2025-03-07",
       "reserves": 3312625.0,
       "onrrp": 136.305,
       "tga": 548331.0,
-      "sofr_iorb": -8671.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 4.94,
       "dealer_net": null,
-      "move": 104.41
+      "move": null
     },
     {
       "date": "2025-03-10",
       "reserves": 3312625.0,
       "onrrp": 129.054,
       "tga": 548331.0,
-      "sofr_iorb": -8600.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 4.94,
       "dealer_net": null,
-      "move": 112.5
+      "move": null
     },
     {
       "date": "2025-03-11",
       "reserves": 3312625.0,
       "onrrp": 137.31,
       "tga": 548331.0,
-      "sofr_iorb": -8666.999999999998,
+      "sofr_iorb": -8.0,
       "bank_credit": 4.94,
       "dealer_net": null,
-      "move": 114.6
+      "move": null
     },
     {
       "date": "2025-03-12",
       "reserves": 3400235.0,
       "onrrp": 131.055,
       "tga": 512581.0,
-      "sofr_iorb": -8646.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 5.05,
       "dealer_net": null,
-      "move": 104.11
+      "move": null
     },
     {
       "date": "2025-03-13",
       "reserves": 3400235.0,
       "onrrp": 113.435,
       "tga": 512581.0,
-      "sofr_iorb": -8718.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 5.05,
       "dealer_net": null,
-      "move": 106.19
+      "move": null
     },
     {
       "date": "2025-03-14",
       "reserves": 3400235.0,
       "onrrp": 126.234,
       "tga": 512581.0,
-      "sofr_iorb": -8838.000000000002,
+      "sofr_iorb": -10.0,
       "bank_credit": 5.05,
       "dealer_net": null,
-      "move": 101.01
+      "move": null
     },
     {
       "date": "2025-03-17",
       "reserves": 3400235.0,
       "onrrp": 89.496,
       "tga": 512581.0,
-      "sofr_iorb": -8691.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 5.05,
       "dealer_net": null,
-      "move": 99.78
+      "move": null
     },
     {
       "date": "2025-03-18",
       "reserves": 3400235.0,
       "onrrp": 149.503,
       "tga": 512581.0,
-      "sofr_iorb": -8696.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 5.05,
       "dealer_net": null,
-      "move": 96.68
+      "move": null
     },
     {
       "date": "2025-03-19",
       "reserves": 3467789.0,
       "onrrp": 193.378,
       "tga": 435936.0,
-      "sofr_iorb": -8557.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 5.12,
       "dealer_net": null,
-      "move": 91.4
+      "move": null
     },
     {
       "date": "2025-03-20",
       "reserves": 3467789.0,
       "onrrp": 192.64,
       "tga": 435936.0,
-      "sofr_iorb": -8608.999999999998,
+      "sofr_iorb": -11.0,
       "bank_credit": 5.12,
       "dealer_net": null,
-      "move": 95.74
+      "move": null
     },
     {
       "date": "2025-03-21",
       "reserves": 3467789.0,
       "onrrp": 200.85,
       "tga": 435936.0,
-      "sofr_iorb": -8556.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 5.12,
       "dealer_net": null,
-      "move": 94.54
+      "move": null
     },
     {
       "date": "2025-03-24",
       "reserves": 3467789.0,
       "onrrp": 196.565,
       "tga": 435936.0,
-      "sofr_iorb": -8780.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 5.12,
       "dealer_net": null,
-      "move": 95.22
+      "move": null
     },
     {
       "date": "2025-03-25",
       "reserves": 3467789.0,
       "onrrp": 214.786,
       "tga": 435936.0,
-      "sofr_iorb": -8731.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 5.12,
       "dealer_net": null,
-      "move": 93.57
+      "move": null
     },
     {
       "date": "2025-03-26",
       "reserves": 3450933.0,
       "onrrp": 241.371,
       "tga": 360177.0,
-      "sofr_iorb": -8800.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 5.23,
       "dealer_net": null,
-      "move": 91.41
+      "move": null
     },
     {
       "date": "2025-03-27",
       "reserves": 3450933.0,
       "onrrp": 291.785,
       "tga": 360177.0,
-      "sofr_iorb": -8895.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 5.23,
       "dealer_net": null,
-      "move": 91.03
+      "move": null
     },
     {
       "date": "2025-03-28",
       "reserves": 3450933.0,
       "onrrp": 286.575,
       "tga": 360177.0,
-      "sofr_iorb": -8857.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 5.23,
       "dealer_net": null,
-      "move": 96.83
+      "move": null
     },
     {
       "date": "2025-03-31",
       "reserves": 3450933.0,
       "onrrp": 399.167,
       "tga": 360177.0,
-      "sofr_iorb": -8708.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 5.23,
       "dealer_net": null,
-      "move": 101.35
+      "move": null
     },
     {
       "date": "2025-04-01",
       "reserves": 3450933.0,
       "onrrp": 230.063,
       "tga": 360177.0,
-      "sofr_iorb": -8865.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 5.23,
       "dealer_net": null,
-      "move": 104.73
+      "move": null
     },
     {
       "date": "2025-04-02",
       "reserves": 3379339.0,
       "onrrp": 233.488,
       "tga": 313326.0,
-      "sofr_iorb": -8861.999999999998,
+      "sofr_iorb": -3.0,
       "bank_credit": 5.26,
       "dealer_net": null,
-      "move": 106.39
+      "move": null
     },
     {
       "date": "2025-04-03",
       "reserves": 3379339.0,
       "onrrp": 196.265,
       "tga": 313326.0,
-      "sofr_iorb": -8774.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 5.26,
       "dealer_net": null,
-      "move": 112.0
+      "move": null
     },
     {
       "date": "2025-04-04",
       "reserves": 3379339.0,
       "onrrp": 184.499,
       "tga": 313326.0,
-      "sofr_iorb": -8642.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 5.26,
       "dealer_net": null,
-      "move": 125.71
+      "move": null
     },
     {
       "date": "2025-04-07",
       "reserves": 3379339.0,
       "onrrp": 148.146,
       "tga": 313326.0,
-      "sofr_iorb": -8444.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 5.26,
       "dealer_net": null,
-      "move": 137.3
+      "move": null
     },
     {
       "date": "2025-04-08",
       "reserves": 3379339.0,
       "onrrp": 156.911,
       "tga": 313326.0,
-      "sofr_iorb": -8266.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 5.26,
       "dealer_net": null,
-      "move": 139.88
+      "move": null
     },
     {
       "date": "2025-04-09",
       "reserves": 3474682.0,
       "onrrp": 168.115,
       "tga": 306049.0,
-      "sofr_iorb": -8287.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 5.5,
       "dealer_net": null,
-      "move": 128.83
+      "move": null
     },
     {
       "date": "2025-04-10",
       "reserves": 3474682.0,
       "onrrp": 129.95,
       "tga": 306049.0,
-      "sofr_iorb": -8461.999999999998,
+      "sofr_iorb": -3.0,
       "bank_credit": 5.5,
       "dealer_net": null,
-      "move": 128.35
+      "move": null
     },
     {
       "date": "2025-04-11",
       "reserves": 3474682.0,
       "onrrp": 98.531,
       "tga": 306049.0,
-      "sofr_iorb": -8440.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 5.5,
       "dealer_net": null,
-      "move": 137.26
+      "move": null
     },
     {
       "date": "2025-04-14",
       "reserves": 3474682.0,
       "onrrp": 102.838,
       "tga": 306049.0,
-      "sofr_iorb": -8489.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 5.5,
       "dealer_net": null,
-      "move": 132.46
+      "move": null
     },
     {
       "date": "2025-04-15",
       "reserves": 3474682.0,
       "onrrp": 88.878,
       "tga": 306049.0,
-      "sofr_iorb": -8500.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 5.5,
       "dealer_net": null,
-      "move": 122.56
+      "move": null
     },
     {
       "date": "2025-04-16",
       "reserves": 3452030.0,
       "onrrp": 54.772,
       "tga": 422983.0,
-      "sofr_iorb": -8455.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 5.8,
       "dealer_net": null,
-      "move": 119.4
+      "move": null
     },
     {
       "date": "2025-04-17",
       "reserves": 3452030.0,
       "onrrp": 58.6,
       "tga": 422983.0,
-      "sofr_iorb": -8396.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 5.8,
       "dealer_net": null,
-      "move": 114.64
+      "move": null
     },
     {
       "date": "2025-04-21",
       "reserves": 3452030.0,
       "onrrp": 114.114,
       "tga": 422983.0,
-      "sofr_iorb": -8559.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 5.8,
       "dealer_net": null,
-      "move": 128.56
+      "move": null
     },
     {
       "date": "2025-04-22",
       "reserves": 3452030.0,
       "onrrp": 137.951,
       "tga": 422983.0,
-      "sofr_iorb": -8502.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 5.8,
       "dealer_net": null,
-      "move": 118.35
+      "move": null
     },
     {
       "date": "2025-04-23",
       "reserves": 3256734.0,
       "onrrp": 171.78,
       "tga": 606632.0,
-      "sofr_iorb": -8673.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 5.87,
       "dealer_net": null,
-      "move": 116.6
+      "move": null
     },
     {
       "date": "2025-04-24",
       "reserves": 3256734.0,
       "onrrp": 130.004,
       "tga": 606632.0,
-      "sofr_iorb": -8605.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 5.87,
       "dealer_net": null,
-      "move": 108.28
+      "move": null
     },
     {
       "date": "2025-04-25",
       "reserves": 3256734.0,
       "onrrp": 94.021,
       "tga": 606632.0,
-      "sofr_iorb": -8490.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 5.87,
       "dealer_net": null,
-      "move": 105.79
+      "move": null
     },
     {
       "date": "2025-04-28",
       "reserves": 3256734.0,
       "onrrp": 148.649,
       "tga": 606632.0,
-      "sofr_iorb": -8492.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 5.87,
       "dealer_net": null,
-      "move": 110.01
+      "move": null
     },
     {
       "date": "2025-04-29",
       "reserves": 3256734.0,
       "onrrp": 157.537,
       "tga": 606632.0,
-      "sofr_iorb": -8495.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 5.87,
       "dealer_net": null,
-      "move": 112.27
+      "move": null
     },
     {
       "date": "2025-04-30",
       "reserves": 3219214.0,
       "onrrp": 250.601,
       "tga": 595741.0,
-      "sofr_iorb": -8409.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 6.01,
       "dealer_net": null,
-      "move": 112.48
+      "move": null
     },
     {
       "date": "2025-05-01",
       "reserves": 3219214.0,
       "onrrp": 157.353,
       "tga": 595741.0,
-      "sofr_iorb": -8278.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 6.01,
       "dealer_net": null,
-      "move": 107.33
+      "move": null
     },
     {
       "date": "2025-05-02",
       "reserves": 3219214.0,
       "onrrp": 147.882,
       "tga": 595741.0,
-      "sofr_iorb": -8385.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 6.01,
       "dealer_net": null,
-      "move": 101.4
+      "move": null
     },
     {
       "date": "2025-05-05",
       "reserves": 3219214.0,
       "onrrp": 124.69,
       "tga": 595741.0,
-      "sofr_iorb": -8450.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 6.01,
       "dealer_net": null,
-      "move": 104.45
+      "move": null
     },
     {
       "date": "2025-05-06",
       "reserves": 3219214.0,
       "onrrp": 129.858,
       "tga": 595741.0,
-      "sofr_iorb": -8544.999999999998,
+      "sofr_iorb": -8.0,
       "bank_credit": 6.01,
       "dealer_net": null,
-      "move": 106.18
+      "move": null
     },
     {
       "date": "2025-05-07",
       "reserves": 3218636.0,
       "onrrp": 154.859,
       "tga": 583727.0,
-      "sofr_iorb": -8592.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 5.96,
       "dealer_net": null,
-      "move": 99.87
+      "move": null
     },
     {
       "date": "2025-05-08",
       "reserves": 3218636.0,
       "onrrp": 139.768,
       "tga": 583727.0,
-      "sofr_iorb": -8410.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 5.96,
       "dealer_net": null,
-      "move": 98.66
+      "move": null
     },
     {
       "date": "2025-05-09",
       "reserves": 3218636.0,
       "onrrp": 142.272,
       "tga": 583727.0,
-      "sofr_iorb": -8455.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 5.96,
       "dealer_net": null,
-      "move": 100.4
+      "move": null
     },
     {
       "date": "2025-05-12",
       "reserves": 3218636.0,
       "onrrp": 147.505,
       "tga": 583727.0,
-      "sofr_iorb": -8718.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 5.96,
       "dealer_net": null,
-      "move": 102.9
+      "move": null
     },
     {
       "date": "2025-05-13",
       "reserves": 3218636.0,
       "onrrp": 144.214,
       "tga": 583727.0,
-      "sofr_iorb": -8679.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 5.96,
       "dealer_net": null,
-      "move": 100.13
+      "move": null
     },
     {
       "date": "2025-05-14",
       "reserves": 3235723.0,
       "onrrp": 165.024,
       "tga": 575846.0,
-      "sofr_iorb": -8769.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.08,
       "dealer_net": null,
-      "move": 100.73
+      "move": null
     },
     {
       "date": "2025-05-15",
       "reserves": 3235723.0,
       "onrrp": 109.436,
       "tga": 575846.0,
-      "sofr_iorb": -8779.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 6.08,
       "dealer_net": null,
-      "move": 98.65
+      "move": null
     },
     {
       "date": "2025-05-16",
       "reserves": 3235723.0,
       "onrrp": 136.799,
       "tga": 575846.0,
-      "sofr_iorb": -8690.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 6.08,
       "dealer_net": null,
-      "move": 96.7
+      "move": null
     },
     {
       "date": "2025-05-19",
       "reserves": 3235723.0,
       "onrrp": 180.417,
       "tga": 575846.0,
-      "sofr_iorb": -8632.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.08,
       "dealer_net": null,
-      "move": 103.81
+      "move": null
     },
     {
       "date": "2025-05-20",
       "reserves": 3235723.0,
       "onrrp": 136.033,
       "tga": 575846.0,
-      "sofr_iorb": -8635.0,
+      "sofr_iorb": -13.0,
       "bank_credit": 6.08,
       "dealer_net": null,
-      "move": 101.37
+      "move": null
     },
     {
       "date": "2025-05-21",
       "reserves": 3289469.0,
       "onrrp": 162.802,
       "tga": 503055.0,
-      "sofr_iorb": -8700.0,
+      "sofr_iorb": -14.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 102.1
+      "move": null
     },
     {
       "date": "2025-05-22",
       "reserves": 3289469.0,
       "onrrp": 173.018,
       "tga": 503055.0,
-      "sofr_iorb": -8669.999999999998,
+      "sofr_iorb": -14.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 99.47
+      "move": null
     },
     {
       "date": "2025-05-23",
       "reserves": 3289469.0,
       "onrrp": 154.841,
       "tga": 503055.0,
-      "sofr_iorb": -8597.999999999998,
+      "sofr_iorb": -14.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 100.91
+      "move": null
     },
     {
       "date": "2025-05-27",
       "reserves": 3289469.0,
       "onrrp": 138.066,
       "tga": 503055.0,
-      "sofr_iorb": -8374.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 97.93
+      "move": null
     },
     {
       "date": "2025-05-28",
       "reserves": 3270661.0,
       "onrrp": 173.641,
       "tga": 467204.0,
-      "sofr_iorb": -8394.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 6.26,
       "dealer_net": null,
-      "move": 93.2
+      "move": null
     },
     {
       "date": "2025-05-29",
       "reserves": 3270661.0,
       "onrrp": 165.66,
       "tga": 467204.0,
-      "sofr_iorb": -8460.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 6.26,
       "dealer_net": null,
-      "move": 92.67
+      "move": null
     },
     {
       "date": "2025-05-30",
       "reserves": 3270661.0,
       "onrrp": 315.657,
       "tga": 467204.0,
-      "sofr_iorb": -8467.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 6.26,
       "dealer_net": null,
-      "move": 92.11
+      "move": null
     },
     {
       "date": "2025-06-02",
       "reserves": 3270661.0,
       "onrrp": 135.841,
       "tga": 467204.0,
-      "sofr_iorb": -8482.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 6.26,
       "dealer_net": null,
-      "move": 95.76
+      "move": null
     },
     {
       "date": "2025-06-03",
       "reserves": 3270661.0,
       "onrrp": 153.177,
       "tga": 467204.0,
-      "sofr_iorb": -8412.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 6.26,
       "dealer_net": null,
-      "move": 100.0
+      "move": null
     },
     {
       "date": "2025-06-04",
       "reserves": 3294381.0,
       "onrrp": 168.882,
       "tga": 378947.0,
-      "sofr_iorb": -8521.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 96.98
+      "move": null
     },
     {
       "date": "2025-06-05",
       "reserves": 3294381.0,
       "onrrp": 152.727,
       "tga": 378947.0,
-      "sofr_iorb": -8491.999999999998,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 94.65
+      "move": null
     },
     {
       "date": "2025-06-06",
       "reserves": 3294381.0,
       "onrrp": 149.284,
       "tga": 378947.0,
-      "sofr_iorb": -8540.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 89.65
+      "move": null
     },
     {
       "date": "2025-06-09",
       "reserves": 3294381.0,
       "onrrp": 179.315,
       "tga": 378947.0,
-      "sofr_iorb": -8482.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 92.62
+      "move": null
     },
     {
       "date": "2025-06-10",
       "reserves": 3294381.0,
       "onrrp": 182.725,
       "tga": 378947.0,
-      "sofr_iorb": -8473.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 6.27,
       "dealer_net": null,
-      "move": 91.22
+      "move": null
     },
     {
       "date": "2025-06-11",
       "reserves": 3407108.0,
       "onrrp": 204.625,
       "tga": 332907.0,
-      "sofr_iorb": -8574.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 6.42,
       "dealer_net": null,
-      "move": 89.36
+      "move": null
     },
     {
       "date": "2025-06-12",
       "reserves": 3407108.0,
       "onrrp": 181.417,
       "tga": 332907.0,
-      "sofr_iorb": -8544.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 6.42,
       "dealer_net": null,
-      "move": 88.99
+      "move": null
     },
     {
       "date": "2025-06-13",
       "reserves": 3407108.0,
       "onrrp": 168.645,
       "tga": 332907.0,
-      "sofr_iorb": -8533.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 6.42,
       "dealer_net": null,
-      "move": 95.31
+      "move": null
     },
     {
       "date": "2025-06-16",
       "reserves": 3407108.0,
       "onrrp": 140.759,
       "tga": 332907.0,
-      "sofr_iorb": -8527.000000000002,
+      "sofr_iorb": -8.0,
       "bank_credit": 6.42,
       "dealer_net": null,
-      "move": 93.48
+      "move": null
     },
     {
       "date": "2025-06-17",
       "reserves": 3407108.0,
       "onrrp": 168.939,
       "tga": 332907.0,
-      "sofr_iorb": -8437.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 6.42,
       "dealer_net": null,
-      "move": 97.18
+      "move": null
     },
     {
       "date": "2025-06-18",
       "reserves": 3406366.0,
       "onrrp": 205.05,
       "tga": 337762.0,
-      "sofr_iorb": -8415.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 6.57,
       "dealer_net": null,
-      "move": 93.64
+      "move": null
     },
     {
       "date": "2025-06-20",
       "reserves": 3406366.0,
       "onrrp": 138.283,
       "tga": 337762.0,
-      "sofr_iorb": -8458.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.57,
       "dealer_net": null,
-      "move": 90.1
+      "move": null
     },
     {
       "date": "2025-06-23",
       "reserves": 3406366.0,
       "onrrp": 165.319,
       "tga": 337762.0,
-      "sofr_iorb": -8497.0,
+      "sofr_iorb": -11.0,
       "bank_credit": 6.57,
       "dealer_net": null,
-      "move": 95.03
+      "move": null
     },
     {
       "date": "2025-06-24",
       "reserves": 3406366.0,
       "onrrp": 187.367,
       "tga": 337762.0,
-      "sofr_iorb": -8460.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 6.57,
       "dealer_net": null,
-      "move": 92.62
+      "move": null
     },
     {
       "date": "2025-06-25",
       "reserves": 3369328.0,
       "onrrp": 210.879,
       "tga": 364375.0,
-      "sofr_iorb": -8448.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 6.69,
       "dealer_net": null,
-      "move": 91.24
+      "move": null
     },
     {
       "date": "2025-06-26",
       "reserves": 3369328.0,
       "onrrp": 252.432,
       "tga": 364375.0,
-      "sofr_iorb": -8472.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 6.69,
       "dealer_net": null,
-      "move": 89.47
+      "move": null
     },
     {
       "date": "2025-06-27",
       "reserves": 3369328.0,
       "onrrp": 285.742,
       "tga": 364375.0,
-      "sofr_iorb": -8595.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 6.69,
       "dealer_net": null,
-      "move": 87.93
+      "move": null
     },
     {
       "date": "2025-06-30",
       "reserves": 3369328.0,
       "onrrp": 460.731,
       "tga": 364375.0,
-      "sofr_iorb": -8580.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 6.69,
       "dealer_net": null,
-      "move": 90.26
+      "move": null
     },
     {
       "date": "2025-07-01",
       "reserves": 3369328.0,
       "onrrp": 245.53,
       "tga": 364375.0,
-      "sofr_iorb": -8491.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 6.69,
       "dealer_net": null,
-      "move": 93.48
+      "move": null
     },
     {
       "date": "2025-07-02",
       "reserves": 3225980.0,
       "onrrp": 237.307,
       "tga": 359516.0,
-      "sofr_iorb": -8705.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 6.93,
       "dealer_net": null,
-      "move": 91.37
+      "move": null
     },
     {
       "date": "2025-07-03",
       "reserves": 3225980.0,
       "onrrp": 214.665,
       "tga": 359516.0,
-      "sofr_iorb": -8796.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 6.93,
       "dealer_net": null,
-      "move": 86.09
+      "move": null
     },
     {
       "date": "2025-07-07",
       "reserves": 3225980.0,
       "onrrp": 218.03,
       "tga": 359516.0,
-      "sofr_iorb": -8681.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 6.93,
       "dealer_net": null,
-      "move": 88.53
+      "move": null
     },
     {
       "date": "2025-07-08",
       "reserves": 3225980.0,
       "onrrp": 219.415,
       "tga": 359516.0,
-      "sofr_iorb": -8779.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 6.93,
       "dealer_net": null,
-      "move": 88.05
+      "move": null
     },
     {
       "date": "2025-07-09",
       "reserves": 3330249.0,
       "onrrp": 227.273,
       "tga": 319889.0,
-      "sofr_iorb": -8855.000000000002,
+      "sofr_iorb": -8.0,
       "bank_credit": 7.0,
       "dealer_net": null,
-      "move": 84.31
+      "move": null
     },
     {
       "date": "2025-07-10",
       "reserves": 3330249.0,
       "onrrp": 183.339,
       "tga": 319889.0,
-      "sofr_iorb": -9133.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 7.0,
       "dealer_net": null,
-      "move": 81.58
+      "move": null
     },
     {
       "date": "2025-07-11",
       "reserves": 3330249.0,
       "onrrp": 181.637,
       "tga": 319889.0,
-      "sofr_iorb": -9153.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 7.0,
       "dealer_net": null,
-      "move": 85.48
+      "move": null
     },
     {
       "date": "2025-07-14",
       "reserves": 3330249.0,
       "onrrp": 217.841,
       "tga": 319889.0,
-      "sofr_iorb": -9204.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 7.0,
       "dealer_net": null,
-      "move": 90.73
+      "move": null
     },
     {
       "date": "2025-07-15",
       "reserves": 3330249.0,
       "onrrp": 198.277,
       "tga": 319889.0,
-      "sofr_iorb": -9178.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 7.0,
       "dealer_net": null,
-      "move": 88.95
+      "move": null
     },
     {
       "date": "2025-07-16",
       "reserves": 3398822.0,
       "onrrp": 197.086,
       "tga": 296247.0,
-      "sofr_iorb": -9243.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.11,
       "dealer_net": null,
-      "move": 89.52
+      "move": null
     },
     {
       "date": "2025-07-17",
       "reserves": 3398822.0,
       "onrrp": 193.66,
       "tga": 296247.0,
-      "sofr_iorb": -9270.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.11,
       "dealer_net": null,
-      "move": 85.57
+      "move": null
     },
     {
       "date": "2025-07-18",
       "reserves": 3398822.0,
       "onrrp": 199.298,
       "tga": 296247.0,
-      "sofr_iorb": -9198.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 7.11,
       "dealer_net": null,
-      "move": 83.29
+      "move": null
     },
     {
       "date": "2025-07-21",
       "reserves": 3398822.0,
       "onrrp": 213.666,
       "tga": 296247.0,
-      "sofr_iorb": -9416.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 7.11,
       "dealer_net": null,
-      "move": 86.62
+      "move": null
     },
     {
       "date": "2025-07-22",
       "reserves": 3398822.0,
       "onrrp": 196.374,
       "tga": 296247.0,
-      "sofr_iorb": -9605.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 7.11,
       "dealer_net": null,
-      "move": 89.89
+      "move": null
     },
     {
       "date": "2025-07-23",
       "reserves": 3362277.0,
       "onrrp": 189.632,
       "tga": 323176.0,
-      "sofr_iorb": -9532.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 7.23,
       "dealer_net": null,
-      "move": 85.95
+      "move": null
     },
     {
       "date": "2025-07-24",
       "reserves": 3362277.0,
       "onrrp": 132.186,
       "tga": 323176.0,
-      "sofr_iorb": -9574.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 7.23,
       "dealer_net": null,
-      "move": 82.75
+      "move": null
     },
     {
       "date": "2025-07-25",
       "reserves": 3362277.0,
       "onrrp": 150.509,
       "tga": 323176.0,
-      "sofr_iorb": -9375.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.23,
       "dealer_net": null,
-      "move": 82.09
+      "move": null
     },
     {
       "date": "2025-07-28",
       "reserves": 3362277.0,
       "onrrp": 170.463,
       "tga": 323176.0,
-      "sofr_iorb": -9158.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.23,
       "dealer_net": null,
-      "move": 83.73
+      "move": null
     },
     {
       "date": "2025-07-29",
       "reserves": 3362277.0,
       "onrrp": 171.018,
       "tga": 323176.0,
-      "sofr_iorb": -9363.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.23,
       "dealer_net": null,
-      "move": 85.07
+      "move": null
     },
     {
       "date": "2025-07-30",
       "reserves": 3347414.0,
       "onrrp": 155.481,
       "tga": 370507.0,
-      "sofr_iorb": -9309.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 7.35,
       "dealer_net": null,
-      "move": 81.88
+      "move": null
     },
     {
       "date": "2025-07-31",
       "reserves": 3347414.0,
       "onrrp": 214.445,
       "tga": 370507.0,
-      "sofr_iorb": -9150.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 7.35,
       "dealer_net": null,
-      "move": 79.84
+      "move": null
     },
     {
       "date": "2025-08-01",
       "reserves": 3347414.0,
       "onrrp": 97.426,
       "tga": 370507.0,
-      "sofr_iorb": -9197.999999999998,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.35,
       "dealer_net": null,
-      "move": 83.83
+      "move": null
     },
     {
       "date": "2025-08-04",
       "reserves": 3347414.0,
       "onrrp": 125.73,
       "tga": 370507.0,
-      "sofr_iorb": -9349.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 7.35,
       "dealer_net": null,
-      "move": 87.95
+      "move": null
     },
     {
       "date": "2025-08-05",
       "reserves": 3347414.0,
       "onrrp": 84.356,
       "tga": 370507.0,
-      "sofr_iorb": -9471.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.35,
       "dealer_net": null,
-      "move": 89.2
+      "move": null
     },
     {
       "date": "2025-08-06",
       "reserves": 3332492.0,
       "onrrp": 91.966,
       "tga": 421043.0,
-      "sofr_iorb": -9451.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.44,
       "dealer_net": null,
-      "move": 83.89
+      "move": null
     },
     {
       "date": "2025-08-07",
       "reserves": 3332492.0,
       "onrrp": 77.961,
       "tga": 421043.0,
-      "sofr_iorb": -9465.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 7.44,
       "dealer_net": null,
-      "move": 80.15
+      "move": null
     },
     {
       "date": "2025-08-08",
       "reserves": 3332492.0,
       "onrrp": 80.303,
       "tga": 421043.0,
-      "sofr_iorb": -9430.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 7.44,
       "dealer_net": null,
-      "move": 79.2
+      "move": null
     },
     {
       "date": "2025-08-11",
       "reserves": 3332492.0,
       "onrrp": 82.214,
       "tga": 421043.0,
-      "sofr_iorb": -9568.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.44,
       "dealer_net": null,
-      "move": 81.76
+      "move": null
     },
     {
       "date": "2025-08-12",
       "reserves": 3332492.0,
       "onrrp": 57.492,
       "tga": 421043.0,
-      "sofr_iorb": -9638.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.44,
       "dealer_net": null,
-      "move": 77.42
+      "move": null
     },
     {
       "date": "2025-08-13",
       "reserves": 3320050.0,
       "onrrp": 57.202,
       "tga": 504304.0,
-      "sofr_iorb": -9504.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 7.58,
       "dealer_net": null,
-      "move": 77.31
+      "move": null
     },
     {
       "date": "2025-08-14",
       "reserves": 3320050.0,
       "onrrp": 28.818,
       "tga": 504304.0,
-      "sofr_iorb": -9341.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.58,
       "dealer_net": null,
-      "move": 76.77
+      "move": null
     },
     {
       "date": "2025-08-15",
       "reserves": 3320050.0,
       "onrrp": 33.757,
       "tga": 504304.0,
-      "sofr_iorb": -9326.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.58,
       "dealer_net": null,
-      "move": 76.66
+      "move": null
     },
     {
       "date": "2025-08-18",
       "reserves": 3320050.0,
       "onrrp": 38.24,
       "tga": 504304.0,
-      "sofr_iorb": -9264.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.58,
       "dealer_net": null,
-      "move": 81.82
+      "move": null
     },
     {
       "date": "2025-08-19",
       "reserves": 3320050.0,
       "onrrp": 22.344,
       "tga": 504304.0,
-      "sofr_iorb": -9269.0,
+      "sofr_iorb": -7.0,
       "bank_credit": 7.58,
       "dealer_net": null,
-      "move": 82.15
+      "move": null
     },
     {
       "date": "2025-08-20",
       "reserves": 3317292.0,
       "onrrp": 34.999,
       "tga": 519534.0,
-      "sofr_iorb": -9254.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 7.65,
       "dealer_net": null,
-      "move": 80.75
+      "move": null
     },
     {
       "date": "2025-08-21",
       "reserves": 3317292.0,
       "onrrp": 25.358,
       "tga": 519534.0,
-      "sofr_iorb": -9280.000000000002,
+      "sofr_iorb": -8.0,
       "bank_credit": 7.65,
       "dealer_net": null,
-      "move": 80.52
+      "move": null
     },
     {
       "date": "2025-08-22",
       "reserves": 3317292.0,
       "onrrp": 36.275,
       "tga": 519534.0,
-      "sofr_iorb": -9218.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.65,
       "dealer_net": null,
-      "move": 78.1
+      "move": null
     },
     {
       "date": "2025-08-25",
       "reserves": 3317292.0,
       "onrrp": 47.567,
       "tga": 519534.0,
-      "sofr_iorb": -9479.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 7.65,
       "dealer_net": null,
-      "move": 77.56
+      "move": null
     },
     {
       "date": "2025-08-26",
       "reserves": 3317292.0,
       "onrrp": 28.574,
       "tga": 519534.0,
-      "sofr_iorb": -9378.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 7.65,
       "dealer_net": null,
-      "move": 79.36
+      "move": null
     },
     {
       "date": "2025-08-27",
       "reserves": 3224967.0,
       "onrrp": 34.744,
       "tga": 589998.0,
-      "sofr_iorb": -9371.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 7.84,
       "dealer_net": null,
-      "move": 77.66
+      "move": null
     },
     {
       "date": "2025-08-28",
       "reserves": 3224967.0,
       "onrrp": 31.966,
       "tga": 589998.0,
-      "sofr_iorb": -9515.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.84,
       "dealer_net": null,
-      "move": 77.55
+      "move": null
     },
     {
       "date": "2025-08-29",
       "reserves": 3224967.0,
       "onrrp": 77.898,
       "tga": 589998.0,
-      "sofr_iorb": -9465.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 7.84,
       "dealer_net": null,
-      "move": 79.39
+      "move": null
     },
     {
       "date": "2025-09-02",
       "reserves": 3224967.0,
       "onrrp": 21.066,
       "tga": 589998.0,
-      "sofr_iorb": -9132.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 7.84,
       "dealer_net": null,
-      "move": 85.28
+      "move": null
     },
     {
       "date": "2025-09-03",
       "reserves": 3181701.0,
       "onrrp": 17.923,
       "tga": 597513.0,
-      "sofr_iorb": -9202.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 7.88,
       "dealer_net": null,
-      "move": 89.67
+      "move": null
     },
     {
       "date": "2025-09-04",
       "reserves": 3181701.0,
       "onrrp": 20.128,
       "tga": 597513.0,
-      "sofr_iorb": -9358.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 7.88,
       "dealer_net": null,
-      "move": 88.26
+      "move": null
     },
     {
       "date": "2025-09-05",
       "reserves": 3181701.0,
       "onrrp": 20.997,
       "tga": 597513.0,
-      "sofr_iorb": -9350.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 7.88,
       "dealer_net": null,
-      "move": 85.29
+      "move": null
     },
     {
       "date": "2025-09-08",
       "reserves": 3181701.0,
       "onrrp": 19.416,
       "tga": 597513.0,
-      "sofr_iorb": -9410.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 7.88,
       "dealer_net": null,
-      "move": 84.0
+      "move": null
     },
     {
       "date": "2025-09-09",
       "reserves": 3181701.0,
       "onrrp": 22.915,
       "tga": 597513.0,
-      "sofr_iorb": -9566.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 7.88,
       "dealer_net": null,
-      "move": 82.2
+      "move": null
     },
     {
       "date": "2025-09-10",
       "reserves": 3160774.0,
       "onrrp": 29.4,
       "tga": 672274.0,
-      "sofr_iorb": -9534.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 7.94,
       "dealer_net": null,
-      "move": 79.58
+      "move": null
     },
     {
       "date": "2025-09-11",
       "reserves": 3160774.0,
       "onrrp": 26.897,
       "tga": 672274.0,
-      "sofr_iorb": -9423.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 7.94,
       "dealer_net": null,
-      "move": 75.07
+      "move": null
     },
     {
       "date": "2025-09-12",
       "reserves": 3160774.0,
       "onrrp": 17.331,
       "tga": 672274.0,
-      "sofr_iorb": -9475.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 7.94,
       "dealer_net": null,
-      "move": 73.37
+      "move": null
     },
     {
       "date": "2025-09-15",
       "reserves": 3160774.0,
       "onrrp": 16.954,
       "tga": 672274.0,
-      "sofr_iorb": -9439.0,
+      "sofr_iorb": 11.0,
       "bank_credit": 7.94,
       "dealer_net": null,
-      "move": 76.88
+      "move": null
     },
     {
       "date": "2025-09-16",
       "reserves": 3160774.0,
       "onrrp": 18.817,
       "tga": 672274.0,
-      "sofr_iorb": -9567.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 7.94,
       "dealer_net": null,
-      "move": 77.09
+      "move": null
     },
     {
       "date": "2025-09-17",
       "reserves": 3073355.0,
       "onrrp": 13.963,
       "tga": 756376.0,
-      "sofr_iorb": -9579.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 8.04,
       "dealer_net": null,
-      "move": 75.95
+      "move": null
     },
     {
       "date": "2025-09-18",
       "reserves": 3073355.0,
       "onrrp": 13.707,
       "tga": 756376.0,
-      "sofr_iorb": -9558.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 8.04,
       "dealer_net": null,
-      "move": 71.91
+      "move": null
     },
     {
       "date": "2025-09-19",
       "reserves": 3073355.0,
       "onrrp": 11.363,
       "tga": 756376.0,
-      "sofr_iorb": -9634.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 8.04,
       "dealer_net": null,
-      "move": 72.51
+      "move": null
     },
     {
       "date": "2025-09-22",
       "reserves": 3073355.0,
       "onrrp": 14.173,
       "tga": 756376.0,
-      "sofr_iorb": -9644.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 8.04,
       "dealer_net": null,
-      "move": 75.8
+      "move": null
     },
     {
       "date": "2025-09-23",
       "reserves": 3073355.0,
       "onrrp": 14.402,
       "tga": 756376.0,
-      "sofr_iorb": -9577.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 8.04,
       "dealer_net": null,
-      "move": 75.66
+      "move": null
     },
     {
       "date": "2025-09-24",
       "reserves": 3002218.0,
       "onrrp": 29.172,
       "tga": 804856.0,
-      "sofr_iorb": -9566.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 8.14,
       "dealer_net": null,
-      "move": 75.13
+      "move": null
     },
     {
       "date": "2025-09-25",
       "reserves": 3002218.0,
       "onrrp": 25.369,
       "tga": 804856.0,
-      "sofr_iorb": -9550.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 8.14,
       "dealer_net": null,
-      "move": 75.44
+      "move": null
     },
     {
       "date": "2025-09-26",
       "reserves": 3002218.0,
       "onrrp": 48.073,
       "tga": 804856.0,
-      "sofr_iorb": -9335.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 8.14,
       "dealer_net": null,
-      "move": 74.38
+      "move": null
     },
     {
       "date": "2025-09-29",
       "reserves": 3002218.0,
       "onrrp": 56.22,
       "tga": 804856.0,
-      "sofr_iorb": -9328.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 8.14,
       "dealer_net": null,
-      "move": 75.51
+      "move": null
     },
     {
       "date": "2025-09-30",
       "reserves": 3002218.0,
       "onrrp": 49.071,
       "tga": 804856.0,
-      "sofr_iorb": -9371.0,
+      "sofr_iorb": 9.0,
       "bank_credit": 8.14,
       "dealer_net": null,
-      "move": 77.93
+      "move": null
     },
     {
       "date": "2025-10-01",
       "reserves": 2966094.0,
       "onrrp": 10.179,
       "tga": 805139.0,
-      "sofr_iorb": -9400.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 8.4,
       "dealer_net": null,
-      "move": 73.5
+      "move": null
     },
     {
       "date": "2025-10-02",
       "reserves": 2966094.0,
       "onrrp": 8.436,
       "tga": 805139.0,
-      "sofr_iorb": -9405.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 8.4,
       "dealer_net": null,
-      "move": 71.21
+      "move": null
     },
     {
       "date": "2025-10-03",
       "reserves": 2966094.0,
       "onrrp": 25.392,
       "tga": 805139.0,
-      "sofr_iorb": -9426.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 8.4,
       "dealer_net": null,
-      "move": 69.53
+      "move": null
     },
     {
       "date": "2025-10-06",
       "reserves": 2966094.0,
       "onrrp": 21.776,
       "tga": 805139.0,
-      "sofr_iorb": -9425.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 8.4,
       "dealer_net": null,
-      "move": 72.99
+      "move": null
     },
     {
       "date": "2025-10-07",
       "reserves": 2966094.0,
       "onrrp": 4.622,
       "tga": 805139.0,
-      "sofr_iorb": -9434.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 8.4,
       "dealer_net": null,
-      "move": 75.43
+      "move": null
     },
     {
       "date": "2025-10-08",
       "reserves": 2998471.0,
       "onrrp": 5.231,
       "tga": 807428.0,
-      "sofr_iorb": -9461.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 8.43,
       "dealer_net": null,
-      "move": 74.87
+      "move": null
     },
     {
       "date": "2025-10-09",
       "reserves": 2998471.0,
       "onrrp": 4.496,
       "tga": 807428.0,
-      "sofr_iorb": -9468.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 8.43,
       "dealer_net": null,
-      "move": 74.12
+      "move": null
     },
     {
       "date": "2025-10-10",
       "reserves": 2998471.0,
       "onrrp": 4.124,
       "tga": 807428.0,
-      "sofr_iorb": -9508.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 8.43,
       "dealer_net": null,
-      "move": 81.65
+      "move": null
     },
     {
       "date": "2025-10-14",
       "reserves": 2998471.0,
       "onrrp": 3.516,
       "tga": 807428.0,
-      "sofr_iorb": -9401.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 8.43,
       "dealer_net": null,
-      "move": 79.95
+      "move": null
     },
     {
       "date": "2025-10-15",
       "reserves": 3019028.0,
       "onrrp": 5.484,
       "tga": 809593.0,
-      "sofr_iorb": -9363.0,
+      "sofr_iorb": 14.0,
       "bank_credit": 8.67,
       "dealer_net": null,
-      "move": 75.11
+      "move": null
     },
     {
       "date": "2025-10-16",
       "reserves": 3019028.0,
       "onrrp": 6.96,
       "tga": 809593.0,
-      "sofr_iorb": -9388.000000000002,
+      "sofr_iorb": 15.0,
       "bank_credit": 8.67,
       "dealer_net": null,
-      "move": 81.23
+      "move": null
     },
     {
       "date": "2025-10-17",
       "reserves": 3019028.0,
       "onrrp": 4.102,
       "tga": 809593.0,
-      "sofr_iorb": -9325.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 8.67,
       "dealer_net": null,
-      "move": 78.62
+      "move": null
     },
     {
       "date": "2025-10-20",
       "reserves": 3019028.0,
       "onrrp": 5.931,
       "tga": 809593.0,
-      "sofr_iorb": -9301.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 8.67,
       "dealer_net": null,
-      "move": 77.22
+      "move": null
     },
     {
       "date": "2025-10-21",
       "reserves": 3019028.0,
       "onrrp": 4.699,
       "tga": 809593.0,
-      "sofr_iorb": -9302.0,
+      "sofr_iorb": 8.0,
       "bank_credit": 8.67,
       "dealer_net": null,
-      "move": 77.18
+      "move": null
     },
     {
       "date": "2025-10-22",
       "reserves": 2933037.0,
       "onrrp": 4.005,
       "tga": 908001.0,
-      "sofr_iorb": -9378.0,
+      "sofr_iorb": 6.0,
       "bank_credit": 8.79,
       "dealer_net": null,
-      "move": 75.49
+      "move": null
     },
     {
       "date": "2025-10-23",
       "reserves": 2933037.0,
       "onrrp": 6.941,
       "tga": 908001.0,
-      "sofr_iorb": -9403.0,
+      "sofr_iorb": 9.0,
       "bank_credit": 8.79,
       "dealer_net": null,
-      "move": 74.05
+      "move": null
     },
     {
       "date": "2025-10-24",
       "reserves": 2933037.0,
       "onrrp": 2.435,
       "tga": 908001.0,
-      "sofr_iorb": -9328.0,
+      "sofr_iorb": 9.0,
       "bank_credit": 8.79,
       "dealer_net": null,
-      "move": 68.94
+      "move": null
     },
     {
       "date": "2025-10-27",
       "reserves": 2933037.0,
       "onrrp": 10.642,
       "tga": 908001.0,
-      "sofr_iorb": -9472.0,
+      "sofr_iorb": 12.0,
       "bank_credit": 8.79,
       "dealer_net": null,
-      "move": 66.87
+      "move": null
     },
     {
       "date": "2025-10-28",
       "reserves": 2933037.0,
       "onrrp": 14.096,
       "tga": 908001.0,
-      "sofr_iorb": -9520.0,
+      "sofr_iorb": 16.0,
       "bank_credit": 8.79,
       "dealer_net": null,
-      "move": 67.3
+      "move": null
     },
     {
       "date": "2025-10-29",
       "reserves": 2848021.0,
       "onrrp": 19.504,
       "tga": 957990.0,
-      "sofr_iorb": -9629.0,
+      "sofr_iorb": 12.0,
       "bank_credit": 8.69,
       "dealer_net": null,
-      "move": 65.75
+      "move": null
     },
     {
       "date": "2025-10-30",
       "reserves": 2848021.0,
       "onrrp": 19.166,
       "tga": 957990.0,
-      "sofr_iorb": -9591.0,
+      "sofr_iorb": 14.0,
       "bank_credit": 8.69,
       "dealer_net": null,
-      "move": 66.88
+      "move": null
     },
     {
       "date": "2025-10-31",
       "reserves": 2848021.0,
       "onrrp": 51.802,
       "tga": 957990.0,
-      "sofr_iorb": -9536.0,
+      "sofr_iorb": 32.0,
       "bank_credit": 8.69,
       "dealer_net": null,
-      "move": 66.61
+      "move": null
     },
     {
       "date": "2025-11-03",
       "reserves": 2848021.0,
       "onrrp": 23.792,
       "tga": 957990.0,
-      "sofr_iorb": -9438.000000000002,
+      "sofr_iorb": 23.0,
       "bank_credit": 8.69,
       "dealer_net": null,
-      "move": 67.23
+      "move": null
     },
     {
       "date": "2025-11-04",
       "reserves": 2848021.0,
       "onrrp": 16.983,
       "tga": 957990.0,
-      "sofr_iorb": -9329.0,
+      "sofr_iorb": 10.0,
       "bank_credit": 8.69,
       "dealer_net": null,
-      "move": 68.02
+      "move": null
     },
     {
       "date": "2025-11-05",
       "reserves": 2862569.0,
       "onrrp": 12.814,
       "tga": 940979.0,
-      "sofr_iorb": -9319.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 8.87,
       "dealer_net": null,
-      "move": 72.42
+      "move": null
     },
     {
       "date": "2025-11-06",
       "reserves": 2862569.0,
       "onrrp": 10.754,
       "tga": 940979.0,
-      "sofr_iorb": -9349.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 8.87,
       "dealer_net": null,
-      "move": 72.44
+      "move": null
     },
     {
       "date": "2025-11-07",
       "reserves": 2862569.0,
       "onrrp": 4.903,
       "tga": 940979.0,
-      "sofr_iorb": -9113.999999999998,
+      "sofr_iorb": 3.0,
       "bank_credit": 8.87,
       "dealer_net": null,
-      "move": 74.41
+      "move": null
     },
     {
       "date": "2025-11-10",
       "reserves": 2862569.0,
       "onrrp": 7.152,
       "tga": 940979.0,
-      "sofr_iorb": -9186.999999999998,
+      "sofr_iorb": 5.0,
       "bank_credit": 8.87,
       "dealer_net": null,
-      "move": 78.86
+      "move": null
     },
     {
       "date": "2025-11-12",
       "reserves": 2855030.0,
       "onrrp": 5.886,
       "tga": 953816.0,
-      "sofr_iorb": -9240.0,
+      "sofr_iorb": 8.0,
       "bank_credit": 9.15,
       "dealer_net": null,
-      "move": 81.12
+      "move": null
     },
     {
       "date": "2025-11-13",
       "reserves": 2855030.0,
       "onrrp": 3.761,
       "tga": 953816.0,
-      "sofr_iorb": -9232.0,
+      "sofr_iorb": 10.0,
       "bank_credit": 9.15,
       "dealer_net": null,
-      "move": 79.1
+      "move": null
     },
     {
       "date": "2025-11-14",
       "reserves": 2855030.0,
       "onrrp": 1.559,
       "tga": 953816.0,
-      "sofr_iorb": -9214.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 9.15,
       "dealer_net": null,
-      "move": 79.71
+      "move": null
     },
     {
       "date": "2025-11-17",
       "reserves": 2855030.0,
       "onrrp": 3.172,
       "tga": 953816.0,
-      "sofr_iorb": -9361.0,
+      "sofr_iorb": 10.0,
       "bank_credit": 9.15,
       "dealer_net": null,
-      "move": 82.58
+      "move": null
     },
     {
       "date": "2025-11-18",
       "reserves": 2855030.0,
       "onrrp": 0.905,
       "tga": 953816.0,
-      "sofr_iorb": -9368.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 9.15,
       "dealer_net": null,
-      "move": 83.18
+      "move": null
     },
     {
       "date": "2025-11-19",
       "reserves": 2888643.0,
       "onrrp": 1.129,
       "tga": 941926.0,
-      "sofr_iorb": -9358.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 9.29,
       "dealer_net": null,
-      "move": 84.32
+      "move": null
     },
     {
       "date": "2025-11-20",
       "reserves": 2888643.0,
       "onrrp": 6.52,
       "tga": 941926.0,
-      "sofr_iorb": -9323.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 9.29,
       "dealer_net": null,
-      "move": 77.81
+      "move": null
     },
     {
       "date": "2025-11-21",
       "reserves": 2888643.0,
       "onrrp": 2.503,
       "tga": 941926.0,
-      "sofr_iorb": -9344.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 9.29,
       "dealer_net": null,
-      "move": 78.81
+      "move": null
     },
     {
       "date": "2025-11-24",
       "reserves": 2888643.0,
       "onrrp": 1.077,
       "tga": 941926.0,
-      "sofr_iorb": -9440.0,
+      "sofr_iorb": 6.0,
       "bank_credit": 9.29,
       "dealer_net": null,
-      "move": 76.82
+      "move": null
     },
     {
       "date": "2025-11-25",
       "reserves": 2888643.0,
       "onrrp": 2.314,
       "tga": 941926.0,
-      "sofr_iorb": -9479.0,
+      "sofr_iorb": 11.0,
       "bank_credit": 9.29,
       "dealer_net": null,
-      "move": 72.82
+      "move": null
     },
     {
       "date": "2025-11-26",
       "reserves": 2896586.0,
       "onrrp": 2.217,
       "tga": 903394.0,
-      "sofr_iorb": -9541.0,
+      "sofr_iorb": 15.0,
       "bank_credit": 9.54,
       "dealer_net": null,
-      "move": 71.9
+      "move": null
     },
     {
       "date": "2025-11-28",
       "reserves": 2896586.0,
       "onrrp": 7.561,
       "tga": 903394.0,
-      "sofr_iorb": -9430.0,
+      "sofr_iorb": 22.0,
       "bank_credit": 9.54,
       "dealer_net": null,
-      "move": 68.95
+      "move": null
     },
     {
       "date": "2025-12-01",
       "reserves": 2896586.0,
       "onrrp": 3.24,
       "tga": 903394.0,
-      "sofr_iorb": -9580.0,
+      "sofr_iorb": 22.0,
       "bank_credit": 9.54,
       "dealer_net": null,
-      "move": 71.35
+      "move": null
     },
     {
       "date": "2025-12-02",
       "reserves": 2896586.0,
       "onrrp": 5.62,
       "tga": 903394.0,
-      "sofr_iorb": -9611.0,
+      "sofr_iorb": 11.0,
       "bank_credit": 9.54,
       "dealer_net": null,
-      "move": 69.91
+      "move": null
     },
     {
       "date": "2025-12-03",
       "reserves": 2858284.0,
       "onrrp": 2.514,
       "tga": 937167.0,
-      "sofr_iorb": -9630.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 9.48,
       "dealer_net": null,
-      "move": 66.46
+      "move": null
     },
     {
       "date": "2025-12-04",
       "reserves": 2858284.0,
       "onrrp": 2.233,
       "tga": 937167.0,
-      "sofr_iorb": -9638.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 9.48,
       "dealer_net": null,
-      "move": 65.69
+      "move": null
     },
     {
       "date": "2025-12-05",
       "reserves": 2858284.0,
       "onrrp": 1.485,
       "tga": 937167.0,
-      "sofr_iorb": -9569.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 9.48,
       "dealer_net": null,
-      "move": 67.28
+      "move": null
     },
     {
       "date": "2025-12-08",
       "reserves": 2858284.0,
       "onrrp": 1.703,
       "tga": 937167.0,
-      "sofr_iorb": -9450.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 9.48,
       "dealer_net": null,
-      "move": 72.3
+      "move": null
     },
     {
       "date": "2025-12-09",
       "reserves": 2858284.0,
       "onrrp": 3.211,
       "tga": 937167.0,
-      "sofr_iorb": -9425.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 9.48,
       "dealer_net": null,
-      "move": 75.38
+      "move": null
     },
     {
       "date": "2025-12-10",
       "reserves": 2932112.0,
       "onrrp": 5.045,
       "tga": 858946.0,
-      "sofr_iorb": -9526.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 9.78,
       "dealer_net": null,
-      "move": 68.62
+      "move": null
     },
     {
       "date": "2025-12-11",
       "reserves": 2932112.0,
       "onrrp": 2.874,
       "tga": 858946.0,
-      "sofr_iorb": -9447.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 9.78,
       "dealer_net": null,
-      "move": 69.24
+      "move": null
     },
     {
       "date": "2025-12-12",
       "reserves": 2932112.0,
       "onrrp": 0.838,
       "tga": 858946.0,
-      "sofr_iorb": -9490.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 9.78,
       "dealer_net": null,
-      "move": 69.25
+      "move": null
     },
     {
       "date": "2025-12-15",
       "reserves": 2932112.0,
       "onrrp": 2.601,
       "tga": 858946.0,
-      "sofr_iorb": -9470.0,
+      "sofr_iorb": 10.0,
       "bank_credit": 9.78,
       "dealer_net": null,
-      "move": 73.31
+      "move": null
     },
     {
       "date": "2025-12-16",
       "reserves": 2932112.0,
       "onrrp": 1.554,
       "tga": 858946.0,
-      "sofr_iorb": -9572.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 9.78,
       "dealer_net": null,
-      "move": 67.14
+      "move": null
     },
     {
       "date": "2025-12-17",
       "reserves": 2959044.0,
       "onrrp": 10.361,
       "tga": 833093.0,
-      "sofr_iorb": -9678.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 9.89,
       "dealer_net": null,
-      "move": 62.74
+      "move": null
     },
     {
       "date": "2025-12-18",
       "reserves": 2959044.0,
       "onrrp": 11.708,
       "tga": 833093.0,
-      "sofr_iorb": -9815.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 9.89,
       "dealer_net": null,
-      "move": 60.01
+      "move": null
     },
     {
       "date": "2025-12-19",
       "reserves": 2959044.0,
       "onrrp": 3.047,
       "tga": 833093.0,
-      "sofr_iorb": -9804.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 9.89,
       "dealer_net": null,
-      "move": 59.41
+      "move": null
     },
     {
       "date": "2025-12-22",
       "reserves": 2959044.0,
       "onrrp": 1.523,
       "tga": 833093.0,
-      "sofr_iorb": -9808.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 9.89,
       "dealer_net": null,
-      "move": 61.7
+      "move": null
     },
     {
       "date": "2025-12-23",
       "reserves": 2959044.0,
       "onrrp": 5.893,
       "tga": 833093.0,
-      "sofr_iorb": -9779.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 9.89,
       "dealer_net": null,
-      "move": 61.17
+      "move": null
     },
     {
       "date": "2025-12-24",
       "reserves": 2955581.0,
       "onrrp": 4.803,
       "tga": 837120.0,
-      "sofr_iorb": -9769.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 10.04,
       "dealer_net": null,
-      "move": 59.48
+      "move": null
     },
     {
       "date": "2025-12-26",
       "reserves": 2955581.0,
       "onrrp": 20.339,
       "tga": 837120.0,
-      "sofr_iorb": -9826.0,
+      "sofr_iorb": 11.0,
       "bank_credit": 10.04,
       "dealer_net": null,
-      "move": 58.5
+      "move": null
     },
     {
       "date": "2025-12-29",
       "reserves": 2955581.0,
       "onrrp": 10.551,
       "tga": 837120.0,
-      "sofr_iorb": -9939.0,
+      "sofr_iorb": 12.0,
       "bank_credit": 10.04,
       "dealer_net": null,
-      "move": 59.21
+      "move": null
     },
     {
       "date": "2025-12-30",
       "reserves": 2955581.0,
       "onrrp": 12.605,
       "tga": 837120.0,
-      "sofr_iorb": -9933.000000000002,
+      "sofr_iorb": 6.0,
       "bank_credit": 10.04,
       "dealer_net": null,
-      "move": 63.98
+      "move": null
     },
     {
       "date": "2025-12-31",
       "reserves": 2957410.0,
       "onrrp": 105.993,
       "tga": 837306.0,
-      "sofr_iorb": -9917.0,
+      "sofr_iorb": 22.0,
       "bank_credit": 10.03,
       "dealer_net": null,
-      "move": 63.96
+      "move": null
     },
     {
       "date": "2026-01-02",
       "reserves": 2957410.0,
       "onrrp": 5.667,
       "tga": 837306.0,
-      "sofr_iorb": -9957.0,
+      "sofr_iorb": 10.0,
       "bank_credit": 10.03,
       "dealer_net": null,
-      "move": 62.36
+      "move": null
     },
     {
       "date": "2026-01-05",
       "reserves": 2957410.0,
       "onrrp": 6.485,
       "tga": 837306.0,
-      "sofr_iorb": -10008.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 10.03,
       "dealer_net": null,
-      "move": 64.71
+      "move": null
     },
     {
       "date": "2026-01-06",
       "reserves": 2957410.0,
       "onrrp": 2.582,
       "tga": 837306.0,
-      "sofr_iorb": -10095.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 10.03,
       "dealer_net": null,
-      "move": 65.82
+      "move": null
     },
     {
       "date": "2026-01-07",
       "reserves": 2996379.0,
       "onrrp": 4.582,
       "tga": 796148.0,
-      "sofr_iorb": -10333.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 10.36,
       "dealer_net": null,
-      "move": 66.15
+      "move": null
     },
     {
       "date": "2026-01-08",
       "reserves": 2996379.0,
       "onrrp": 3.083,
       "tga": 796148.0,
-      "sofr_iorb": -10219.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 10.36,
       "dealer_net": null,
-      "move": 66.94
+      "move": null
     },
     {
       "date": "2026-01-09",
       "reserves": 2996379.0,
       "onrrp": 3.28,
       "tga": 796148.0,
-      "sofr_iorb": -10252.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 10.36,
       "dealer_net": null,
-      "move": 61.55
+      "move": null
     },
     {
       "date": "2026-01-12",
       "reserves": 2996379.0,
       "onrrp": 3.402,
       "tga": 796148.0,
-      "sofr_iorb": -10371.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 10.36,
       "dealer_net": null,
-      "move": 62.9
+      "move": null
     },
     {
       "date": "2026-01-13",
       "reserves": 2996379.0,
       "onrrp": 3.277,
       "tga": 796148.0,
-      "sofr_iorb": -10290.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 10.36,
       "dealer_net": null,
-      "move": 60.79
+      "move": null
     },
     {
       "date": "2026-01-14",
       "reserves": 3049630.0,
       "onrrp": 3.223,
       "tga": 779175.0,
-      "sofr_iorb": -10305.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 10.61,
       "dealer_net": null,
-      "move": 58.11
+      "move": null
     },
     {
       "date": "2026-01-15",
       "reserves": 3049630.0,
       "onrrp": 2.003,
       "tga": 779175.0,
-      "sofr_iorb": -10245.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 10.61,
       "dealer_net": null,
-      "move": 56.14
+      "move": null
     },
     {
       "date": "2026-01-16",
       "reserves": 3049630.0,
       "onrrp": 1.222,
       "tga": 779175.0,
-      "sofr_iorb": -10182.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 10.61,
       "dealer_net": null,
-      "move": 58.05
+      "move": null
     },
     {
       "date": "2026-01-20",
       "reserves": 3049630.0,
       "onrrp": 3.506,
       "tga": 779175.0,
-      "sofr_iorb": -9968.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 10.61,
       "dealer_net": null,
-      "move": 66.67
+      "move": null
     },
     {
       "date": "2026-01-21",
       "reserves": 2954903.0,
       "onrrp": 3.344,
       "tga": 869261.0,
-      "sofr_iorb": -9913.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 11.02,
       "dealer_net": null,
-      "move": 59.56
+      "move": null
     },
     {
       "date": "2026-01-22",
       "reserves": 2954903.0,
       "onrrp": 2.058,
       "tga": 869261.0,
-      "sofr_iorb": -9941.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 11.02,
       "dealer_net": null,
-      "move": 56.5
+      "move": null
     },
     {
       "date": "2026-01-23",
       "reserves": 2954903.0,
       "onrrp": 0.927,
       "tga": 869261.0,
-      "sofr_iorb": -10038.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 11.02,
       "dealer_net": null,
-      "move": 56.25
+      "move": null
     },
     {
       "date": "2026-01-26",
       "reserves": 2954903.0,
       "onrrp": 1.489,
       "tga": 869261.0,
-      "sofr_iorb": -9934.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 11.02,
       "dealer_net": null,
-      "move": 55.77
+      "move": null
     },
     {
       "date": "2026-01-27",
       "reserves": 2954903.0,
       "onrrp": 1.253,
       "tga": 869261.0,
-      "sofr_iorb": -9954.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 11.02,
       "dealer_net": null,
-      "move": 56.12
+      "move": null
     },
     {
       "date": "2026-01-28",
       "reserves": 2901600.0,
       "onrrp": 1.103,
       "tga": 923042.0,
-      "sofr_iorb": -9903.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 10.99,
       "dealer_net": null,
-      "move": 57.43
+      "move": null
     },
     {
       "date": "2026-01-29",
       "reserves": 2901600.0,
       "onrrp": 2.852,
       "tga": 923042.0,
-      "sofr_iorb": -10080.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 10.99,
       "dealer_net": null,
-      "move": 60.73
+      "move": null
     },
     {
       "date": "2026-01-30",
       "reserves": 2901600.0,
       "onrrp": 9.629,
       "tga": 923042.0,
-      "sofr_iorb": -9968.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 10.99,
       "dealer_net": null,
-      "move": 59.2
+      "move": null
     },
     {
       "date": "2026-02-02",
       "reserves": 2901600.0,
       "onrrp": 10.415,
       "tga": 923042.0,
-      "sofr_iorb": -9885.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 10.99,
       "dealer_net": null,
-      "move": 59.3
+      "move": null
     },
     {
       "date": "2026-02-03",
       "reserves": 2901600.0,
       "onrrp": 1.785,
       "tga": 923042.0,
-      "sofr_iorb": -9816.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 10.99,
       "dealer_net": null,
-      "move": 57.54
+      "move": null
     },
     {
       "date": "2026-02-04",
       "reserves": 2925170.0,
       "onrrp": 2.414,
       "tga": 908773.0,
-      "sofr_iorb": -9844.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 11.37,
       "dealer_net": null,
-      "move": 57.51
+      "move": null
     },
     {
       "date": "2026-02-05",
       "reserves": 2925170.0,
       "onrrp": 1.748,
       "tga": 908773.0,
-      "sofr_iorb": -9633.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 11.37,
       "dealer_net": null,
-      "move": 62.16
+      "move": null
     },
     {
       "date": "2026-02-06",
       "reserves": 2925170.0,
       "onrrp": 3.111,
       "tga": 908773.0,
-      "sofr_iorb": -9494.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 11.37,
       "dealer_net": null,
-      "move": 63.62
+      "move": null
     },
     {
       "date": "2026-02-09",
       "reserves": 2925170.0,
       "onrrp": 1.306,
       "tga": 908773.0,
-      "sofr_iorb": -9551.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 11.37,
       "dealer_net": null,
-      "move": 62.74
+      "move": null
     },
     {
       "date": "2026-02-10",
       "reserves": 2925170.0,
       "onrrp": 1.447,
       "tga": 908773.0,
-      "sofr_iorb": -9547.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 11.37,
       "dealer_net": null,
-      "move": 64.55
+      "move": null
     },
     {
       "date": "2026-02-11",
       "reserves": 2939557.0,
       "onrrp": 1.048,
       "tga": 915306.0,
-      "sofr_iorb": -9547.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 11.7,
       "dealer_net": null,
-      "move": 61.35
+      "move": null
     },
     {
       "date": "2026-02-12",
       "reserves": 2939557.0,
       "onrrp": 2.844,
       "tga": 915306.0,
-      "sofr_iorb": -9518.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 11.7,
       "dealer_net": null,
-      "move": 68.57
+      "move": null
     },
     {
       "date": "2026-02-13",
       "reserves": 2939557.0,
       "onrrp": 0.377,
       "tga": 915306.0,
-      "sofr_iorb": -9247.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 11.7,
       "dealer_net": null,
-      "move": 70.1
+      "move": null
     },
     {
       "date": "2026-02-17",
       "reserves": 2939557.0,
       "onrrp": 0.441,
       "tga": 915306.0,
-      "sofr_iorb": -9189.0,
+      "sofr_iorb": 6.0,
       "bank_credit": 11.7,
       "dealer_net": null,
-      "move": 68.84
+      "move": null
     },
     {
       "date": "2026-02-18",
       "reserves": 2949804.0,
       "onrrp": 0.856,
       "tga": 912727.0,
-      "sofr_iorb": -9132.0,
+      "sofr_iorb": 8.0,
       "bank_credit": 11.84,
       "dealer_net": null,
-      "move": 64.19
+      "move": null
     },
     {
       "date": "2026-02-19",
       "reserves": 2949804.0,
       "onrrp": 0.632,
       "tga": 912727.0,
-      "sofr_iorb": -9127.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 11.84,
       "dealer_net": null,
-      "move": 68.03
+      "move": null
     },
     {
       "date": "2026-02-20",
       "reserves": 2949804.0,
       "onrrp": 0.496,
       "tga": 912727.0,
-      "sofr_iorb": -9113.000000000002,
+      "sofr_iorb": 1.0,
       "bank_credit": 11.84,
       "dealer_net": null,
-      "move": 64.27
+      "move": null
     },
     {
       "date": "2026-02-23",
       "reserves": 2949804.0,
       "onrrp": 0.877,
       "tga": 912727.0,
-      "sofr_iorb": -9153.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 11.84,
       "dealer_net": null,
-      "move": 68.03
+      "move": null
     },
     {
       "date": "2026-02-24",
       "reserves": 2949804.0,
       "onrrp": 0.917,
       "tga": 912727.0,
-      "sofr_iorb": -9203.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 11.84,
       "dealer_net": null,
-      "move": 65.27
+      "move": null
     },
     {
       "date": "2026-02-25",
       "reserves": 2965765.0,
       "onrrp": 1.159,
       "tga": 887612.0,
-      "sofr_iorb": -9369.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 11.88,
       "dealer_net": null,
-      "move": 62.43
+      "move": null
     },
     {
       "date": "2026-02-26",
       "reserves": 2965765.0,
       "onrrp": 3.796,
       "tga": 887612.0,
-      "sofr_iorb": -9344.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 11.88,
       "dealer_net": null,
-      "move": 63.93
+      "move": null
     },
     {
       "date": "2026-02-27",
       "reserves": 2965765.0,
       "onrrp": 16.318,
       "tga": 887612.0,
-      "sofr_iorb": -9336.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 11.88,
       "dealer_net": null,
-      "move": 73.38
+      "move": null
     },
     {
       "date": "2026-03-02",
       "reserves": 2965765.0,
       "onrrp": 0.627,
       "tga": 887612.0,
-      "sofr_iorb": -9410.0,
+      "sofr_iorb": 6.0,
       "bank_credit": 11.88,
       "dealer_net": null,
-      "move": 73.21
+      "move": null
     },
     {
       "date": "2026-03-03",
       "reserves": 2965765.0,
       "onrrp": 1.203,
       "tga": 887612.0,
-      "sofr_iorb": -9386.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 11.88,
       "dealer_net": null,
-      "move": 77.75
+      "move": null
     },
     {
       "date": "2026-03-04",
       "reserves": 3015531.0,
       "onrrp": 0.877,
       "tga": 832053.0,
-      "sofr_iorb": -9369.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 12.13,
       "dealer_net": null,
-      "move": 70.03
+      "move": null
     },
     {
       "date": "2026-03-05",
       "reserves": 3015531.0,
       "onrrp": 2.793,
       "tga": 832053.0,
-      "sofr_iorb": -9494.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 12.13,
       "dealer_net": null,
-      "move": 74.53
+      "move": null
     },
     {
       "date": "2026-03-06",
       "reserves": 3015531.0,
       "onrrp": 1.512,
       "tga": 832053.0,
-      "sofr_iorb": -9635.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 12.13,
       "dealer_net": null,
-      "move": 81.26
+      "move": null
     },
     {
       "date": "2026-03-09",
       "reserves": 3015531.0,
       "onrrp": 0.332,
       "tga": 832053.0,
-      "sofr_iorb": -9776.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 12.13,
       "dealer_net": null,
-      "move": 79.74
+      "move": null
     },
     {
       "date": "2026-03-10",
       "reserves": 3015531.0,
       "onrrp": 0.278,
       "tga": 832053.0,
-      "sofr_iorb": -9849.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 12.13,
       "dealer_net": null,
-      "move": 76.33
+      "move": null
     },
     {
       "date": "2026-03-11",
       "reserves": 3037665.0,
       "onrrp": 0.552,
       "tga": 838186.0,
-      "sofr_iorb": -9887.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 12.33,
       "dealer_net": null,
-      "move": 78.59
+      "move": null
     },
     {
       "date": "2026-03-12",
       "reserves": 3037665.0,
       "onrrp": 0.137,
       "tga": 838186.0,
-      "sofr_iorb": -10188.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 12.33,
       "dealer_net": null,
-      "move": 95.3
+      "move": null
     },
     {
       "date": "2026-03-13",
       "reserves": 3037665.0,
       "onrrp": 0.427,
       "tga": 838186.0,
-      "sofr_iorb": -10101.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 12.33,
       "dealer_net": null,
-      "move": 91.17
+      "move": null
     },
     {
       "date": "2026-03-16",
       "reserves": 3037665.0,
       "onrrp": 0.582,
       "tga": 838186.0,
-      "sofr_iorb": -10085.0,
+      "sofr_iorb": 5.0,
       "bank_credit": 12.33,
       "dealer_net": null,
-      "move": 85.25
+      "move": null
     },
     {
       "date": "2026-03-17",
       "reserves": 3037665.0,
       "onrrp": 0.797,
       "tga": 838186.0,
-      "sofr_iorb": -10197.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 12.33,
       "dealer_net": null,
-      "move": 79.23
+      "move": null
     },
     {
       "date": "2026-03-18",
       "reserves": 3019995.0,
       "onrrp": 0.698,
       "tga": 853052.0,
-      "sofr_iorb": -10105.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 12.37,
       "dealer_net": null,
-      "move": 81.25
+      "move": null
     },
     {
       "date": "2026-03-19",
       "reserves": 3019995.0,
       "onrrp": 0.637,
       "tga": 853052.0,
-      "sofr_iorb": -10089.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 12.37,
       "dealer_net": null,
-      "move": 84.88
+      "move": null
     },
     {
       "date": "2026-03-20",
       "reserves": 3019995.0,
       "onrrp": 0.822,
       "tga": 853052.0,
-      "sofr_iorb": -10169.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 12.37,
       "dealer_net": null,
-      "move": 108.84
+      "move": null
     },
     {
       "date": "2026-03-23",
       "reserves": 3019995.0,
       "onrrp": 0.857,
       "tga": 853052.0,
-      "sofr_iorb": -10169.999999999998,
+      "sofr_iorb": -3.0,
       "bank_credit": 12.37,
       "dealer_net": null,
-      "move": 98.15
+      "move": null
     },
     {
       "date": "2026-03-24",
       "reserves": 3019995.0,
       "onrrp": 1.123,
       "tga": 853052.0,
-      "sofr_iorb": -10133.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 12.37,
       "dealer_net": null,
-      "move": 103.01
+      "move": null
     },
     {
       "date": "2026-03-25",
       "reserves": 2993955.0,
       "onrrp": 0.777,
       "tga": 874077.0,
-      "sofr_iorb": -9948.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 12.67,
       "dealer_net": null,
-      "move": 97.59
+      "move": null
     },
     {
       "date": "2026-03-26",
       "reserves": 2993955.0,
       "onrrp": 0.885,
       "tga": 874077.0,
-      "sofr_iorb": -10116.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 12.67,
       "dealer_net": null,
-      "move": 115.02
+      "move": null
     },
     {
       "date": "2026-03-27",
       "reserves": 2993955.0,
       "onrrp": 0.992,
       "tga": 874077.0,
-      "sofr_iorb": -10091.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 12.67,
       "dealer_net": null,
-      "move": 111.95
+      "move": null
     },
     {
       "date": "2026-03-30",
       "reserves": 2993955.0,
       "onrrp": 0.752,
       "tga": 874077.0,
-      "sofr_iorb": -10095.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 12.67,
       "dealer_net": null,
-      "move": 108.33
+      "move": null
     },
     {
       "date": "2026-03-31",
       "reserves": 2993955.0,
       "onrrp": 15.782,
       "tga": 874077.0,
-      "sofr_iorb": -10010.0,
+      "sofr_iorb": 3.0,
       "bank_credit": 12.67,
       "dealer_net": null,
-      "move": 96.05
+      "move": null
     },
     {
       "date": "2026-04-01",
       "reserves": 3026708.0,
       "onrrp": 2.107,
       "tga": 847718.0,
-      "sofr_iorb": -10100.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 13.17,
       "dealer_net": null,
-      "move": 90.19
+      "move": null
     },
     {
       "date": "2026-04-02",
       "reserves": 3026708.0,
       "onrrp": 0.327,
       "tga": 847718.0,
-      "sofr_iorb": -10080.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 13.17,
       "dealer_net": null,
-      "move": 84.41
-    },
-    {
-      "date": "2026-04-03",
-      "reserves": 3026708.0,
-      "onrrp": 0.327,
-      "tga": 847718.0,
-      "sofr_iorb": -10080.0,
-      "bank_credit": 13.17,
-      "dealer_net": null,
-      "move": 81.78
+      "move": null
     },
     {
       "date": "2026-04-06",
       "reserves": 3026708.0,
       "onrrp": 0.227,
       "tga": 847718.0,
-      "sofr_iorb": -10086.999999999998,
+      "sofr_iorb": 0.0,
       "bank_credit": 13.17,
       "dealer_net": null,
-      "move": 81.68
+      "move": null
     },
     {
       "date": "2026-04-07",
       "reserves": 3026708.0,
       "onrrp": 15.345,
       "tga": 847718.0,
-      "sofr_iorb": -10097.999999999998,
+      "sofr_iorb": -3.0,
       "bank_credit": 13.17,
       "dealer_net": null,
-      "move": 83.15
+      "move": null
     },
     {
       "date": "2026-04-08",
       "reserves": 3116247.0,
       "onrrp": 0.177,
       "tga": 748376.0,
-      "sofr_iorb": -10036.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 13.35,
       "dealer_net": null,
-      "move": 78.74
+      "move": null
     },
     {
       "date": "2026-04-09",
       "reserves": 3116247.0,
       "onrrp": 0.402,
       "tga": 748376.0,
-      "sofr_iorb": -9801.0,
+      "sofr_iorb": -8.0,
       "bank_credit": 13.35,
       "dealer_net": null,
-      "move": 74.01
+      "move": null
     },
     {
       "date": "2026-04-10",
       "reserves": 3116247.0,
       "onrrp": 0.507,
       "tga": 748376.0,
-      "sofr_iorb": -9849.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 13.35,
       "dealer_net": null,
-      "move": 72.15
+      "move": null
     },
     {
       "date": "2026-04-13",
       "reserves": 3116247.0,
       "onrrp": 0.227,
       "tga": 748376.0,
-      "sofr_iorb": -9966.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 13.35,
       "dealer_net": null,
-      "move": 74.42
+      "move": null
     },
     {
       "date": "2026-04-14",
       "reserves": 3116247.0,
       "onrrp": 0.306,
       "tga": 748376.0,
-      "sofr_iorb": -9867.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 13.35,
       "dealer_net": null,
-      "move": 74.35
+      "move": null
     },
     {
       "date": "2026-04-15",
       "reserves": 3129588.0,
       "onrrp": 0.223,
       "tga": 751354.0,
-      "sofr_iorb": -9939.0,
+      "sofr_iorb": 7.0,
       "bank_credit": 13.41,
       "dealer_net": null,
-      "move": 67.94
+      "move": null
     },
     {
       "date": "2026-04-16",
       "reserves": 3129588.0,
       "onrrp": 0.158,
       "tga": 751354.0,
-      "sofr_iorb": -10155.0,
+      "sofr_iorb": 2.0,
       "bank_credit": 13.41,
       "dealer_net": null,
-      "move": 65.89
+      "move": null
     },
     {
       "date": "2026-04-17",
       "reserves": 3129588.0,
       "onrrp": 0.137,
       "tga": 751354.0,
-      "sofr_iorb": -10110.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 13.41,
       "dealer_net": null,
-      "move": 65.7
+      "move": null
     },
     {
       "date": "2026-04-20",
       "reserves": 3129588.0,
       "onrrp": 0.503,
       "tga": 751354.0,
-      "sofr_iorb": -10211.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 13.41,
       "dealer_net": null,
-      "move": 67.9
+      "move": null
     },
     {
       "date": "2026-04-21",
       "reserves": 3129588.0,
       "onrrp": 0.807,
       "tga": 751354.0,
-      "sofr_iorb": -10207.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 13.41,
       "dealer_net": null,
-      "move": 70.78
+      "move": null
     },
     {
       "date": "2026-04-22",
       "reserves": 2901825.0,
       "onrrp": 0.538,
       "tga": 1005968.0,
-      "sofr_iorb": -10233.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 13.49,
       "dealer_net": null,
-      "move": 69.88
+      "move": null
     },
     {
       "date": "2026-04-23",
       "reserves": 2901825.0,
       "onrrp": 0.114,
       "tga": 1005968.0,
-      "sofr_iorb": -10199.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 13.49,
       "dealer_net": null,
-      "move": 67.7
+      "move": null
     },
     {
       "date": "2026-04-24",
       "reserves": 2901825.0,
       "onrrp": 0.082,
       "tga": 1005968.0,
-      "sofr_iorb": -10185.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 13.49,
       "dealer_net": null,
-      "move": 66.97
+      "move": null
     },
     {
       "date": "2026-04-27",
       "reserves": 2901825.0,
       "onrrp": 0.363,
       "tga": 1005968.0,
-      "sofr_iorb": -10207.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 13.49,
       "dealer_net": null,
-      "move": 68.42
+      "move": null
     },
     {
       "date": "2026-04-28",
       "reserves": 2901825.0,
       "onrrp": 0.643,
       "tga": 1005968.0,
-      "sofr_iorb": -10158.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 13.49,
       "dealer_net": null,
-      "move": 68.68
+      "move": null
     },
     {
       "date": "2026-04-29",
       "reserves": 2918599.0,
       "onrrp": 0.747,
       "tga": 981929.0,
-      "sofr_iorb": -10222.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 13.55,
       "dealer_net": null,
-      "move": 74.33
+      "move": null
     },
     {
       "date": "2026-04-30",
       "reserves": 2918599.0,
       "onrrp": 8.261,
       "tga": 981929.0,
-      "sofr_iorb": -10283.0,
+      "sofr_iorb": 1.0,
       "bank_credit": 13.55,
       "dealer_net": null,
-      "move": 72.07
+      "move": null
     },
     {
       "date": "2026-05-01",
       "reserves": 2918599.0,
       "onrrp": 0.607,
       "tga": 981929.0,
-      "sofr_iorb": -10346.0,
+      "sofr_iorb": -1.0,
       "bank_credit": 13.55,
       "dealer_net": null,
-      "move": 70.41
+      "move": null
     },
     {
       "date": "2026-05-04",
       "reserves": 2918599.0,
       "onrrp": 0.618,
       "tga": 981929.0,
-      "sofr_iorb": -10419.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 13.55,
       "dealer_net": null,
-      "move": 77.86
+      "move": null
     },
     {
       "date": "2026-05-05",
       "reserves": 2918599.0,
       "onrrp": 1.122,
       "tga": 981929.0,
-      "sofr_iorb": -10427.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 13.55,
       "dealer_net": null,
-      "move": 76.78
+      "move": null
     },
     {
       "date": "2026-05-06",
       "reserves": 3032588.0,
       "onrrp": 1.633,
       "tga": 877761.0,
-      "sofr_iorb": -10636.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 13.66,
       "dealer_net": null,
-      "move": 70.63
+      "move": null
     },
     {
       "date": "2026-05-07",
       "reserves": 3032588.0,
       "onrrp": 0.773,
       "tga": 877761.0,
-      "sofr_iorb": -10641.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 13.66,
       "dealer_net": null,
-      "move": 72.24
+      "move": null
     },
     {
       "date": "2026-05-08",
       "reserves": 3032588.0,
       "onrrp": 0.787,
       "tga": 877761.0,
-      "sofr_iorb": -10618.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 13.66,
       "dealer_net": null,
-      "move": 67.25
+      "move": null
     },
     {
       "date": "2026-05-11",
       "reserves": 3032588.0,
       "onrrp": 1.133,
       "tga": 877761.0,
-      "sofr_iorb": -10731.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 13.66,
       "dealer_net": null,
-      "move": 70.74
+      "move": null
     },
     {
       "date": "2026-05-12",
       "reserves": 3032588.0,
       "onrrp": 1.199,
       "tga": 877761.0,
-      "sofr_iorb": -10603.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 13.66,
       "dealer_net": null,
-      "move": 71.68
+      "move": null
     },
     {
       "date": "2026-05-13",
       "reserves": 3102810.0,
       "onrrp": 3.719,
       "tga": 838584.0,
-      "sofr_iorb": -10693.0,
+      "sofr_iorb": -6.0,
       "bank_credit": 13.86,
       "dealer_net": null,
-      "move": 70.24
+      "move": null
     },
     {
       "date": "2026-05-14",
       "reserves": 3102810.0,
       "onrrp": 2.034,
       "tga": 838584.0,
-      "sofr_iorb": -10650.0,
+      "sofr_iorb": -9.0,
       "bank_credit": 13.86,
       "dealer_net": null,
-      "move": 69.63
+      "move": null
     },
     {
       "date": "2026-05-15",
       "reserves": 3102810.0,
       "onrrp": 0.647,
       "tga": 838584.0,
-      "sofr_iorb": -10511.0,
+      "sofr_iorb": -10.0,
       "bank_credit": 13.86,
       "dealer_net": null,
-      "move": 79.87
+      "move": null
     },
     {
       "date": "2026-05-18",
       "reserves": 3102810.0,
       "onrrp": 7.193,
       "tga": 838584.0,
-      "sofr_iorb": -10418.0,
+      "sofr_iorb": -12.0,
       "bank_credit": 13.86,
       "dealer_net": null,
-      "move": 86.07
+      "move": null
     },
     {
       "date": "2026-05-19",
       "reserves": 3102810.0,
       "onrrp": 12.911,
       "tga": 838584.0,
-      "sofr_iorb": -10385.0,
+      "sofr_iorb": -14.0,
       "bank_credit": 13.86,
       "dealer_net": null,
-      "move": 85.32
+      "move": null
     },
     {
       "date": "2026-05-20",
       "reserves": 3129562.0,
       "onrrp": 24.867,
       "tga": 781293.0,
-      "sofr_iorb": -10346.0,
+      "sofr_iorb": -15.0,
       "bank_credit": 14.15,
       "dealer_net": null,
-      "move": 81.53
+      "move": null
     },
     {
       "date": "2026-05-21",
       "reserves": 3129562.0,
       "onrrp": 3.281,
       "tga": 781293.0,
-      "sofr_iorb": -10197.0,
+      "sofr_iorb": -14.0,
       "bank_credit": 14.15,
       "dealer_net": null,
-      "move": 79.72
+      "move": null
     },
     {
       "date": "2026-05-22",
       "reserves": 3129562.0,
       "onrrp": 0.965,
       "tga": 781293.0,
-      "sofr_iorb": -10238.000000000002,
+      "sofr_iorb": -10.0,
       "bank_credit": 14.15,
       "dealer_net": null,
-      "move": 78.43
+      "move": null
     },
     {
       "date": "2026-05-26",
       "reserves": 3129562.0,
       "onrrp": 1.787,
       "tga": 781293.0,
-      "sofr_iorb": -10114.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.15,
       "dealer_net": null,
-      "move": 74.95
+      "move": null
     },
     {
       "date": "2026-05-27",
       "reserves": 3066560.0,
       "onrrp": 1.853,
       "tga": 830296.0,
-      "sofr_iorb": -10137.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.17,
       "dealer_net": null,
-      "move": 70.9
+      "move": null
     },
     {
       "date": "2026-05-28",
       "reserves": 3066560.0,
       "onrrp": 1.163,
       "tga": 830296.0,
-      "sofr_iorb": -10146.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 14.17,
       "dealer_net": null,
-      "move": 69.74
+      "move": null
     },
     {
       "date": "2026-05-29",
       "reserves": 3066560.0,
       "onrrp": 11.677,
       "tga": 830296.0,
-      "sofr_iorb": -10161.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.17,
       "dealer_net": null,
-      "move": 70.22
+      "move": null
     },
     {
       "date": "2026-06-01",
       "reserves": 3066560.0,
       "onrrp": 1.302,
       "tga": 830296.0,
-      "sofr_iorb": -10090.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 14.17,
       "dealer_net": null,
-      "move": 73.33
+      "move": null
     },
     {
       "date": "2026-06-02",
       "reserves": 3066560.0,
       "onrrp": 2.502,
       "tga": 830296.0,
-      "sofr_iorb": -10160.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.17,
       "dealer_net": null,
-      "move": 73.43
+      "move": null
     },
     {
       "date": "2026-06-03",
       "reserves": 3013902.0,
       "onrrp": 2.062,
       "tga": 875713.0,
-      "sofr_iorb": -10005.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 14.07,
       "dealer_net": null,
-      "move": 73.58
+      "move": null
     },
     {
       "date": "2026-06-04",
       "reserves": 3013902.0,
       "onrrp": 1.122,
       "tga": 875713.0,
-      "sofr_iorb": -9781.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 14.07,
       "dealer_net": null,
-      "move": 71.16
+      "move": null
     },
     {
       "date": "2026-06-05",
       "reserves": 3013902.0,
       "onrrp": 0.761,
       "tga": 875713.0,
-      "sofr_iorb": -9810.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.07,
       "dealer_net": null,
-      "move": 75.2
+      "move": null
     },
     {
       "date": "2026-06-08",
       "reserves": 3013902.0,
       "onrrp": 1.832,
       "tga": 875713.0,
-      "sofr_iorb": -9655.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.07,
       "dealer_net": null,
-      "move": 76.98
+      "move": null
     },
     {
       "date": "2026-06-09",
       "reserves": 3013902.0,
       "onrrp": 0.577,
       "tga": 875713.0,
-      "sofr_iorb": -9707.0,
+      "sofr_iorb": -5.0,
       "bank_credit": 14.07,
       "dealer_net": null,
-      "move": 77.03
+      "move": null
     },
     {
       "date": "2026-06-10",
       "reserves": 3080723.0,
       "onrrp": 0.387,
       "tga": 828122.0,
-      "sofr_iorb": -9786.999999999998,
+      "sofr_iorb": -6.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 73.95
+      "move": null
     },
     {
       "date": "2026-06-11",
       "reserves": 3080723.0,
       "onrrp": 0.46,
       "tga": 828122.0,
-      "sofr_iorb": -9763.000000000002,
+      "sofr_iorb": -5.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 69.45
+      "move": null
     },
     {
       "date": "2026-06-12",
       "reserves": 3080723.0,
       "onrrp": 0.454,
       "tga": 828122.0,
-      "sofr_iorb": -9774.0,
+      "sofr_iorb": 0.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 69.36
+      "move": null
     },
     {
       "date": "2026-06-15",
       "reserves": 3080723.0,
       "onrrp": 0.581,
       "tga": 828122.0,
-      "sofr_iorb": -9849.0,
+      "sofr_iorb": 4.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 69.38
+      "move": null
     },
     {
       "date": "2026-06-16",
       "reserves": 3080723.0,
       "onrrp": 10.721,
       "tga": 828122.0,
-      "sofr_iorb": -9758.0,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 67.28
+      "move": null
     },
     {
       "date": "2026-06-17",
       "reserves": 3033444.0,
       "onrrp": 6.828,
       "tga": 880713.0,
-      "sofr_iorb": -9552.000000000002,
+      "sofr_iorb": -2.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 70.66
+      "move": null
     },
     {
       "date": "2026-06-18",
       "reserves": 3033444.0,
       "onrrp": 0.251,
       "tga": 880713.0,
-      "sofr_iorb": -9566.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 65.39
+      "move": null
     },
     {
       "date": "2026-06-22",
       "reserves": 3033444.0,
       "onrrp": 3.925,
       "tga": 880713.0,
-      "sofr_iorb": -9463.0,
+      "sofr_iorb": -4.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 70.02
+      "move": null
     },
     {
       "date": "2026-06-23",
       "reserves": 3033444.0,
       "onrrp": 6.484,
       "tga": 880713.0,
-      "sofr_iorb": -9381.0,
+      "sofr_iorb": -3.0,
       "bank_credit": 14.41,
       "dealer_net": null,
-      "move": 68.78
+      "move": null
     }
   ],
   "meta": {
