@@ -32,7 +32,7 @@ OUTPUT_DIR   = SCRIPT_DIR / "dashboards" / "public" / "data"
 OUTPUT_FILE  = OUTPUT_DIR / "liquidity_data.json"
 
 FRED_BASE    = "https://api.stlouisfed.org/fred/series/observations"
-FRED_API_KEY = os.environ.get("FRED_API_KEY", "")   # set in .env or env var
+FRED_API_KEY = os.environ.get("FRED_API_KEY", "04542c270d076d3003ee81def2a96990")
 
 # Bloomberg tickers → series keys
 BBG_TICKERS = {
@@ -85,14 +85,23 @@ def fetch_bloomberg(start_date: str, end_date: str) -> dict:
 
     result = {}
 
+    import pandas as pd
+
+    def _bbg_to_dict(df):
+        """Normalise xbbg output → {date_str: value} dict."""
+        if df is None or df.empty:
+            return {}
+        if isinstance(df.columns, pd.MultiIndex):
+            df = df.droplevel(1, axis=1)
+        df.index = pd.to_datetime(df.index).strftime("%Y-%m-%d")
+        return df.iloc[:, 0].dropna().to_dict()
+
     # Fetch simple tickers
     tickers = {k: v for k, v in BBG_TICKERS.items() if v is not None}
     for key, ticker in tickers.items():
         try:
             df = blp.bdh(ticker, "PX_LAST", start_date, end_date)
-            df = df.droplevel(1, axis=1)
-            df.index = df.index.strftime("%Y-%m-%d")
-            result[key] = df.iloc[:, 0].dropna().to_dict()
+            result[key] = _bbg_to_dict(df)
             print(f"  [Bloomberg] ✓ {key} ({ticker}) — {len(result[key])} obs")
         except Exception as e:
             print(f"  [Bloomberg] ✗ {key} ({ticker}): {e}")
@@ -102,11 +111,9 @@ def fetch_bloomberg(start_date: str, end_date: str) -> dict:
     try:
         sofr_df = blp.bdh(BBG_SOFR, "PX_LAST", start_date, end_date)
         iorb_df = blp.bdh(BBG_IORB, "PX_LAST", start_date, end_date)
-        sofr_df = sofr_df.droplevel(1, axis=1)
-        iorb_df = iorb_df.droplevel(1, axis=1)
-        sofr_df.index = sofr_df.index.strftime("%Y-%m-%d")
-        iorb_df.index = iorb_df.index.strftime("%Y-%m-%d")
-        spread = (sofr_df.iloc[:, 0] - iorb_df.iloc[:, 0]) * 100  # → bps
+        sofr = pd.Series(_bbg_to_dict(sofr_df))
+        iorb = pd.Series(_bbg_to_dict(iorb_df))
+        spread = (sofr - iorb) * 100  # → bps
         result["sofr_iorb"] = spread.dropna().to_dict()
         print(f"  [Bloomberg] ✓ sofr_iorb (computed) — {len(result['sofr_iorb'])} obs")
     except Exception as e:
