@@ -1,0 +1,74 @@
+{
+  "repository": "cclimon/macro",
+  "description": "Daily trade ideas log — extended each session",
+  "last_updated": "2026-06-24",
+  "ideas": [
+    {
+      "date": "2026-06-24",
+      "entries": [
+        {
+          "id": "2026-06-24-001",
+          "asset_class": "Rates",
+          "direction": "Long duration",
+          "instrument": "UST",
+          "trade": "Maintain high duration hedge ratio — UST rally to continue",
+          "entry_level": null,
+          "rationale": "Rapid bull steepening of the yield curve and excessive stretching in the 2s10s segment leave long duration vulnerable to structural mean reversion.",
+          "status": "Active",
+          "tags": ["UST", "duration", "yield curve", "2s10s", "bull steepening"]
+        },
+        {
+          "id": "2026-06-24-002",
+          "asset_class": "FX",
+          "direction": "Buy ZAR carry",
+          "instrument": "USD/ZAR",
+          "trade": "Buy ZAR carry via options or spot/forward",
+          "entry_level": {
+            "spot_forward": "16.645 at 0.45% USD",
+            "options": "2m 16.50 erko 16.00, USD 25mn notional"
+          },
+          "rationale": "Spot positioning offers a high-yielding entry point to capture South African carry on specific macro-driven sessions.",
+          "status": "Active",
+          "tags": ["ZAR", "carry", "FX", "South Africa", "options", "ERKO"]
+        },
+        {
+          "id": "2026-06-24-003",
+          "asset_class": "Credit",
+          "direction": "Buy protection",
+          "instrument": "South Africa CDS",
+          "trade": "Buy South Africa CDS",
+          "entry_level": {
+            "spread_bps": 126
+          },
+          "rationale": "Sovereign risk protection is underpriced relative to the macro backdrop.",
+          "status": "Active",
+          "tags": ["CDS", "South Africa", "sovereign", "credit", "EM"]
+        },
+        {
+          "id": "2026-06-24-004",
+          "asset_class": "Credit",
+          "direction": "Pay",
+          "instrument": "iTraxx Crossover",
+          "trade": "Pay iTraxx Crossover",
+          "entry_level": {
+            "spread_bps": 245
+          },
+          "rationale": "Asymmetry favours paying as spreads sit near compressed levels — excess compression leaves limited carry versus the risk of a widening.",
+          "status": "Active",
+          "tags": ["iTraxx", "Crossover", "credit", "HY", "Europe", "spread compression"]
+        },
+        {
+          "id": "2026-06-24-005",
+          "asset_class": "EM Fixed Income",
+          "direction": "Buy",
+          "instrument": "Eurobonds",
+          "trade": "Buy Kenya and Egypt Eurobonds",
+          "entry_level": null,
+          "rationale": "Declining oil prices and rallying global rates support BoP improvement in both economies, providing a constructive backdrop for sovereign spread compression.",
+          "status": "Active",
+          "tags": ["Kenya", "Egypt", "Eurobonds", "EM", "BoP", "oil", "sovereign"]
+        }
+      ]
+    }
+  ]
+}
