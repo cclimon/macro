@@ -107,18 +107,8 @@ def fetch_bloomberg(start_date: str, end_date: str) -> dict:
             print(f"  [Bloomberg] ✗ {key} ({ticker}): {e}")
             result[key] = {}
 
-    # Compute SOFR − IORB spread
-    try:
-        sofr_df = blp.bdh(BBG_SOFR, "PX_LAST", start_date, end_date)
-        iorb_df = blp.bdh(BBG_IORB, "PX_LAST", start_date, end_date)
-        sofr = pd.Series(_bbg_to_dict(sofr_df))
-        iorb = pd.Series(_bbg_to_dict(iorb_df))
-        spread = (sofr - iorb) * 100  # → bps
-        result["sofr_iorb"] = spread.dropna().to_dict()
-        print(f"  [Bloomberg] ✓ sofr_iorb (computed) — {len(result['sofr_iorb'])} obs")
-    except Exception as e:
-        print(f"  [Bloomberg] ✗ sofr_iorb: {e}")
-        result["sofr_iorb"] = {}
+    # sofr_iorb: IORB Index is a price index on BBG, not the rate — always use FRED
+    result["sofr_iorb"] = {}
 
     return result
 
