@@ -1,7 +1,7 @@
 {
   "repository": "cclimon/macro",
   "description": "Daily trade ideas log — extended each session",
-  "last_updated": "2026-06-24",
+  "last_updated": "2026-06-25",
   "ideas": [
     {
       "date": "2026-06-24",
@@ -67,6 +67,63 @@
           "rationale": "Declining oil prices and rallying global rates support BoP improvement in both economies, providing a constructive backdrop for sovereign spread compression.",
           "status": "Active",
           "tags": ["Kenya", "Egypt", "Eurobonds", "EM", "BoP", "oil", "sovereign"]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "entries": [
+        {
+          "id": "2026-06-25-001",
+          "asset_class": "FX",
+          "topic": "CB divergence",
+          "direction": "Short vega / range structure",
+          "instrument": "CHF/JPY",
+          "trade": "Buy PS 200/195, sell call 215 — zero cost structure",
+          "entry_level": {
+            "spot_ref": "199.25",
+            "structure": "1y buy put spread 200/195, sell call 215",
+            "cost": "zero cost",
+            "greek": "short vega"
+          },
+          "rationale": "SNB defends excessive CHF appreciation; BOJ defends excessive JPY depreciation. Dual CB intervention anchors CHFJPY in a range. Stable spot and positive forward curve allow monetisation via roll (roll to spot). Short vega is the structural expression given compressed realised vol in the cross.",
+          "status": "Active",
+          "tags": ["CHFJPY", "SNB", "BOJ", "CB divergence", "options", "put spread", "short vega", "carry", "roll"]
+        },
+        {
+          "id": "2026-06-25-002",
+          "asset_class": "FX",
+          "topic": "JPY consumption / BOJ hike delay",
+          "direction": "Buy USD/JPY topside",
+          "instrument": "USD/JPY",
+          "trade": "1m 162 call EKO 166 @ 0.34% USD offer",
+          "entry_level": {
+            "structure": "1m call 162 EKO 166",
+            "premium_pct": "0.34% USD",
+            "dx": "nil"
+          },
+          "rationale": "Japan government draft blueprint urges BOJ to support private demand and keep rates low, citing coordination provisions. Dovish political pressure complicates further BOJ tightening. BOJ held at 1% (31y high) with July 30-31 meeting expected on hold. Yen near multi-decade lows (161.73). Less hikes likely add topside pressure to USDJPY. EKO at 166 caps cost while targeting the trend move.",
+          "rationale_source": "Reuters / Takaichi blueprint draft, 2026-06-25",
+          "status": "Active",
+          "tags": ["USDJPY", "JPY", "BOJ", "Takaichi", "options", "EKO", "call", "CB divergence", "hike delay"]
+        },
+        {
+          "id": "2026-06-25-003",
+          "asset_class": "FX",
+          "topic": "JPY consumption / BOJ hike delay",
+          "direction": "Buy USD/JPY topside",
+          "instrument": "USD/JPY",
+          "trade": "2m 166 digital call at 15.25% (TV 18%)",
+          "entry_level": {
+            "structure": "2m digital call 166",
+            "premium_pct": "15.25%",
+            "theoretical_value_pct": "18%",
+            "note": "Cheap to TV — will look well when added to book"
+          },
+          "rationale": "Same macro driver as 2026-06-25-002. Cheap digital (15.25% vs 18% TV) offers attractive risk/reward for a sustained USDJPY break above 166 on continued BOJ passivity. Complements the 1m EKO structure with longer tenor and binary payoff.",
+          "rationale_source": "Reuters / Takaichi blueprint draft, 2026-06-25",
+          "status": "Active",
+          "tags": ["USDJPY", "JPY", "BOJ", "digital", "options", "166", "binary", "hike delay", "CB divergence"]
         }
       ]
     }
