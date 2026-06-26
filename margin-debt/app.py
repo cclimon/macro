@@ -27,6 +27,7 @@ MUTED  = "#7d8590"
 DIMMED = "#484f58"
 FG     = "#e6edf3"
 MONO   = "'Courier New', monospace"
+SANS   = "'Inter', 'Segoe UI', Arial, sans-serif"
 
 COLORS = ["#58a6ff", "#e05c4b", "#d29922", "#3fb950"]
 FILL   = ["rgba(88,166,255,0.07)", "rgba(224,92,75,0.07)",
@@ -47,11 +48,11 @@ html, body, [class*="css"], .stApp {{
     font-family: {MONO}; font-size: 11px; color: {MUTED};
 }}
 .panel-label {{
-    font-family: {MONO}; font-size: 9px; letter-spacing: .14em;
+    font-family: {SANS}; font-size: 10px; letter-spacing: .10em;
     color: {MUTED}; text-transform: uppercase; margin-bottom: 2px;
 }}
 .panel-stat {{
-    font-family: {MONO}; font-size: 10px; color: {MUTED}; margin-bottom: 6px;
+    font-family: {SANS}; font-size: 12px; color: {MUTED}; margin-bottom: 6px;
 }}
 .sbox {{
     background: {CARD}; padding: 14px 16px;
@@ -62,9 +63,9 @@ html, body, [class*="css"], .stApp {{
     color: {MUTED}; text-transform: uppercase; margin-bottom: 5px;
 }}
 .sval {{ font-size: 18px; letter-spacing: -.02em; margin-bottom: 4px; }}
-.ssub {{ font-family: {MONO}; font-size: 9px; color: {MUTED}; line-height: 1.6; }}
+.ssub {{ font-family: {SANS}; font-size: 11px; color: {MUTED}; line-height: 1.6; }}
 .source {{
-    font-family: {MONO}; font-size: 9px; color: {DIMMED};
+    font-family: {SANS}; font-size: 11px; color: {MUTED};
     text-align: right; margin-top: 8px;
 }}
 div[data-testid="stHorizontalBlock"] {{ gap: 2px !important; }}
@@ -158,7 +159,7 @@ def make_chart(
                 line_dash="dot",
                 annotation=dict(
                     text=label,
-                    font=dict(size=8, color="rgba(255,255,255,0.22)", family="Courier New"),
+                    font=dict(size=10, color="rgba(255,255,255,0.45)", family=SANS),
                     bgcolor="rgba(0,0,0,0)",
                     borderwidth=0,
                     yref="paper", y=1.0,
@@ -192,10 +193,10 @@ def make_chart(
         margin=dict(t=4, b=4, l=4, r=52),
         showlegend=False,
         hovermode="x unified",
-        font=dict(color=FG, family="Courier New"),
+        font=dict(color=FG, family=SANS),
         xaxis=dict(
             showgrid=False,
-            tickfont=dict(size=8, color=DIMMED, family="Courier New"),
+            tickfont=dict(size=11, color="#ffffff", family=SANS),
             tickformat="%Y" if (years is None or years >= 10) else "%b %y",
             dtick="M12" if (years is None or years >= 5) else "M3",
             linecolor=BORDER,
@@ -204,7 +205,7 @@ def make_chart(
             side="right",
             showgrid=True,
             gridcolor=BORDER,
-            tickfont=dict(size=9, color=DIMMED, family="Courier New"),
+            tickfont=dict(size=11, color="#ffffff", family=SANS),
             tickformat=tick_fmt,
             tickprefix=y_prefix,
             ticksuffix=y_suffix,
