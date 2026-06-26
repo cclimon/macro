@@ -59,13 +59,13 @@ html, body, [class*="css"], .stApp {{
     border: 1px solid {BORDER}; border-radius: 2px; height: 100%;
 }}
 .slabel {{
-    font-family: {MONO}; font-size: 9px; letter-spacing: .14em;
-    color: {MUTED}; text-transform: uppercase; margin-bottom: 5px;
+    font-family: {SANS}; font-size: 11px; letter-spacing: .10em;
+    color: #ffffff; text-transform: uppercase; margin-bottom: 5px;
 }}
-.sval {{ font-size: 18px; letter-spacing: -.02em; margin-bottom: 4px; }}
-.ssub {{ font-family: {SANS}; font-size: 11px; color: {MUTED}; line-height: 1.6; }}
+.sval {{ font-family: {SANS}; font-size: 18px; letter-spacing: -.02em; margin-bottom: 4px; }}
+.ssub {{ font-family: {SANS}; font-size: 11px; color: #ffffff; line-height: 1.6; }}
 .source {{
-    font-family: {SANS}; font-size: 11px; color: {MUTED};
+    font-family: {SANS}; font-size: 11px; color: #ffffff;
     text-align: right; margin-top: 8px;
 }}
 div[data-testid="stHorizontalBlock"] {{ gap: 2px !important; }}
