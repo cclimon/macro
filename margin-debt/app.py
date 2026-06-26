@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {{
     color: #ffffff !important;
     font-family: {SANS} !important;
 }}
+h2 {{ font-size: 32px !important; font-weight: 600 !important; }}
 
 /* General Streamlit text elements */
 p, div[data-testid="stMarkdownContainer"] p,
