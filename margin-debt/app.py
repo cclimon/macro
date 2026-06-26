@@ -84,7 +84,6 @@ h1, h2, h3, h4, h5, h6 {{
     color: #ffffff !important;
     font-family: {SANS} !important;
 }}
-h2 {{ font-size: 32px !important; font-weight: 600 !important; }}
 
 /* General Streamlit text elements */
 p, div[data-testid="stMarkdownContainer"] p,
@@ -133,7 +132,10 @@ st.markdown(
     f'{df.index[0]:%b %Y} – {df.index[-1]:%b %Y}</div>',
     unsafe_allow_html=True,
 )
-st.markdown("## Margin Debt — Normalized Analysis")
+st.markdown(
+    f'<div style="font-family:{SANS}; font-size:36px; font-weight:700; color:#ffffff; margin:8px 0 4px 0;">Margin Debt — Normalized Analysis</div>',
+    unsafe_allow_html=True,
+)
 st.markdown(
     '<div class="subtitle">'
     "Debit/GDP uses BEA nominal GDP (quarterly SAAR, forward-filled monthly) · "
