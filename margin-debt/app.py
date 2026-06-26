@@ -69,6 +69,31 @@ html, body, [class*="css"], .stApp {{
     text-align: right; margin-top: 8px;
 }}
 div[data-testid="stHorizontalBlock"] {{ gap: 2px !important; }}
+
+/* Radio buttons (range selector) */
+div[data-testid="stRadio"] label,
+div[data-testid="stRadio"] p,
+div[data-testid="stRadio"] span {{
+    color: #ffffff !important;
+    font-family: {SANS} !important;
+    font-size: 13px !important;
+}}
+
+/* All markdown headers */
+h1, h2, h3, h4, h5, h6 {{
+    color: #ffffff !important;
+    font-family: {SANS} !important;
+}}
+
+/* General Streamlit text elements */
+p, div[data-testid="stMarkdownContainer"] p,
+div[data-testid="stMarkdownContainer"] li,
+div[data-testid="stMarkdownContainer"] span,
+label, .stTextInput label, .stSelectbox label {{
+    color: #ffffff !important;
+    font-family: {SANS} !important;
+    font-size: 13px !important;
+}}
 </style>
 """, unsafe_allow_html=True)
 
