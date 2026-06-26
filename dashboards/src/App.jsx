@@ -16,6 +16,11 @@ const externalDashboards = [
     label: 'G10 FX Signal Dashboard',
     tag: 'Live · Streamlit',
   },
+  {
+    href: 'https://cclimon-margin-debt.streamlit.app',
+    label: 'FINRA — Margin Debt Analysis',
+    tag: 'Live · Streamlit',
+  },
 ]
 
 const linkStyle = { fontSize: 18, color: '#4fa3e8', textDecoration: 'none' }
