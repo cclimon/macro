@@ -23,6 +23,13 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+_LOGO = "https://raw.githubusercontent.com/cclimon/macro/main/dashboards/src/assets/centileLogo.png"
+st.markdown(
+    f'<div style="position:fixed;top:14px;right:20px;z-index:9999;">'
+    f'<img src="{_LOGO}" style="height:36px;opacity:0.9;"></div>',
+    unsafe_allow_html=True,
+)
+
 # ── Dark theme palette ────────────────────────────────────────────────────────
 
 BULL_COLOR  = "#00e676"   # green

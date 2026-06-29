@@ -97,6 +97,13 @@ label, .stTextInput label, .stSelectbox label {{
 </style>
 """, unsafe_allow_html=True)
 
+LOGO_URL = "https://raw.githubusercontent.com/cclimon/macro/main/dashboards/src/assets/centileLogo.png"
+st.markdown(
+    f'<div style="position:fixed;top:14px;right:20px;z-index:9999;">'
+    f'<img src="{LOGO_URL}" style="height:36px;opacity:0.9;"></div>',
+    unsafe_allow_html=True,
+)
+
 # ── Events for vertical annotations ──────────────────────────────────────────
 
 EVENTS = [

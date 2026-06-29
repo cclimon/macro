@@ -63,6 +63,11 @@ function Home() {
 export default function App() {
   return (
     <BrowserRouter basename="/macro">
+      <img
+        src={centileLogo}
+        alt="Centile"
+        style={{ position: 'fixed', top: 16, right: 20, height: 36, zIndex: 1000, opacity: 0.9 }}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/israel-gov" element={<IsraelGov />} />
