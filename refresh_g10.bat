@@ -7,7 +7,7 @@ echo ============================================
 echo.
 
 echo [1/3] Fetching data from Bloomberg...
-python macro\main.py
+"C:\Users\CarlosCliment\AppData\Local\Programs\Python\Python312\python.exe" macro\main.py
 if errorlevel 1 (
     echo.
     echo ERROR: Data fetch failed. Is Bloomberg Terminal open and logged in?
