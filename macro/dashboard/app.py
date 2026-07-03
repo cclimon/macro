@@ -255,14 +255,13 @@ with tab_carry:
         carry_cols = {
             "rate_diff_bps":    "Rate Diff (bps)",
             "real_carry_bps":   "Real Carry (bps)",
-            "fwd_carry_ann_pct":"Fwd Carry Ann %",
             "cpi_diff_pct":     "CPI Diff %",
         }
         c_disp = carry.rename(columns=carry_cols)[list(carry_cols.values())]
 
         def style_carry(df):
             styles = pd.DataFrame("", index=df.index, columns=df.columns)
-            for col in ["Rate Diff (bps)", "Real Carry (bps)", "Fwd Carry Ann %"]:
+            for col in ["Rate Diff (bps)", "Real Carry (bps)"]:
                 if col in df.columns:
                     styles[col] = df[col].apply(
                         lambda v: f"color:{BULL_COLOR};font-weight:600" if (not pd.isna(v) and v > 0)

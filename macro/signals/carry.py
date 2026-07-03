@@ -54,39 +54,14 @@ def rolling_vol_series(prices: pd.Series, window: int = 21) -> pd.Series:
     return log_ret.rolling(window).std() * np.sqrt(252) * 100
 
 
-# ── Forward-implied carry ─────────────────────────────────────────────────────
-
-def forward_implied_carry(spot: float, fwd: float, tenor_months: int = 3) -> float:
-    """
-    Annualised carry implied by forward vs spot.
-    carry (%) = (fwd/spot - 1) * (12 / tenor_months) * 100
-    Positive = base currency at premium (earns carry if long base).
-    """
-    if pd.isna(spot) or pd.isna(fwd) or spot == 0:
-        return np.nan
-    return ((fwd / spot) - 1) * (12 / tenor_months) * 100
-
-
 # ── Build carry signals ────────────────────────────────────────────────────────
 
 def build_carry_signals(
     spot_df: pd.DataFrame,
     rates_3m: pd.Series,           # latest 3m rate per currency (%)
     cpi_latest: pd.Series,         # latest CPI YoY per currency (%)
-    fwd_latest: pd.Series,         # latest 3m forward per pair (spot units)
-    spot_latest: pd.Series,        # latest spot per pair
 ) -> pd.DataFrame:
-    """
-    Build all carry signals for each G10 pair.
-
-    Parameters
-    ----------
-    spot_df     : historical spot prices (columns = pair names)
-    rates_3m    : latest 3m rate, indexed by currency code (USD, EUR, …)
-    cpi_latest  : latest CPI YoY, indexed by currency code
-    fwd_latest  : latest 3m fwd price, indexed by pair name
-    spot_latest : latest spot price, indexed by pair name
-    """
+    """Build all carry signals for each G10 pair."""
     records = []
 
     for pair in G10_PAIRS:
@@ -126,11 +101,6 @@ def build_carry_signals(
         rv_series = rolling_vol_series(px)
         regime = vol_regime(rvol_1m, rv_series)
 
-        # ── Forward implied carry ─────────────────────────────────────────────
-        spot_px = spot_latest.get(pair, np.nan)
-        fwd_px = fwd_latest.get(pair, np.nan)
-        fwd_carry = forward_implied_carry(spot_px, fwd_px, 3)
-
         records.append(
             {
                 "pair": pair,
@@ -144,7 +114,6 @@ def build_carry_signals(
                 "carry_vol_1m": round(carry_vol_1m, 3) if not pd.isna(carry_vol_1m) else np.nan,
                 "carry_vol_3m": round(carry_vol_3m, 3) if not pd.isna(carry_vol_3m) else np.nan,
                 "vol_regime": regime,
-                "fwd_carry_ann_pct": round(fwd_carry, 3) if not pd.isna(fwd_carry) else np.nan,
             }
         )
 

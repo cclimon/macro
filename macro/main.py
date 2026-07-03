@@ -7,7 +7,7 @@ import logging
 from datetime import datetime
 
 from config.pairs import (
-    SPOT_TICKERS, FORWARD_TICKERS,
+    SPOT_TICKERS,
     RATE_3M_TICKERS, OIS_TICKERS, CPI_TICKERS,
     PMI_TICKERS, POLICY_RATE_TICKERS,
     HIST_DAYS,
@@ -51,16 +51,7 @@ def run_eod() -> dict:
         spot_df = spot_close   # alias used by carry, charts, and return dict
 
         # Latest spot
-        spot_latest = spot_close.iloc[-1].rename(index=lambda x: x)
-
-        # ── 2. FX forwards ────────────────────────────────────────────────────
-        logger.info("Fetching FX forwards …")
-        fwd_df = bbg.bdp(list(FORWARD_TICKERS.values()), "PX_LAST")
-        fwd_latest = fwd_df["PX_LAST"].rename(
-            index={v: k for k, v in FORWARD_TICKERS.items()}
-        )
-
-        # ── 3. Rates ──────────────────────────────────────────────────────────
+        # ── 2. Rates ──────────────────────────────────────────────────────────
         logger.info("Fetching 3m rates …")
         rates_3m = fetch_latest_rates(bbg, RATE_3M_TICKERS)
 
@@ -94,8 +85,6 @@ def run_eod() -> dict:
             spot_df=spot_df,
             rates_3m=rates_3m,
             cpi_latest=cpi_latest,
-            fwd_latest=fwd_latest,
-            spot_latest=spot_latest,
         )
 
         logger.info("Building macro signals …")
