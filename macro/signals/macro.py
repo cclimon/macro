@@ -12,12 +12,6 @@ def split_pair(pair: str):
 
 # ── PMI composite differential ────────────────────────────────────────────────
 
-def pmi_composite(pmi_mfg: float, pmi_svc: float) -> float:
-    """Simple average of mfg and services PMI; use mfg only if svc unavailable."""
-    vals = [v for v in [pmi_mfg, pmi_svc] if not pd.isna(v)]
-    return np.mean(vals) if vals else np.nan
-
-
 def pmi_signal(diff: float) -> str:
     """Direction label based on PMI composite differential."""
     if pd.isna(diff):
@@ -56,6 +50,8 @@ CB_BIAS = {
     "CAD": -1,   # BoC — cutting
     "AUD": 0,    # RBA — on hold
     "NZD": -1,   # RBNZ — cutting
+    "NOK": 0,    # Norges Bank — on hold
+    "SEK": -1,   # Riksbank — cutting
 }
 
 CB_BIAS_LABEL = {1: "Hawkish 🦅", 0: "Neutral ⚖️", -1: "Dovish 🕊️"}
@@ -74,12 +70,10 @@ def latest_momentum(series: pd.Series, periods: int = 1) -> float:
 # ── Build macro signals ───────────────────────────────────────────────────────
 
 def build_macro_signals(
-    pmi_mfg: pd.Series,        # latest mfg PMI per currency
-    pmi_svc: pd.Series,        # latest svc PMI per currency
+    pmi: pd.Series,            # latest composite PMI per currency
     cpi_latest: pd.Series,     # latest CPI YoY per currency
     policy_rate: pd.Series,    # latest policy rate per currency
-    pmi_mfg_hist: pd.DataFrame = None,   # monthly history for momentum
-    pmi_svc_hist: pd.DataFrame = None,
+    pmi_hist: pd.DataFrame = None,   # monthly history for momentum
     cpi_hist: pd.DataFrame = None,
 ) -> pd.DataFrame:
     """
@@ -91,18 +85,18 @@ def build_macro_signals(
     for pair in G10_PAIRS:
         base, quote = split_pair(pair)
 
-        # ── PMI composite ─────────────────────────────────────────────────────
-        pmi_b = pmi_composite(pmi_mfg.get(base, np.nan), pmi_svc.get(base, np.nan))
-        pmi_q = pmi_composite(pmi_mfg.get(quote, np.nan), pmi_svc.get(quote, np.nan))
+        # ── PMI differential ──────────────────────────────────────────────────
+        pmi_b = pmi.get(base, np.nan)
+        pmi_q = pmi.get(quote, np.nan)
         pmi_diff = (pmi_b - pmi_q) if not (pd.isna(pmi_b) or pd.isna(pmi_q)) else np.nan
 
-        # ── PMI momentum (MoM change in composite) ───────────────────────────
+        # ── PMI momentum (MoM change) ─────────────────────────────────────────
         pmi_mom_b = np.nan
         pmi_mom_q = np.nan
-        if pmi_mfg_hist is not None and base in pmi_mfg_hist.columns:
-            pmi_mom_b = latest_momentum(pmi_mfg_hist[base])
-        if pmi_mfg_hist is not None and quote in pmi_mfg_hist.columns:
-            pmi_mom_q = latest_momentum(pmi_mfg_hist[quote])
+        if pmi_hist is not None and base in pmi_hist.columns:
+            pmi_mom_b = latest_momentum(pmi_hist[base])
+        if pmi_hist is not None and quote in pmi_hist.columns:
+            pmi_mom_q = latest_momentum(pmi_hist[quote])
         pmi_mom_diff = (
             (pmi_mom_b - pmi_mom_q)
             if not (pd.isna(pmi_mom_b) or pd.isna(pmi_mom_q))

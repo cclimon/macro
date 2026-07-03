@@ -5,6 +5,7 @@ G10_PAIRS = [
     "EURUSD", "GBPUSD", "USDJPY", "USDCHF", "USDCAD",
     "AUDUSD", "NZDUSD", "EURGBP", "EURJPY", "GBPJPY",
     "AUDJPY", "CADJPY", "NZDCHF", "EURCHF", "AUDNZD",
+    "EURNOK", "USDNOK", "EURSEK", "USDSEK",
 ]
 
 # Spot FX tickers — Bloomberg Curncy
@@ -14,7 +15,7 @@ SPOT_TICKERS = {pair: f"{pair} Curncy" for pair in G10_PAIRS}
 FORWARD_TICKERS = {pair: f"{pair}3M Curncy" for pair in G10_PAIRS}
 
 # G10 currencies involved
-G10_CURRENCIES = ["USD", "EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD"]
+G10_CURRENCIES = ["USD", "EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD", "NOK", "SEK"]
 
 # OIS / Overnight rate tickers per currency
 OIS_TICKERS = {
@@ -26,18 +27,22 @@ OIS_TICKERS = {
     "CAD": "CORRA Index",       # CAD CORRA
     "AUD": "RBATCTR Index",     # AUD RBA Cash Target
     "NZD": "RBNZOCR Index",     # NZD OCR
+    "NOK": "NOWA Index",        # NOK NOWA overnight
+    "SEK": "SWESTR Index",      # SEK SWESTR overnight
 }
 
-# 3m money market / T-bill rates per currency
+# 3m OIS / IBOR rates per currency
 RATE_3M_TICKERS = {
-    "USD": "US0003M Index",     # USD 3m LIBOR/SOFR proxy
-    "EUR": "EUR003M Index",     # EUR 3m Euribor
-    "GBP": "BP0003M Index",     # GBP 3m LIBOR
-    "JPY": "JY0003M Index",     # JPY 3m TIBOR
-    "CHF": "SF0003M Index",     # CHF 3m
-    "CAD": "CD0003M Index",     # CAD 3m CDOR
-    "AUD": "AU0003M Index",     # AUD 3m BBSW
-    "NZD": "NZ0003M Index",     # NZD 3m
+    "USD": "USOSFRC Curncy",    # USD 3m SOFR compounded
+    "EUR": "EURI3M BGN Curncy", # EUR 3m Euribor
+    "GBP": "GBPI3M BGN Curncy", # GBP 3m SONIA
+    "JPY": "JPYI3M BGN Curncy", # JPY 3m TONAR
+    "CHF": "CHFI3M BGN Curncy", # CHF 3m SARON
+    "CAD": "CADI3M BGN Curncy", # CAD 3m CORRA
+    "AUD": "AUDI3M BGN Curncy", # AUD 3m AONIA
+    "NZD": "NZDI3M BGN Curncy", # NZD 3m OCR
+    "NOK": "NOKI3M BGN Curncy", # NOK 3m NOWA
+    "SEK": "SEKI3M BGN Curncy", # SEK 3m SWESTR
 }
 
 # CPI YoY tickers per currency
@@ -50,30 +55,22 @@ CPI_TICKERS = {
     "CAD": "CACPIYOY Index",
     "AUD": "AUCPIYOY Index",
     "NZD": "NZCPIYOY Index",
+    "NOK": "NOCPIYOY Index",    # Norway CPI YoY
+    "SEK": "SWCPIYOY Index",    # Sweden CPI YoY
 }
 
-# Manufacturing PMI tickers per currency
-PMI_MFG_TICKERS = {
-    "USD": "NAPMPMI Index",
-    "EUR": "MPMIEZMA Index",
-    "GBP": "PMITMUK Index",
-    "JPY": "JMAPMI Index",
-    "CHF": "SZWVPSAI Index",
-    "CAD": "IVEYSA Index",
-    "AUD": "AIMIPMI Index",
-    "NZD": "NZPMI Index",
-}
-
-# Services PMI tickers per currency
-PMI_SVCS_TICKERS = {
-    "USD": "NAPMPMS Index",
-    "EUR": "MPMIEZMS Index",
-    "GBP": "PMITBUK Index",
-    "JPY": "JMAPSER Index",
-    "CHF": None,
-    "CAD": None,
-    "AUD": "AISIPMI Index",
-    "NZD": None,
+# Composite PMI tickers per currency (S&P Global Composite)
+PMI_TICKERS = {
+    "USD": "MPMIUSCA Index",
+    "EUR": "MPMIEZCA Index",
+    "GBP": "MPMIGBCA Index",
+    "JPY": "MPMIJPCA Index",
+    "CHF": "SVPMICOM Index",
+    "CAD": "IVEYPMIS Index",
+    "AUD": "MPMIAUCA Index",
+    "NZD": "BNNZPMI Index",
+    "NOK": "NOPMISA Index",
+    "SEK": "PMISCMPS Index",
 }
 
 # Central bank policy rate tickers
@@ -86,6 +83,8 @@ POLICY_RATE_TICKERS = {
     "CAD": "CABROVER Index",
     "AUD": "RBATCTR Index",
     "NZD": "RBNZOCR Index",
+    "NOK": "NOBRDEPA Index",     # Norges Bank sight deposit rate
+    "SEK": "SWRRATMN Index",    # Riksbank repo rate
 }
 
 # Lookback windows

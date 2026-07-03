@@ -9,7 +9,7 @@ from datetime import datetime
 from config.pairs import (
     SPOT_TICKERS, FORWARD_TICKERS,
     RATE_3M_TICKERS, OIS_TICKERS, CPI_TICKERS,
-    PMI_MFG_TICKERS, PMI_SVCS_TICKERS, POLICY_RATE_TICKERS,
+    PMI_TICKERS, POLICY_RATE_TICKERS,
     HIST_DAYS,
 )
 from data.bloomberg import (
@@ -22,6 +22,7 @@ from data.bloomberg import (
 from signals.technical import build_technical_signals
 from signals.carry import build_carry_signals
 from signals.macro import build_macro_signals
+from signals.positioning import POSITIONING_TICKERS, HIST_YEARS, build_positioning_tag
 from data.cache import save_signals
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -73,11 +74,18 @@ def run_eod() -> dict:
 
         # ── 5. PMI ────────────────────────────────────────────────────────────
         logger.info("Fetching PMI …")
-        pmi_mfg_latest = fetch_macro_latest(bbg, PMI_MFG_TICKERS)
-        pmi_svc_latest = fetch_macro_latest(bbg, PMI_SVCS_TICKERS)
-        pmi_mfg_hist = fetch_macro_history(bbg, PMI_MFG_TICKERS, days=HIST_DAYS, periodicity="MONTHLY")
+        pmi_latest = fetch_macro_latest(bbg, PMI_TICKERS)
+        pmi_hist = fetch_macro_history(bbg, PMI_TICKERS, days=HIST_DAYS, periodicity="MONTHLY")
 
-        # ── 6. Build signals ──────────────────────────────────────────────────
+        # ── 6. Positioning ────────────────────────────────────────────────────
+        logger.info("Fetching positioning data …")
+        pos_days = HIST_YEARS * 365  # fetch_macro_history adds 1.5x buffer internally
+        pos_data = {}
+        for category, tickers in POSITIONING_TICKERS.items():
+            hist = fetch_macro_history(bbg, tickers, days=pos_days, periodicity="DAILY")
+            pos_data[category] = {ccy: hist[ccy] for ccy in tickers if ccy in hist.columns}
+
+        # ── 7. Build signals ──────────────────────────────────────────────────
         logger.info("Building technical signals …")
         tech_df = build_technical_signals(spot_close, spot_high, spot_low)
 
@@ -92,13 +100,15 @@ def run_eod() -> dict:
 
         logger.info("Building macro signals …")
         macro_df = build_macro_signals(
-            pmi_mfg=pmi_mfg_latest,
-            pmi_svc=pmi_svc_latest,
+            pmi=pmi_latest,
             cpi_latest=cpi_latest,
             policy_rate=policy_rate,
-            pmi_mfg_hist=pmi_mfg_hist,
+            pmi_hist=pmi_hist,
             cpi_hist=cpi_hist,
         )
+
+        logger.info("Building positioning signals …")
+        positioning_df = build_positioning_tag(pos_data)
 
     logger.info("All signals built. Pairs: %d", len(tech_df))
 
@@ -107,6 +117,7 @@ def run_eod() -> dict:
         "technical": tech_df,
         "carry": carry_df,
         "macro": macro_df,
+        "positioning": positioning_df,
         "as_of": datetime.today(),
     }
     save_signals(signals)
@@ -116,9 +127,11 @@ def run_eod() -> dict:
 
 if __name__ == "__main__":
     signals = run_eod()
-    print("\n── TECHNICAL ──")
+    print("\n-- TECHNICAL --")
     print(signals["technical"].to_string())
-    print("\n── CARRY ──")
+    print("\n-- CARRY --")
     print(signals["carry"].to_string())
-    print("\n── MACRO ──")
+    print("\n-- MACRO --")
     print(signals["macro"].to_string())
+    print("\n-- POSITIONING --")
+    print(signals["positioning"].to_string())
