@@ -48,8 +48,8 @@ RATE_3M_TICKERS = {
 # CPI YoY tickers per currency
 CPI_TICKERS = {
     "USD": "CPI YOY Index",
-    "EUR": "ECCPUPCH Index",
-    "GBP": "UKRPIYOY Index",
+    "EUR": "ECCPEMUY Index",
+    "GBP": "UKRPCJYR Index",
     "JPY": "JNCPIYOY Index",
     "CHF": "SZCPIYOY Index",
     "CAD": "CACPIYOY Index",
