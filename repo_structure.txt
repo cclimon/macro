@@ -1,0 +1,172 @@
+================================================================================
+  MACRO / RATES TRADING SYSTEM  —  Repository Summary
+  GitHub: https://github.com/cclimon/macro.git
+  Last updated: 2026-06-26
+================================================================================
+
+  Multi-asset quantitative trading system covering STIR rates, G10 FX macro,
+  FX volatility, and realized vs implied vol analysis. Python signal engines
+  feed both a Streamlit dashboard and a React/Vite web frontend.
+
+  MODULES AT A GLANCE
+  -------------------
+  stir-engine/         SOFR/FF futures algo: mean reversion (OU), momentum,
+                       OSINT signals, Markov-switching regime, backtest/walk-fwd
+
+  macro/               G10 FX signals via Bloomberg: technical (RSI/MACD/BBands),
+                       carry (fwd-implied vs RV), macro (PMI/CPI/rate diffs).
+                       Streamlit dashboard in macro/dashboard/app.py
+
+  dashboards/          React/Vite SPA: Israel Gov cabinet, TIC flows,
+                       US Fed liquidity (reserves, RRP, TGA, SOFR-IORB, MOVE)
+
+  rv-analysis/         FX options RV vs IV: Yang-Zhang & EWMA estimators,
+                       IV-RV spread percentile signals, USDINR RSI backtest
+
+  fx-vol-monitor/      Intraday FX vol + carry heatmap monitor, PNG + CSV export
+  fx-vol-bands/        Vol regime-based entry/exit bands per currency pair
+  MF-Engine/           Multi-factor STIR engine (extension of stir-engine)
+  correlation-machine/ Correlation framework (stub/in progress)
+
+  ROOT FILES
+  ----------
+  liquidity_data.py    Fetches Fed liquidity data (Bloomberg/FRED) -> dashboards/public/data/
+  macro_charts.py      GDP per worker charts via FRED + matplotlib -> output/macro/
+  trade_ideas.json     Manual trade ideas log
+  MODELS-RUN-HOWTO.txt How to run each model
+
+  DATA FLOW
+  ---------
+  Bloomberg / FRED / yfinance / CME
+    -> Python engines (stir-engine, macro, rv-analysis)
+    -> JSON / Parquet cache
+    -> Streamlit dashboard  OR  React/Vite SPA (dashboards/)
+
+================================================================================
+
+GitRepo/
+
++-- [correlation-machine/]
+|   +-- [config/]
+|   +-- [data/]
+|   +-- [notebooks/]
+|   +-- [output/]
+|   +-- [src/]
+|   +-- [tests/]
++-- [dashboards/]
+|   +-- [public/]
+|   |   +-- [data/]
+|   +-- [src/]
+|   |   +-- [assets/]
+|   |   +-- [pages/]
+|   |   |   |   israel-gov-final.jsx
+|   |   |   |   IsraelGov.jsx
+|   |   |   |   LiquidityDashboard.jsx
+|   |   |   |   TicDashboard.jsx
+|   |   |   App.css
+|   |   |   App.jsx
+|   |   |   index.css
+|   |   |   main.jsx
+|   |   .gitignore
+|   |   eslint.config.js
+|   |   index.html
+|   |   README.md
+|   |   vite.config.js
++-- [fx-vol-bands/]
+|   +-- [fx_vol_bands/]
+|   |   +-- [output/]
+|   |   fx_vol_bands.py
+|   |   README.md
+|   |   requirements.txt
++-- [fx-vol-monitor/]
+|   +-- [output/]
+|   |   |   heatmap_legend.txt
+|   |   fx_vol_carry_monitor.py
+|   |   README.md
+|   |   requirements.txt
++-- [macro/]
+|   +-- [.streamlit/]
+|   |   |   config.toml
+|   +-- [config/]
+|   |   |   __init__.py
+|   |   |   pairs.py
+|   +-- [dashboard/]
+|   |   |   __init__.py
+|   |   |   app.py
+|   |   |   requirements.txt
+|   +-- [data/]
+|   |   |   __init__.py
+|   |   |   bloomberg.py
+|   |   |   cache.py
+|   +-- [signals/]
+|   |   |   __init__.py
+|   |   |   carry.py
+|   |   |   macro.py
+|   |   |   technical.py
+|   |   .gitignore
+|   |   HOW_TO_RUN.md
+|   |   main.py
+|   |   README.md
+|   |   requirements.txt
++-- [MF-Engine/]
+|   +-- [.vscode/]
+|   +-- [backtest/]
+|   +-- [data/]
+|   +-- [logs/]
+|   +-- [multi-factor-stir-engine/]
+|   |   +-- [.vscode/]
+|   +-- [regime/]
+|   +-- [signals/]
++-- [output/]
+|   +-- [fx-vol-bands/]
+|   +-- [fx-vol-monitor/]
+|   |   |   heatmap_legend.txt
+|   +-- [macro/]
+|   +-- [rv-analysis/]
+|   +-- [stir-engine/]
++-- [rv-analysis/]
+|   +-- [vol_analysis/]
+|   |   |   __init__.py
+|   |   |   bbg_connector.py
+|   |   |   config.py
+|   |   |   data_fetcher.py
+|   |   |   estimators.py
+|   |   |   main.py
+|   |   |   plotter.py
+|   |   |   spread_analysis.py
+|   |   calibrate.py
+|   |   Prompt_RV-Analysis.txt
+|   |   README.md
+|   |   requirements.txt
+|   |   run_usdinr_rsi.py
+|   |   test_intraday.py
++-- [RVanalysis/]
+|   +-- [vol_analysis/]
++-- [stir-engine/]
+|   +-- [backtest/]
+|   |   |   pnl.py
+|   |   |   walk_forward.py
+|   +-- [data/]
+|   |   |   __init__.py
+|   |   |   cftc.py
+|   |   |   cme.py
+|   |   |   fred.py
+|   |   |   universe.py
+|   +-- [regime/]
+|   |   |   classifier.py
+|   |   |   ensemble.py
+|   +-- [signals/]
+|   |   |   mean_reversion.py
+|   |   |   momentum.py
+|   |   |   osint.py
+|   |   .env.example
+|   |   config.py
+|   |   main.py
+|   |   README.md
+|   |   requirements.txt
+|   .gitignore
+|   liquidity_data.py
+|   macro_charts.py
+|   MODELS-RUN-HOWTO.txt
+|   README.md
+|   repo_structure.txt

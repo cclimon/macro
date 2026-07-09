@@ -78,6 +78,7 @@ ax1.plot(plot.index, trend, color="#c94a2a", lw=1.8, ls="--",
          label=f"Trend  +${slope_per_yr:,.1f}k/yr  |  CAGR {cagr*100:.2f}%")
 ax1.set_ylabel("Thousands of Chained 2017 $ per Worker", fontsize=10)
 ax1.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"${x:,.0f}k"))
+ax1.set_ylim(bottom=80)
 ax1.grid(alpha=0.3)
 ax1.set_title("GDP per Worker (productivity proxy)", fontsize=11, loc="left")
 ax1.legend(fontsize=10, loc="upper left")

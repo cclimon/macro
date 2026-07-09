@@ -164,9 +164,13 @@ def compute_zscore(prices: pd.Series, window: int = 252) -> float:
 
 # ── Master technical signal builder ───────────────────────────────────────────
 
-def build_technical_signals(spot_df: pd.DataFrame) -> pd.DataFrame:
+def build_technical_signals(
+    spot_df: pd.DataFrame,
+    spot_high: pd.DataFrame,
+    spot_low: pd.DataFrame,
+) -> pd.DataFrame:
     """
-    Given spot_df with columns = pair names and DatetimeIndex,
+    Given close/high/low DataFrames (columns = pair names, DatetimeIndex),
     return a DataFrame with one row per pair and all technical signals.
     """
     records = []
@@ -175,10 +179,13 @@ def build_technical_signals(spot_df: pd.DataFrame) -> pd.DataFrame:
         if len(px) < 60:
             continue
 
+        high_s = spot_high[pair].reindex(px.index) if pair in spot_high.columns else px
+        low_s  = spot_low[pair].reindex(px.index)  if pair in spot_low.columns  else px
+
         rsi_val = compute_rsi(px).iloc[-1]
         macd_df = compute_macd(px)
-        bb_df = compute_bollinger(px)
-        adx_val = compute_adx(px, px, px).iloc[-1]   # close-only proxy
+        bb_df   = compute_bollinger(px)
+        adx_val = compute_adx(high_s, low_s, px).iloc[-1]
 
         rec = {
             "pair": pair,
@@ -199,7 +206,9 @@ def build_technical_signals(spot_df: pd.DataFrame) -> pd.DataFrame:
             # ADX
             "adx_14": round(adx_val, 1) if not pd.isna(adx_val) else np.nan,
             "adx_strength": adx_strength(adx_val),
-            # Z-score
+            # Z-scores
+            "zscore_1m": round(compute_zscore(px, 21), 2),
+            "zscore_3m": round(compute_zscore(px, 63), 2),
             "zscore_1y": round(compute_zscore(px, 252), 2),
         }
         records.append(rec)

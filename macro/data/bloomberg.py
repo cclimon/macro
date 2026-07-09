@@ -155,15 +155,24 @@ def fetch_spot_history(
     bbg: BloombergSession,
     tickers: List[str],
     days: int = 400,
-) -> pd.DataFrame:
-    """Return daily PX_LAST for all spot tickers. Columns = ticker."""
+) -> Dict[str, pd.DataFrame]:
+    """Return daily PX_LAST, PX_HIGH, PX_LOW for all spot tickers.
+    Returns {"close": df_close, "high": df_high, "low": df_low}. Columns = ticker."""
     start = (datetime.today() - timedelta(days=int(days * 1.5))).strftime("%Y%m%d")
-    raw = bbg.bdh(tickers, "PX_LAST", start)
+    raw = bbg.bdh(tickers, ["PX_LAST", "PX_HIGH", "PX_LOW"], start)
     if raw.empty:
-        return pd.DataFrame()
-    df = raw.xs("PX_LAST", level="field", axis=1)
-    df.columns = [c.replace(" Curncy", "").replace(" Index", "") for c in df.columns]
-    return df.sort_index().dropna(how="all")
+        return {"close": pd.DataFrame(), "high": pd.DataFrame(), "low": pd.DataFrame()}
+
+    def _extract(field: str) -> pd.DataFrame:
+        df = raw.xs(field, level="field", axis=1)
+        df.columns = [c.replace(" Curncy", "").replace(" Index", "") for c in df.columns]
+        return df.sort_index().dropna(how="all")
+
+    return {
+        "close": _extract("PX_LAST"),
+        "high":  _extract("PX_HIGH"),
+        "low":   _extract("PX_LOW"),
+    }
 
 
 def fetch_latest_rates(
