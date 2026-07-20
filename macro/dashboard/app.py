@@ -10,7 +10,7 @@ from datetime import datetime
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from config.pairs import G10_PAIRS
+from config.pairs import ALL_PAIRS
 from data.cache import load_signals, CACHE_DIR
 import pytz
 
@@ -112,8 +112,8 @@ with st.sidebar:
 
     pair_filter = st.multiselect(
         "Filter pairs",
-        options=G10_PAIRS,
-        default=G10_PAIRS,
+        options=ALL_PAIRS,
+        default=ALL_PAIRS,
     )
     st.divider()
 

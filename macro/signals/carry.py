@@ -4,7 +4,7 @@
 import pandas as pd
 import numpy as np
 from typing import Dict
-from config.pairs import G10_PAIRS, LOOKBACK
+from config.pairs import ALL_PAIRS, LOOKBACK
 
 
 # ── Utility: extract base/quote currencies from pair string ───────────────────
@@ -64,7 +64,7 @@ def build_carry_signals(
     """Build all carry signals for each G10 pair."""
     records = []
 
-    for pair in G10_PAIRS:
+    for pair in ALL_PAIRS:
         if pair not in spot_df.columns:
             continue
 

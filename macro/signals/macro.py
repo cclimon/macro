@@ -3,7 +3,7 @@
 
 import pandas as pd
 import numpy as np
-from config.pairs import G10_PAIRS
+from config.pairs import ALL_PAIRS
 
 
 def split_pair(pair: str):
@@ -52,6 +52,16 @@ CB_BIAS = {
     "NZD": -1,   # RBNZ — cutting
     "NOK": 0,    # Norges Bank — on hold
     "SEK": -1,   # Riksbank — cutting
+    # EM — update after each meeting
+    "BRL": 1,    # BCB — hiking cycle
+    "MXN": -1,   # Banxico — cutting
+    "CLP": 0,    # BCCh — on hold after cuts
+    "HUF": -1,   # MNB — cutting
+    "PLN": 0,    # NBP — on hold
+    "CZK": -1,   # CNB — cutting
+    "ZAR": 0,    # SARB — on hold
+    "KRW": -1,   # BoK — cutting
+    "IDR": 0,    # BI — on hold
 }
 
 CB_BIAS_LABEL = {1: "Hawkish 🦅", 0: "Neutral ⚖️", -1: "Dovish 🕊️"}
@@ -82,7 +92,7 @@ def build_macro_signals(
     """
     records = []
 
-    for pair in G10_PAIRS:
+    for pair in ALL_PAIRS:
         base, quote = split_pair(pair)
 
         # ── PMI differential ──────────────────────────────────────────────────
