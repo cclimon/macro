@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Macro FX Journal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand"><b>Macro</b> FX Journal</div>
+  <span id="mockBadge" class="mock-badge hidden">MOCK</span>
+</header>
+
+<div class="daybar">
+  <button id="prevDay" class="arrow" aria-label="Previous day">&#8592;</button>
+  <div class="datewrap">
+    <span id="weekday" class="weekday"></span>
+    <input id="datePicker" type="date">
+  </div>
+  <button id="nextDay" class="arrow" aria-label="Next day">&#8594;</button>
+  <button id="todayBtn" class="ghost hidden">TODAY</button>
+  <span id="statusPill" class="pill open">OPEN</span>
+  <span id="entryCount" class="entry-count">0 entries</span>
+</div>
+
+<div id="closedBanner" class="closed-banner hidden">
+  This day is closed. Filing will require confirmation.
+</div>
+
+<nav class="tabbar">
+  <button id="tabJournal" class="tab active">Journal</button>
+  <button id="tabAsk" class="tab">Ask</button>
+</nav>
+
+<main class="panes">
+
+  <section id="paneJournal" class="pane">
+    <div class="panel">
+      <div class="panel-label">File info</div>
+      <textarea id="pasteBox" placeholder="Paste colour here…" spellcheck="false" autocapitalize="off" autocorrect="off"></textarea>
+      <div class="actions">
+        <button id="fileBtn" class="file-btn">FILE INFO</button>
+        <span class="hint"><kbd>&#8984;</kbd>/<kbd>Ctrl</kbd> + <kbd>&#8629;</kbd> to file</span>
+        <span id="charCount" class="char-count">0 chars</span>
+        <span id="filedFlash" class="filed-flash"></span>
+      </div>
+      <div id="inlineError" class="inline-error hidden"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-label-row">
+        <span class="panel-label">Today's entries</span>
+        <div id="tally" class="tally"></div>
+      </div>
+      <div class="entries-wrap">
+        <div id="entriesBox" class="entries-box">
+          <div id="entriesEmpty" class="entries-empty hidden">Nothing filed on this day.</div>
+          <div id="entriesList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paneAsk" class="pane hidden">
+    <div class="panel">
+      <div class="panel-label">Ask</div>
+      <div class="ask-row">
+        <input id="askInput" type="text" placeholder="summary GBP · GBP · summary · eod · a free question…">
+      </div>
+      <div id="askHistory" class="ask-history"></div>
+    </div>
+  </section>
+
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>
