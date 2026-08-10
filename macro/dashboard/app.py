@@ -128,12 +128,15 @@ with st.sidebar:
     else:
         st.caption("Data as of: —")
     st.divider()
+    if st.button("🔄 Refresh data", use_container_width=True):
+        st.cache_data.clear()
+        st.rerun()
     st.caption("Signals are isolated. Scoring / weighting in next phase.")
 
 
 # ── Data loading ──────────────────────────────────────────────────────────────
 
-@st.cache_data(ttl=3600, show_spinner="Loading cached signals …")
+@st.cache_data(ttl=60, show_spinner="Loading cached signals …")
 def _load():
     return load_signals()
 
