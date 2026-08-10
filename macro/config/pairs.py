@@ -9,7 +9,7 @@ G10_PAIRS = [
 ]
 
 EM_PAIRS = [
-    "USDBRL", "USDMXN", "USDCLP",
+    "USDBRL", "USDMXN", "USDCLP", "USDCOP",
     "EURHUF", "USDPLN", "EURCZK",
     "USDZAR", "USDKRW", "USDIDR",
 ]
@@ -56,6 +56,7 @@ RATE_3M_TICKERS = {
     "BRL": "BCNI3M BGN Curncy",   # BRL 3m
     "MXN": "MXNI3M Curncy",       # MXN 3m TIIE
     "CLP": "CHNI3M BGN Curncy",   # CLP 3m
+    "COP": "CLNI3M Curncy",        # COP 3m
     "HUF": "HUFI3M Curncy",       # HUF 3m BUBOR
     "PLN": "PLNI3M Curncy",       # PLN 3m WIBOR
     "CZK": "CZKI3M Curncy",       # CZK 3m PRIBOR
@@ -80,6 +81,7 @@ CPI_TICKERS = {
     "BRL": "BZPIIPCA Index",    # Brazil IPCA CPI YoY
     "MXN": "MXCPIYOY Index",    # Mexico CPI YoY
     "CLP": "CLCPIYOY Index",    # Chile CPI YoY
+    "COP": "COCPIYOY Index",    # Colombia CPI YoY
     "HUF": "HUCPIYOY Index",    # Hungary CPI YoY
     "PLN": "POCPIYOY Index",    # Poland CPI YoY
     "CZK": "CZCPIYOY Index",    # Czech CPI YoY
@@ -104,6 +106,7 @@ PMI_TICKERS = {
     "BRL": "MPMIBZCA Index",    # S&P Global Brazil Composite
     "MXN": "MXPMIMAN Index",    # S&P Global Mexico Manufacturing (no composite)
     "CLP": None,                # No S&P Global coverage
+    "COP": "MPMICOCA Index",    # S&P Global Colombia
     "HUF": None,                # No S&P Global coverage
     "PLN": "MPMIPLMF Index",    # S&P Global Poland Manufacturing
     "CZK": "MPMICZMA Index",    # S&P Global Czech Manufacturing
@@ -128,6 +131,7 @@ POLICY_RATE_TICKERS = {
     "BRL": "BZSTSETA Index",    # Brazil SELIC target
     "MXN": "MXONBR Index",      # Mexico Banxico overnight
     "CLP": "CHPBREPR Index",    # Chile BCCh repo rate
+    "COP": "COBRRMIN Index",    # Colombia BanRep rate
     "HUF": "HUGBBASE Index",    # Hungary MNB base rate
     "PLN": "POREFINR Index",    # Poland NBP reference rate
     "CZK": "CZTXRBOR Index",    # Czech CNB 2W repo
