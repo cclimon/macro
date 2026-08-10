@@ -255,6 +255,9 @@ with tab_carry:
 
     with c1:
         st.markdown("**Carry metrics**")
+        # Normalise old cached parquet column name
+        if "rate_diff_bps" in carry.columns and "rate_diff_3m_bps" not in carry.columns:
+            carry = carry.rename(columns={"rate_diff_bps": "rate_diff_3m_bps"})
         carry_cols = {
             "rate_base_3m":     "Base 3m %",
             "rate_quote_3m":    "Quote 3m %",
