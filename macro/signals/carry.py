@@ -97,6 +97,7 @@ def build_carry_signals(
         carry_vol_1m = carry_vol_ratio(rate_diff_bps, rvol_1m)
         carry_vol_3m = carry_vol_ratio(rate_diff_bps, rvol_3m)
 
+
         # ── Vol regime ────────────────────────────────────────────────────────
         rv_series = rolling_vol_series(px)
         regime = vol_regime(rvol_1m, rv_series)
@@ -104,9 +105,9 @@ def build_carry_signals(
         records.append(
             {
                 "pair": pair,
-                "rate_base_3m": round(r_base, 3) if not pd.isna(r_base) else np.nan,
+                "rate_base_3m":  round(r_base,  3) if not pd.isna(r_base)  else np.nan,
                 "rate_quote_3m": round(r_quote, 3) if not pd.isna(r_quote) else np.nan,
-                "rate_diff_bps": round(rate_diff_bps, 1) if not pd.isna(rate_diff_bps) else np.nan,
+                "rate_diff_3m_bps": round(rate_diff_bps, 1) if not pd.isna(rate_diff_bps) else np.nan,
                 "cpi_diff_pct": round(cpi_diff, 2) if not pd.isna(cpi_diff) else np.nan,
                 "real_carry_bps": round(real_carry_bps, 1) if not pd.isna(real_carry_bps) else np.nan,
                 "rvol_1m_pct": round(rvol_1m, 2) if not pd.isna(rvol_1m) else np.nan,

@@ -256,7 +256,9 @@ with tab_carry:
     with c1:
         st.markdown("**Carry metrics**")
         carry_cols = {
-            "rate_diff_bps":    "Rate Diff (bps)",
+            "rate_base_3m":     "Base 3m %",
+            "rate_quote_3m":    "Quote 3m %",
+            "rate_diff_3m_bps": "Rate Diff 3m (bps)",
             "real_carry_bps":   "Real Carry (bps)",
             "cpi_diff_pct":     "CPI Diff %",
         }
@@ -264,7 +266,7 @@ with tab_carry:
 
         def style_carry(df):
             styles = pd.DataFrame("", index=df.index, columns=df.columns)
-            for col in ["Rate Diff (bps)", "Real Carry (bps)"]:
+            for col in ["Rate Diff 3m (bps)", "Real Carry (bps)"]:
                 if col in df.columns:
                     styles[col] = df[col].apply(
                         lambda v: f"color:{BULL_COLOR};font-weight:600" if (not pd.isna(v) and v > 0)
@@ -275,9 +277,10 @@ with tab_carry:
         st.dataframe(
             c_disp.style.apply(style_carry, axis=None).format(
                 {
-                    "Rate Diff (bps)":   "{:+.1f}",
+                    "Base 3m %":         "{:.3f}%",
+                    "Quote 3m %":        "{:.3f}%",
+                    "Rate Diff 3m (bps)":"{:+.1f}",
                     "Real Carry (bps)":  "{:+.1f}",
-                    "Fwd Carry Ann %":   "{:+.3f}%",
                     "CPI Diff %":        "{:+.2f}%",
                 },
                 na_rep="N/A",
