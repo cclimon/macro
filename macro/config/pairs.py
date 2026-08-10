@@ -39,29 +39,12 @@ OIS_TICKERS = {
     "SEK": "SWESTR Index",      # SEK SWESTR overnight
 }
 
-# 3m OIS / IBOR rates per currency
-RATE_3M_TICKERS = {
-    "USD": "USOSFRC Curncy",    # USD 3m SOFR compounded
-    "EUR": "EURI3M BGN Curncy", # EUR 3m Euribor
-    "GBP": "GBPI3M BGN Curncy", # GBP 3m SONIA
-    "JPY": "JPYI3M BGN Curncy", # JPY 3m TONAR
-    "CHF": "CHFI3M BGN Curncy", # CHF 3m SARON
-    "CAD": "CADI3M BGN Curncy", # CAD 3m CORRA
-    "AUD": "AUDI3M BGN Curncy", # AUD 3m AONIA
-    "NZD": "NZDI3M BGN Curncy", # NZD 3m OCR
-    "NOK": "NOKI3M BGN Curncy", # NOK 3m NOWA
-    "SEK": "SEKI3M BGN Curncy", # SEK 3m SWESTR
-    # EM
-    "BRL": "BZDIOVRA Index",    # Brazil CDI overnight (best proxy)
-    "MXN": "MXIBR91D Index",    # Mexico TIIE 91-day
-    "CLP": "CLCAM90D Index",    # Chile 90-day deposit rate
-    "HUF": "BUBOR3M BGN Curncy", # Hungary BUBOR 3m
-    "PLN": "WIBOR3M BGN Curncy", # Poland WIBOR 3m
-    "CZK": "PRIBOR3M BGN Curncy", # Czech PRIBOR 3m
-    "ZAR": "JIBAS3M BGN Curncy", # South Africa JIBAR 3m
-    "KRW": "KOCD91D Index",     # Korea CD 91-day
-    "IDR": "IDIBOR3M BGN Curncy", # Indonesia JIBOR 3m
-}
+# 3m rates per currency — Bloomberg pattern: {CCY}I Curncy
+_RATE_CURRENCIES = [
+    "USD", "EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD", "NOK", "SEK",
+    "BRL", "MXN", "CLP", "HUF", "PLN", "CZK", "ZAR", "KRW", "IDR",
+]
+RATE_3M_TICKERS = {ccy: f"{ccy}I Curncy" for ccy in _RATE_CURRENCIES}
 
 # CPI YoY tickers per currency
 CPI_TICKERS = {
