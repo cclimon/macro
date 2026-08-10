@@ -71,18 +71,18 @@ def build_carry_signals(
         base, quote = split_pair(pair)
         px = spot_df[pair].dropna()
 
-        # ── 3m nominal rate differential ──────────────────────────────────────
-        r_base = rates_3m.get(base, np.nan)
+        # ── 3m nominal rate differential: Carry = CCY2 (Quote) - CCY1 (Base) ──
+        # Positive = quote currency has higher rates (cost to be long the pair)
+        r_base  = rates_3m.get(base,  np.nan)
         r_quote = rates_3m.get(quote, np.nan)
-        rate_diff_bps = (r_base - r_quote) * 100 if not (
+        rate_diff_bps = (r_quote - r_base) * 100 if not (
             pd.isna(r_base) or pd.isna(r_quote)
         ) else np.nan
-        # Positive = long base earns carry
 
-        # ── CPI / real carry ──────────────────────────────────────────────────
-        cpi_base = cpi_latest.get(base, np.nan)
+        # ── CPI / real carry — same CCY2 - CCY1 convention ───────────────────
+        cpi_base  = cpi_latest.get(base,  np.nan)
         cpi_quote = cpi_latest.get(quote, np.nan)
-        cpi_diff = (cpi_base - cpi_quote) if not (
+        cpi_diff = (cpi_quote - cpi_base) if not (
             pd.isna(cpi_base) or pd.isna(cpi_quote)
         ) else np.nan
         real_carry_bps = (rate_diff_bps - cpi_diff * 100) if not (
