@@ -37,8 +37,7 @@ pip install -r requirements.txt
 ## Quick start
 
 ```bash
-# FX vol & carry monitor
-python fx-vol-monitor/fx_vol_carry_monitor.py
+# FX vol & carry monito
 
 # FX vol bands (Bloomberg)
 python fx-vol-bands/fx_vol_bands.py --blp --ticker EURUSD

@@ -1,0 +1,555 @@
+================================================================================================
+BLOOMBERG SOVEREIGN-FISCAL FIELD DISCOVERY  --  pre-scale sanity check
+run: 2026-08-04T12:16:40
+countries: US, DE, JP, BR, ZA
+================================================================================================
+
+
+########## (1) FIELD MNEMONIC SEARCH  (//blp/apiflds) -- expected noise ##########
+
+----- Fiscal balance % GDP (headline, general govt)  [fiscal_balance_pct_gdp] -----
+  search "budget balance"  ->  2 field(s)
+      BS_SOURCE_FUNDS_FROM_ASSET_BLDG    Double   Source of Funds from Asset Building
+      MSCI_G_RISK_FINANCIAL_MGMT_SCR     Double   MSCI Govt Risk Financial Management Score
+
+----- Primary balance % GDP (ex-interest)  [primary_balance_pct_gdp] -----
+  search "primary balance"  ->  10 field(s)
+      CF_PRIMARY_BALANCE                 Double   Primary Balance
+      ARDR_PRIMARY_BALANCE               Double   ARD Ref Primary Balance
+      INSURED_LOAN_BAL                   Double   Insured Loan Balance
+      MTG_OCCUPANCY_OWNER_CURR           Double   Occupancy Owner Occupied Current %
+      AUTHORIZED_SHARES                  Double   Authorized Number of Shares
+      INSURED_LOAN_PCT                   Double   Insured Loan Percentage
+
+----- Gross general govt debt % GDP  [debt_pct_gdp] -----
+  search "government debt"  ->  10 field(s)
+      FINRA_6710KK_FOR_SOV_DB_SEC_IND    Bool     FINRA 6710 kk Trace Reprt Frgn Sov Dbt Secs Ind
+      WACC_COST_DEBT                     Double   WACC Cost of Debt (After Tax)
+      RTG_MDY_ST_LC_DEBT                 String   Moody's Short Term Domestic Currency Debt Rating
+      RTG_MDY_ST_FC_DEBT                 String   Moody's ST Foreign Currency Debt Rating
+      GOVT_GREEN_BOND_SCORE              Double   Government Green Bond Score
+      SEC_15C2_11_FRGN_SOV_OR_GRNT_IND   Bool     SEC 15c2-11 Forgn Sovrgn Issued or Guarnted Indctr
+
+----- Interest servicing cost (% GDP and % revenue)  [interest_cost] -----
+  search "interest payments"  ->  10 field(s)
+      MTG_FACTOR_INT_PAY                 Double   Mtge Factor Interest Payment
+      MTG_CUR_INT_PAY                    Double   Mtge Current Interest Payment
+      INTEREST_PAYMENT_GRACE_PERIOD      String   Interest Payment Grace Period
+      FL_INT_PAY_FREQ                    String   Floater Interest Payment Frequency
+      MUNI_INT_PAY_TYP                   String   Interest Payment Type
+      ADJ_CPN_INT_PAY_INFO               String   Interest Payment Information for Adjustable Bonds
+
+----- Nominal GDP growth (for r-g; actual + consensus fcst)  [nominal_gdp_growth] -----
+  search "nominal GDP"  ->  1 field(s)
+      MSCI_G_SCG_CNTRY_GHG_INTENS        Double   MSCI Govt Scg Country Greenhouse Gas intensity
+
+
+########## (2/3) SECURITY SEARCH + BDP PROBE  (//blp/instruments -> //blp/refdata) ##########
+
+
+==================== US  (United States) ====================
+
+  ---- Fiscal balance % GDP (headline, general govt)  [fiscal_balance_pct_gdp] ----
+     OK EHBBUS Index             px=-5.66       asof=2026-06-30   freq=Quarterly | US Budget Balance (% GDP)
+     OK ECBBUS 26 Index          px=-6.28       asof=2026-08-04   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK EHBBUSY Index            px=-5.36       asof=2025-12-31   freq=Yearly    | US Budget Balance (% GDP)
+     OK ECBBUS 27 Index          px=-6.36       asof=2026-08-04   freq=Daily     | US Budget Balance Forecast (% GDP)
+     -- ECBBUS Index             px=None        asof=             freq=Daily     | US Budget Balance Forecast (% GDP)  [no PX_LAST]
+     OK ECBBUS 22 Index          px=-4.4        asof=2023-02-28   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK ECBBUS 25 Index          px=-6.0        asof=2026-02-27   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK ECBBUS 28 Index          px=-6.37       asof=2026-08-04   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK ECBBUS Q326 Index        px=-6.42       asof=2026-08-04   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK ECBBUS Q327 Index        px=-6.45       asof=2026-08-04   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK ECBBUS 09 Index          px=-10.0       asof=2010-02-19   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK ECBBUS 10 Index          px=-8.9        asof=2011-02-18   freq=Daily     | US Budget Balance Forecast (% GDP)
+     OK GGLBUSA Index            px=-1202.63    asof=2031-12-31   freq=Yearly    | IMF United States General Government Primary
+     OK EHBBMX Index             px=-4.05       asof=2026-03-31   freq=Quarterly | Mexico Budget Balance (% GDP)
+
+  ---- Primary balance % GDP (ex-interest)  [primary_balance_pct_gdp] ----
+     OK OEEOUSAC Index           px=-3.19844    asof=2027-12-31   freq=Yearly    | OECD Eco Outlook USA Cyclically Adjusted Gov
+     OK OEEOUSPL Index           px=-3.59111    asof=2027-12-31   freq=Quarterly | OECD Eco Outlook USA Government Primary Bala
+     OK OEEOUSUB Index           px=-3.19844    asof=2027-12-31   freq=Yearly    | OECD Eco Outlook USA Underlying Government P
+     -- GCPBUS Index             px=None        asof=             freq=          | General Government Cyclically Adjusted Prima  [Unknown/Invalid Security  [nid:19533]]
+     -- GCYAUS Index             px=None        asof=             freq=          | General Government Primary Balance United St  [Unknown/Invalid Security  [nid:19533]]
+     OK UKGIROXU Index           px=82093.0     asof=2026-03-31   freq=Quarterly | UK GDP Inc & Cap Accts General Govt Uses Gro
+
+  ---- Gross general govt debt % GDP  [debt_pct_gdp] ----
+     OK FDDSGDP Index            px=-5.663      asof=2026-08-12   freq=Monthly   | US Treasury Federal Budget Deficit Or Surplu
+     OK ECDBUS 14 Index          px=74.1        asof=2015-02-27   freq=Daily     | United States Government Debt Forecast % GDP
+     OK ECDBUS 25 Index          px=100.16      asof=2026-02-27   freq=Daily     | United States Government Debt Forecast % GDP
+     OK GDDBUNST Index           px=114.8       asof=2023-12-31   freq=Yearly    | United States of America Debt as a Percentag
+     OK IGS%USA Index            px=142.113     asof=2031-12-31   freq=Yearly    | IMF US General Government Gross Debt % of GD
+     OK ECDBUS 26 Index          px=101.75      asof=2026-08-04   freq=Daily     | United States Government Debt Forecast % GDP
+     -- ECDBUS Index             px=None        asof=             freq=Daily     | United States Government Debt Forecast % GDP  [no PX_LAST]
+     OK ECDBUS 15 Index          px=74.05       asof=2016-02-29   freq=Daily     | United States Government Debt Forecast % GDP
+     OK ECDBUS 16 Index          px=76.3        asof=2017-02-28   freq=Daily     | United States Government Debt Forecast % GDP
+     OK ECDBUS 17 Index          px=76.6        asof=2018-02-28   freq=Daily     | United States Government Debt Forecast % GDP
+     OK ECDBUS 18 Index          px=77.7        asof=2019-02-28   freq=Daily     | United States Government Debt Forecast % GDP
+     OK ECDBUS 19 Index          px=78.7        asof=2020-02-28   freq=Daily     | United States Government Debt Forecast % GDP
+     OK GDDI111G Index           px=120.79      asof=2024-12-31   freq=Yearly    | IMF GDD United States General Government Deb
+     OK WGPDCUSA Index           px=136.95      asof=2025-09-30   freq=Quarterly | World Bank United States General Government 
+     OK IDH%USA Index            px=115.37      asof=2031-12-31   freq=Yearly    | IMF US General Government Net Debt % of GDP
+     OK IGDSUSA Index            px=55468.6     asof=2031-12-31   freq=Yearly    | IMF US General Government Gross Debt Nationa
+     -- GDEBUS Index             px=None        asof=             freq=          | General Government Gross Debt United States  [Unknown/Invalid Security  [nid:23007]]
+     OK IND%USA Index            px=84.884      asof=2014-12-31   freq=Yearly    | IMF United States General Government Net Deb
+     OK HELDUSDB Index           px=8536923.0   asof=2025-12-31   freq=Quarterly | United States General Government Long Term D
+     OK HELDUS03 Index           px=0.0         asof=2025-03-31   freq=Quarterly | United States General Government Short Term 
+     OK HELDUS05 Index           px=0.0         asof=2025-03-31   freq=Quarterly | United States General Government Short Term 
+     OK HELDUS06 Index           px=0.0         asof=2025-03-31   freq=Quarterly | United States General Government Short Term 
+     OK HELDUS07 Index           px=0.0         asof=2025-03-31   freq=Quarterly | United States General Government Short Term 
+     OK IGD%USA Index            px=108.243     asof=2014-12-31   freq=Yearly    | IMF United States General Government Gross D
+     OK HELDUS10 Index           px=0.0         asof=2025-03-31   freq=Quarterly | United States General Government Long Term C
+     OK HELDUS12 Index           px=0.0         asof=2025-12-31   freq=Quarterly | United States General Government Long Term L
+     OK HPDDUNIT Index           px=105.15199   asof=2015-12-31   freq=Yearly    | IMF Gross Gov Debt to GDP ratios United Stat
+     OK FEDDGFDP Index           px=128.0       asof=2029-12-31   freq=Yearly    | White House US Federal Debt Gross Federal De
+     OK HHLDHDGD Index           px=66.215      asof=2026-03-31   freq=Quarterly | United States Household Debt % of GDP
+     OK FEDDHPBP Index           px=105.6       asof=2029-12-31   freq=Yearly    | White House US Federal Debt Held by the Publ
+     OK WGPDGUSA Index           px=116.91      asof=2025-09-30   freq=Quarterly | World Bank United States Central Government 
+     OK GDDBMXCO Index           px=45.1        asof=2023-12-31   freq=Yearly    | Mexico Debt as a Percentage of GDP
+
+  ---- Interest servicing cost (% GDP and % revenue)  [interest_cost] ----
+     OK FGCRINPY Index           px=1247.0      asof=2026-08-26   freq=Quarterly | US Current Expenditures Interest Payments SA
+     OK OEEOUSPV Index           px=4.26145     asof=2027-12-31   freq=Quarterly | OECD Eco Outlook USA Net Government Interest
+     OK OEEOUSPP Index           px=1448120000000.0 asof=2027-12-31   freq=Quarterly | OECD Eco Outlook USA Net Government Interest
+     OK 111CR108 Index           px=103.9       asof=2012-06-30   freq=Monthly   | IMF US Govt Cash Payments Interest
+     OK OEEOUSPI Index           px=1681470000000.0 asof=2027-12-31   freq=Quarterly | OECD Eco Outlook USA Gross Government Intere
+     OK GOVFINPY Index           px=258.58      asof=2026-08-26   freq=Quarterly | US State & Local Interest Payments SAAR
+     OK FGREINPE Index           px=76580.5     asof=2026-06-30   freq=Monthly   | Mexico Fed Govt Rev & Expend Ttl Expend Inte
+     OK FGREINTP Index           px=616898.2    asof=2026-06-30   freq=Monthly   | Mexico Fed Govt Rev & Expend Ttl Expend Inte
+     OK OEEOUSAE Index           px=11508050000000.0 asof=2027-12-31   freq=Yearly    | OECD Eco Outlook USA Cyc Adj Curr Disburseme
+     OK OEEOUSRX Index           px=10446370000000.0 asof=2027-12-31   freq=Quarterly | OECD Eco Outlook USA Curr Receipts Ex Gross 
+     OK OEEOUSPX Index           px=11380960000000.0 asof=2027-12-31   freq=Quarterly | OECD Eco Outlook USA Curr Disbursements Ex G
+
+  ---- Nominal GDP growth (for r-g; actual + consensus fcst)  [nominal_gdp_growth] ----
+     OK GDP CUR$ Index           px=32475.21    asof=2026-08-26   freq=Quarterly | GDP US Nominal Dollars SAAR
+     OK GDP CURY Index           px=6.5         asof=2026-08-26   freq=Quarterly | US GDP Nominal Dollars YoY SA
+     OK GDP$IPEQ Index           px=798.3       asof=2026-08-26   freq=Quarterly | US Nominal GDP Dollar Level Information Proc
+     OK GDP CRCH Index           px=7.9         asof=2026-08-26   freq=Quarterly | GDP US Nominal Dollars QoQ SAAR
+     OK FDDSGDP Index            px=-5.663      asof=2026-08-12   freq=Monthly   | US Treasury Federal Budget Deficit Or Surplu
+     OK WGDPWRLD Index           px=118350.166  asof=2025-12-31   freq=Yearly    | World Bank World GDP in Current USD
+     OK PCE CRCH Index           px=0.3         asof=2026-08-26   freq=Monthly   | US Personal Consumption Expenditures Nominal
+     OK PCE YOY$ Index           px=6.3         asof=2026-08-26   freq=Monthly   | US Personal Consumption Expenditures Nominal
+     OK GDP$CAPE Index           px=406.4       asof=2026-08-26   freq=Quarterly | US Nominal GDP Dollar Level Computers & Peri
+     OK GDP$IPPP Index           px=1872.4      asof=2026-08-26   freq=Quarterly | US Nominal GDP Dollar Level Intellectual Pro
+     OK GDP$EQUP Index           px=1872.6      asof=2026-08-26   freq=Quarterly | US Nominal GDP Dollar Level Equipment SAAR
+     OK GDP$RESD Index           px=937.8       asof=2026-08-26   freq=Quarterly | US Nominal GDP Dollar Level Research & Devel
+     OK WGDPUS Index             px=30769.7     asof=2025-12-31   freq=Yearly    | World Bank US GDP in Current USD
+     OK 1119B38 Index            px=15775.7     asof=2012-09-30   freq=Quarterly | IMF United States Nominal Gross Domestic Pro
+     OK GDDI111M Index           px=29184.9     asof=2024-12-31   freq=Yearly    | IMF GDD United States Nominal Gross Domestic
+     OK USAMMPND Index           px=866741.0    asof=2017-12-31   freq=Yearly    | Nominal GDP by Industry MSA United States No
+     OK USAMMPNM Index           px=42667.0     asof=2016-12-31   freq=Yearly    | Nominal GDP by Industry MSA United States No
+     OK PCE CUR$ Index           px=22184.132   asof=2026-08-26   freq=Monthly   | US Personal Consumption Expenditures Nominal
+     OK GDPACUR$ Index           px=30762.1     asof=2025-12-31   freq=Yearly    | GDP US Annual Nominal Dollars
+     OK .USGDP5YR G Index        px=2.12466     asof=2026-08-04   freq=          | Global CIX: US Nominal GDP less 5-Yr Yld Gap
+     OK WGDPWDYY Index           px=6.0         asof=2025-12-31   freq=Yearly    | World Bank World GDP in Current USD YoY
+     OK GDPAPCEC Index           px=20954.86    asof=2025-12-31   freq=Yearly    | GDP US Annual PCE Nominal Dollars
+     OK MDVGUGDP Index           px=7341.1      asof=2025-12-31   freq=Yearly    | Maldives GDP National Accounts Nominal GDP M
+     OK USLVGD1Y Index           px=34019.19    asof=2026-06-30   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK GDPBNDDY Index           px=3.6         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Domestic Uses YoY NSA
+     OK USLVG12M Index           px=33748.53    asof=2026-06-30   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK USLVGD2Y Index           px=33514.25    asof=2025-12-31   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK USLVGDBY Index           px=30762.08    asof=2026-06-30   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK MXGRGDPY Index           px=3.36        asof=2026-08-24   freq=Quarterly | Mexico Nominal GDP Total YoY % Change
+     OK MXNPPRWY Index           px=3.19        asof=2026-09-18   freq=Quarterly | Mexico Nominal GDP by Expenditure Private Co
+     OK PFBINGDA Index           px=32484.87    asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK MXCAGDPY Index           px=5771.855    asof=2002-12-31   freq=Quarterly | Mexico Nominal Account Bal. Yrly GDP
+     OK MXGRAGRY Index           px=-1.88       asof=2026-08-24   freq=Quarterly | Mexico Nominal GDP Agriculture YoY % Change
+     OK MXGRCONY Index           px=3.0         asof=2026-08-24   freq=Quarterly | Mexico Nominal GDP Construction YoY % Change
+     OK MXGRMFGY Index           px=-2.6        asof=2026-08-24   freq=Quarterly | Mexico Nominal GDP Manufacturing YoY % Chang
+     OK PFBINGD2 Index           px=32324.23    asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK USLVGD6M Index           px=33078.32    asof=2026-06-30   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK USLVGDZM Index           px=32361.17    asof=2026-06-30   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK USLVGDZY Index           px=32508.33    asof=2026-06-30   freq=Monthly   | US Livingston Philly Fed Nominal Gross Domes
+     OK PFBINGD3 Index           px=32698.0     asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK PFBINGD1 Index           px=31856.3     asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK PFBINGD4 Index           px=33088.98    asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK PFBINGD5 Index           px=33439.09    asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK PFBINGD6 Index           px=33788.9     asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+     OK PFBINGDB Index           px=33987.15    asof=2026-06-30   freq=Quarterly | Survey of Professional Forecasters Nominal G
+
+
+==================== DE  (Germany) ====================
+
+  ---- Fiscal balance % GDP (headline, general govt)  [fiscal_balance_pct_gdp] ----
+     OK EHBBDE Index             px=-3.08       asof=2026-03-31   freq=Quarterly | Germany Budget Balance (% GDP)
+     OK EHBBDEY Index            px=-2.7        asof=2025-12-31   freq=Yearly    | Germany Budget Balance (% GDP)
+     OK WBBGGERM Index           px=-2.2800000000000002 asof=2005-12-31   freq=Yearly    | World Bank Budget Balance % of GDP Germany
+     OK GRFIFINB Index           px=-2.4        asof=2027-01-13   freq=Yearly    | Germany General Govt Deficit/Surplus  - Fina
+     OK GGLBDEU Index            px=-116.193    asof=2031-12-31   freq=Yearly    | IMF Germany General Government Primary Net L
+     OK EUNFDELB Index           px=-36366.0    asof=2026-03-31   freq=Quarterly | Eurostat Non Finl Accounts for General Govt 
+
+  ---- Primary balance % GDP (ex-interest)  [primary_balance_pct_gdp] ----
+     OK OEEODEAC Index           px=-2.4804399999999998 asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Cyclically Adjusted
+     OK OEEODEPL Index           px=-3.10026    asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Government Primary 
+     OK OEEODEUB Index           px=-2.4804399999999998 asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Underlying Govt Pri
+     -- GCPBDE Index             px=None        asof=             freq=          | General Government Cyclically Adjusted Prima  [Unknown/Invalid Security  [nid:23009]]
+     -- GCYADE Index             px=None        asof=             freq=          | General Government Primary Balance Germany  [Unknown/Invalid Security  [nid:23009]]
+
+  ---- Gross general govt debt % GDP  [debt_pct_gdp] ----
+     OK GRFIDEBT Index           px=63.5        asof=2025-12-31   freq=Yearly    | Germany Govt Debt as % of GDP
+     OK EUDB60DE Index           px=63.5        asof=2025-12-31   freq=Yearly    | Eurostat Germany Govt Debt as a % of GDP
+     OK GDDI134G Index           px=63.89       asof=2024-12-31   freq=Yearly    | IMF GDD Germany General Government Debt % GD
+     OK WGPDCDEU Index           px=63.03       asof=2025-09-30   freq=Quarterly | World Bank Germany General Government Debt %
+     OK EUSEDE% Index            px=51.1        asof=2026-03-31   freq=Quarterly | Eurostat Govt Debt Securities Other than Sha
+     OK DGSTDELN Index           px=2.0         asof=2025-12-31   freq=Yearly    | Germany Govt Debt Short Term Loans as a % of
+     OK DGSTDESC Index           px=2.2         asof=2025-12-31   freq=Yearly    | Germany Govt Debt Short Term Securities Othe
+     OK GDDBGERM Index           px=63.9        asof=2017-12-31   freq=Yearly    | Germany Debt as a Percentage of GDP
+     OK IGS%DEU Index            px=73.671      asof=2031-12-31   freq=Yearly    | IMF Germany General Government Gross Debt % 
+     OK EU4SDE% Index            px=1.9         asof=2026-03-31   freq=Quarterly | Eurostat Government Debt Short-Term Loans as
+     OK EUDEDE% Index            px=0.4         asof=2026-03-31   freq=Quarterly | Eurostat Govt Debt Currency and Deposits as 
+     OK EULLDE% Index            px=11.0        asof=2026-03-31   freq=Quarterly | Eurostat Government Debt Long-Term Loans as 
+     -- GDDI862G Index           px=None        asof=             freq=Yearly    | IMF GDD Samoa General Government Debt % GDP  [no PX_LAST]
+     OK WGPDGDEU Index           px=44.62       asof=2025-09-30   freq=Quarterly | World Bank Germany Central Government Debt %
+     -- GDEBDE Index             px=None        asof=             freq=          | General Government Gross Debt Germany  [Unknown/Invalid Security  [nid:19435]]
+     OK HELDDE01 Index           px=1497310.0   asof=2025-06-30   freq=Quarterly | Germany General Government Debt
+     OK HELDDE02 Index           px=101339.0    asof=2025-06-30   freq=Quarterly | Germany General Government Short Term Debt
+     OK HELDDE03 Index           px=0.0         asof=2003-12-31   freq=Quarterly | Germany General Government Short Term Curren
+     OK HELDDE04 Index           px=82613.11    asof=2025-06-30   freq=Quarterly | Germany General Government Short Term Debt S
+     OK HELDDE05 Index           px=7823.1      asof=2025-06-30   freq=Quarterly | Germany General Government Short Term Loans 
+     OK HELDDE06 Index           px=50.4        asof=2025-06-30   freq=Quarterly | Germany General Government Short Term Trade 
+     OK HELDDE07 Index           px=10852.72    asof=2025-06-30   freq=Quarterly | Germany General Government Short Term Other 
+     OK HELDDE08 Index           px=1395970.0   asof=2025-06-30   freq=Quarterly | Germany General Government Long Term Debt
+     OK EUQDGDE Index            px=64.4        asof=2026-03-31   freq=Quarterly | EU Government Debt to GDP Germany
+     OK HPDDGERM Index           px=70.98816    asof=2015-12-31   freq=Yearly    | IMF Gross Gov Debt to GDP ratios Germany
+     OK OEEODEPD Index           px=67.85116    asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Gross Public Debt M
+     OK EUPVDE Index             px=106.7       asof=2012-12-31   freq=Yearly    | Eurostat Private Debt as % of GDP Germany
+     OK 1348B02 Index            px=59.8        asof=2001-12-31   freq=Yearly    | IMF Germany Debt As % of GDP in Percent per 
+     OK GRGGTOTD Index           px=2392.656    asof=2001-12-31   freq=Quarterly | Germany Public Sector Debt DEM
+     OK IGD%DEU Index            px=89.347      asof=2014-12-31   freq=Yearly    | IMF Germany General Government Gross Debt as
+     OK HPDDSAMO Index           px=57.78013    asof=2015-12-31   freq=Yearly    | IMF Gross Gov Debt to GDP ratios Samoa
+
+  ---- Interest servicing cost (% GDP and % revenue)  [interest_cost] ----
+     OK OEEODEPV Index           px=0.91357     asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Net Government Inte
+     OK OEEODEPI Index           px=62541987183.1088 asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Gross Government In
+     OK OEEODEPP Index           px=43951376672.0394 asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Net Government Inte
+     OK GRFIIPAY Index           px=56.8        asof=2013-12-31   freq=Yearly    | Germany General Govt Expenditure - Interest 
+     OK GRFIIPYY Index           px=-11.0       asof=2013-12-31   freq=Yearly    | Germany General Govt Expenditure - Interest 
+     OK OEEODERX Index           px=2247500000000.0 asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Germany Curr Receipts Ex Gr
+     OK EUNFDEIP Index           px=12135.0     asof=2026-03-31   freq=Quarterly | Eurostat Non Finl Accounts for General Govt 
+     OK EUNFDEIR Index           px=4253.0      asof=2026-03-31   freq=Quarterly | Eurostat Non Finl Accounts for General Govt 
+
+  ---- Nominal GDP growth (for r-g; actual + consensus fcst)  [nominal_gdp_growth] ----
+     OK EUGPDE Index             px=4185550.0   asof=2023-12-31   freq=Yearly    | Germany Nominal GDP Germany
+     OK GDPBGDYY Index           px=3.8         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Pan German NSA YoY
+     OK GRGDNDGD Index           px=1142.23     asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Gross Domestic Product
+     OK ECOXDES Index            px=5231.3      asof=2026-03-31   freq=Quarterly | Germany Nominal GDP (Billion USD) SAAR
+     OK EOGPDEY Index            px=3.817       asof=2015-12-31   freq=Yearly    | OECD Germany Nominal GDP Growth Change from 
+     OK GDPBGDPE Index           px=1151.12     asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Pan German NSA
+     OK GDPBGDPY Index           px=4.1         asof=2011-12-31   freq=Quarterly | Germany Nominal GDP Pan German NSA YoY
+     OK GDPBNALN Index           px=27.893      asof=2026-08-21   freq=Quarterly | Germany Nominal GDP GFCF Buildings Above Gro
+     OK GDPBNDOD Index           px=1095.954    asof=2026-08-21   freq=Quarterly | Germany Nominal GDP  Domestic Dem&
+     OK GDPBNETE Index           px=40.966      asof=2026-08-21   freq=Quarterly | Germany Nominal GDP  Net Exports
+     OK GDPBNMGL Index           px=299.827     asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Imports of Goods
+     OK GDPBNXGL Index           px=351.199     asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Exports of Goods
+     OK GDPBGDPQ Index           px=-0.3        asof=2012-06-30   freq=Quarterly | Germany Nominal GDP Pan German NSA QoQ
+     OK GDPBGDQQ Index           px=-1.3        asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Pan German NSA QoQ
+     OK GRGDGDQQ Index           px=1.4         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Pan German SWDA QoQ
+     OK KALS0JP9 Index           px=98.0        asof=2026-07-14   freq=Intraday  | Germany Kalshi Germany Nominal GDP in 2026? 
+     OK KALS3IDO Index           px=66.0        asof=2026-07-30   freq=Intraday  | Germany Kalshi Germany Nominal GDP in 2026? 
+     OK KALS89GH Index           px=97.0        asof=2026-08-02   freq=Intraday  | Germany Kalshi Germany Nominal GDP in 2026? 
+     OK KALS9JQ2 Index           px=88.0        asof=2026-07-14   freq=Intraday  | Germany Kalshi Germany Nominal GDP in 2026? 
+     OK GDPBNACY Index           px=6.4         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Actual Collective Consum
+     OK GDPBNAIY Index           px=3.8         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Actual Individual Consum
+     OK GDPBNAYN Index           px=-1.1        asof=2026-08-21   freq=Quarterly | Germany Nominal GDP GFCF Buildings Above Gro
+     OK GDPBNBYN Index           px=-0.4        asof=2026-08-21   freq=Quarterly | Germany Nominal GDP GFCF Other Buildings and
+     OK GDPBNCCY Index           px=4.6         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP HH Final Consumption Exp
+     OK GDPBNCFY Index           px=3.7         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP HH Final Consumption Exp
+     OK GDPBNCGY Index           px=3.4         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP HH Final Consumption Exp
+     OK GDPBNCHY Index           px=3.2         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP HH Final Consumption Exp
+     OK GDPBNCLY Index           px=-1.9        asof=2026-08-21   freq=Quarterly | Germany Nominal GDP HH Final Consumption Exp
+     OK GDPBNCNY Index           px=0.9         asof=2026-08-21   freq=Quarterly | Germany Nominal GDP Changes in Inventories Y
+     OK EUFGDE Index             px=2938148.0   asof=2015-12-31   freq=Yearly    | Eurostat Nominal Annual GDP Forecast Germany
+
+
+==================== JP  (Japan) ====================
+
+  ---- Fiscal balance % GDP (headline, general govt)  [fiscal_balance_pct_gdp] ----
+     OK EHBBJPY Index            px=-1.6800000000000002 asof=2024-12-31   freq=Yearly    | Japan Budget Balance (% GDP)
+     OK ECBBJP 26 Index          px=-2.9        asof=2026-08-04   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     -- EHBBJP Index             px=None        asof=             freq=Quarterly | Japan Budget Balance (% GDP)  [no PX_LAST]
+     OK ECBBJP 27 Index          px=-2.7        asof=2026-08-04   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     -- ECBBJP Index             px=None        asof=             freq=Daily     | Japan Budget Balance Forecast (% GDP)  [no PX_LAST]
+     OK ECBBJP 28 Index          px=-2.8        asof=2026-08-04   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     -- ECBBJP 05 Index          px=None        asof=             freq=Daily     | Japan Budget Balance Forecast (% GDP)  [no PX_LAST]
+     -- ECBBJP 09 Index          px=None        asof=             freq=Daily     | Japan Budget Balance Forecast (% GDP)  [no PX_LAST]
+     OK ECBBJP 10 Index          px=-7.8        asof=2010-12-30   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     OK ECBBJP 11 Index          px=-9.0        asof=2011-12-01   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     OK ECBBJP 12 Index          px=-9.95       asof=2013-02-28   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     OK ECBBJP 13 Index          px=-9.5        asof=2014-02-28   freq=Daily     | Japan Budget Balance Forecast (% GDP)
+     OK GGLBJPN Index            px=-18027.033  asof=2031-12-31   freq=Yearly    | IMF Japan General Government Primary Net Len
+
+  ---- Primary balance % GDP (ex-interest)  [primary_balance_pct_gdp] ----
+     OK OEEOJPPL Index           px=0.19947     asof=2027-12-31   freq=Quarterly | OECD Eco Outlook Japan Government Primary Ba
+     OK OEEOJPAC Index           px=-0.38562    asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Japan Cyclically Adjusted G
+     OK OEEOJPUB Index           px=-0.38562    asof=2027-12-31   freq=Yearly    | OECD Eco Outlook Japan Underlying Govt Prima
+     -- GCPBJP Index             px=None        asof=             freq=          | General Government Cyclically Adjusted Prima  [Unknown/Invalid Security  [nid:19562]]
+     -- GCYAJP Index             px=None        asof=             freq=          | General Government Primary Balance Japan  [Unknown/Invalid Security  [nid:19562]]
+
+  ---- Gross general govt debt % GDP  [debt_pct_gdp] ----
+     OK GDDBJAPN Index           px=215.9       asof=2022-12-31   freq=Yearly    | Japan Debt as a Percentage of GDP
+     OK IGS%JPN Index            px=192.805     asof=2031-12-31   freq=Yearly    | IMF Japan General Government Gross Debt % of
+     OK GDDI158G Index           px=236.66      asof=2024-12-31   freq=Yearly    | IMF GDD Japan General Government Debt % GDP
+     OK IDH%JPN Index            px=122.76      asof=2031-12-31   freq=Yearly    | IMF Japan General Government Net Debt % of G
+     OK WGPDCJPN Index           px=206.85      asof=2025-09-30   freq=Quarterly | World Bank Japan General Government Debt % G
+     OK WGPDGJPN Index           px=180.43      asof=2025-09-30   freq=Quarterly | World Bank Japan Central Government Debt % G
+     OK G7BBJAPN Index           px=-1.6800000000000002 asof=2024-12-31   freq=Yearly    | OECD Japan Surplus or Deficit as a percentag
+     OK IND%JPN Index            px=143.452     asof=2014-12-31   freq=Yearly    | IMF Japan General Government Net Debt as a P
+     OK GDDI158C Index           px=200.93      asof=2024-12-31   freq=Yearly    | IMF GDD Japan Central Government Debt % GDP
+     OK IGD%JPN Index            px=245.557     asof=2014-12-31   freq=Yearly    | IMF Japan General Government Gross Debt as a
+     OK HELDJP01 Index           px=1292460.0   asof=2025-06-30   freq=Quarterly | Japan General Government Debt
+     -- GDEBJP Index             px=None        asof=             freq=          | General Government Gross Debt Japan  [Unknown/Invalid Security  [nid:19560]]
+     OK HELDJP02 Index           px=546738.0    asof=2025-06-30   freq=Quarterly | Japan General Government Short Term Debt
+     OK HELDJP03 Index           px=0.0         asof=2013-12-31   freq=Quarterly | Japan General Government Short Term Currency
+     OK HELDJP04 Index           px=535377.0    asof=2025-06-30   freq=Quarterly | Japan General Government Short Term Debt Sec
+     OK HELDJP05 Index           px=0.0         asof=2017-03-31   freq=Quarterly | Japan General Government Short Term Loans De
+     OK HELDJP06 Index           px=0.0         asof=2013-12-31   freq=Quarterly | Japan General Government Short Term Trade Cr
+     OK HPDDJAPA Index           px=247.97586   asof=2015-12-31   freq=Yearly    | IMF Gross Gov Debt to GDP ratios Japan
+     OK JNFOINEX Index           px=13037.1     asof=2026-12-31   freq=Yearly    | Japan Long-term Debt Outstanding vs GDP:Inte
+     OK GDDI158M Index           px=609432.6    asof=2024-12-31   freq=Yearly    | IMF GDD Japan Nominal Gross Domestic Product
+     OK JNFOBALA Index           px=-29584.7    asof=2026-12-31   freq=Yearly    | Japan Long-term Debt Outstanding vs GDP:Bala
+     OK JNFOREVN Index           px=92724.5     asof=2026-12-31   freq=Yearly    | Japan Long-term Debt Outstanding vs GDP:Reve
+
+  ---- Interest servicing cost (% GDP and % revenue)  [interest_cost] ----
+     OK OEEOJPPV Index           px=1.24207     asof=2027-12-31   freq=Quarterly | OECD Eco Outlook Japan Net Government Intere
+     OK OEEOJPPI Index           px=17214330000000.0 asof=2027-12-31   freq=Quarterly | OECD Eco Outlook Japan Gross Government Inte
+     OK OEEOJPPP Index           px=8446910000000.001 asof=2027-12-31   freq=Quarterly | OECD Eco Outlook Japan Net Government Intere
+     OK OEEOJPRX Index           px=98516000000000.0 asof=1986-09-30   freq=Quarterly | OECD Eco Outlook Japan Curr Receipts Ex Gros
+
+  ---- Nominal GDP growth (for r-g; actual + consensus fcst)  [nominal_gdp_growth] ----
+     OK ECOXJPS Index            px=4307.95     asof=2026-03-31   freq=Quarterly | Japan Nominal GDP (Billion USD) SAAR
+     OK KALS19KJ Index           px=7.0         asof=2026-07-24   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALS2F39 Index           px=7.0         asof=2026-08-01   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALS2G5I Index           px=2.0         asof=2026-05-29   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALS7V00 Index           px=6.0         asof=2026-08-01   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALS8A1S Index           px=68.0        asof=2026-08-03   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALS8I2R Index           px=95.0        asof=2026-08-02   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALSC5GL Index           px=5.0         asof=2026-06-04   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALSD2NJ Index           px=93.0        asof=2026-05-29   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALSGFQC Index           px=7.0         asof=2026-08-01   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALSMPYU Index           px=10.0        asof=2026-06-16   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK KALSMRE9 Index           px=8.0         asof=2026-08-01   freq=Intraday  | Japan Kalshi Japan Nominal GDP in 2026? Abov
+     OK JPGPALP% Index           px=2.9         asof=2022-12-31   freq=Yearly    | Japan All Prefectures Nominal GDP YoY
+     OK JPGPAIP% Index           px=7.0         asof=2023-12-31   freq=Yearly    | Japan Aichi Prefecture Nominal GDP YoY
+     OK JP931096 Index           px=1.51        asof=2013-12-31   freq=Yearly    | Japan Hokkaido Prefecture Nominal GDP YoY
+     OK JP931097 Index           px=-1.19       asof=2013-12-31   freq=Yearly    | Japan Aomori Prefecture Nominal GDP YoY
+     OK JP931098 Index           px=3.45        asof=2013-12-31   freq=Yearly    | Japan Iwate Prefecture Nominal GDP YoY
+     OK JP931099 Index           px=3.48        asof=2013-12-31   freq=Yearly    | Japan Miyagi Prefecture Nominal GDP YoY
+     OK JP931100 Index           px=0.19        asof=2013-12-31   freq=Yearly    | Japan Akita Prefecture Nominal GDP YoY
+     OK JP931101 Index           px=4.57        asof=2013-12-31   freq=Yearly    | Japan Yamagata Prefecture Nominal GDP YoY
+     OK JP931102 Index           px=6.91        asof=2013-12-31   freq=Yearly    | Japan Fukushima Prefecture Nominal GDP YoY
+     OK JP931103 Index           px=-0.15       asof=2013-12-31   freq=Yearly    | Japan Ibaragi Prefecture Nominal GDP YoY
+     OK JP931104 Index           px=6.54        asof=2013-12-31   freq=Yearly    | Japan Tochigi Prefecture Nominal GDP YoY
+     OK JP931105 Index           px=3.9699999999999998 asof=2013-12-31   freq=Yearly    | Japan Gunma Prefecture Nominal GDP YoY
+
+
+==================== BR  (Brazil) ====================
+
+  ---- Fiscal balance % GDP (headline, general govt)  [fiscal_balance_pct_gdp] ----
+     OK EHBBBR Index             px=-9.99       asof=2026-06-30   freq=Quarterly | Brazil Budget Balance (% GDP)
+     OK EHBBBRY Index            px=-8.34       asof=2025-12-31   freq=Yearly    | Brazil Budget Balance (% GDP)
+     OK ECBBBR 26 Index          px=-8.89       asof=2026-08-04   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 27 Index          px=-8.3        asof=2026-08-04   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     -- ECBBBR Index             px=None        asof=             freq=Daily     | Brazil Budget Balance Forecast (% GDP)  [no PX_LAST]
+     OK ECBBBR 09 Index          px=-3.2        asof=2010-02-26   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 10 Index          px=-2.5        asof=2011-02-28   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 11 Index          px=-2.7        asof=2012-02-28   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 12 Index          px=-2.5        asof=2013-02-28   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 13 Index          px=-3.3        asof=2014-02-28   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 14 Index          px=-5.3        asof=2015-02-27   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK ECBBBR 15 Index          px=-10.0       asof=2016-02-26   freq=Daily     | Brazil Budget Balance Forecast (% GDP)
+     OK GGL%BRA Index            px=0.575       asof=2031-12-31   freq=Yearly    | IMF Brazil General Government Primary Net le
+     OK GGLBBRA Index            px=105.537     asof=2031-12-31   freq=Yearly    | IMF Brazil General Government Primary Net Le
+
+  ---- Primary balance % GDP (ex-interest)  [primary_balance_pct_gdp] ----
+     OK FCBRBD Index             px=1.0         asof=2026-07-31   freq=Daily     | Brazil Primary Budget Balance Median Market 
+     OK BRFCBD Index             px=-0.7        asof=2024-06-07   freq=Daily     | Brazil Primary Budget Balance Median Market 
+
+  ---- Gross general govt debt % GDP  [debt_pct_gdp] ----
+     OK BZDPGDT% Index           px=81.94       asof=2026-08-31   freq=Monthly   | Brazil General Government Gross Debt % of GD
+     OK BZDPNDT% Index           px=68.48       asof=2026-08-31   freq=Monthly   | Brazil Public Net Debt % of GDP
+     OK IGS%BRA Index            px=106.52      asof=2031-12-31   freq=Yearly    | IMF Brazil General Government Gross Debt as 
+     OK GDDBBRAZ Index           px=83.0        asof=2023-12-31   freq=Yearly    | Brazil Debt as a Percentage of GDP
+     OK IDH%BRA Index            px=81.08       asof=2031-12-31   freq=Yearly    | IMF Brazil General Government Net Debt as a 
+     OK BZPDFED% Index           px=60.82       asof=2026-06-30   freq=Monthly   | Brazilian Federal Government Debt in % of GD
+     OK GDDI223G Index           px=87.28       asof=2024-12-31   freq=Yearly    | IMF GDD Brazil General Government Debt % GDP
+     OK WGPDGBRA Index           px=72.62       asof=2025-09-30   freq=Quarterly | World Bank Brazil Central Government Debt % 
+     OK BZDPGDD% Index           px=71.76       asof=2026-08-31   freq=Monthly   | Brazil General Government Gross Domestic Deb
+     OK BZDPGID% Index           px=10.18       asof=2026-08-31   freq=Monthly   | Brazil General Government Gross Internationa
+     OK BZDPGOD% Index           px=68.94       asof=2026-08-31   freq=Monthly   | Brazil General Government Net Debt % GDP
+     OK BZDPIGD% Index           px=2.63        asof=2026-08-31   freq=Monthly   | Brazil Public Net Government & Central Bank 
+     OK BZPDEFE% Index           px=9.11        asof=2026-06-30   freq=Monthly   | Brazilian Federal Government Debt to Foreign
+     OK BZPDEFEG Index           px=1201.37     asof=2026-06-30   freq=Monthly   | Brazilian Federal Government Debt to Foreign
+     OK BZPDIFB% Index           px=0.12        asof=2026-06-30   freq=Monthly   | Brazilian Federal Government Debt with Banks
+     OK BZPDIFE% Index           px=51.71       asof=2026-06-30   freq=Monthly   | Brazilian Federal Government Domestic Debt i
+     OK WGPDCBRA Index           px=75.95       asof=2025-09-30   freq=Quarterly | World Bank Brazil General Government Debt % 
+     OK BZDPGDTL Index           px=10809.48    asof=2026-06-30   freq=Monthly   | Brazil General Government Gross Debt
+     OK HELDBRSH Index           px=6.9399999999999995 asof=2025-06-30   freq=Quarterly | Brazil General Government Short Term Debt
+     OK BZDPGDD Index            px=9466.25     asof=2026-08-31   freq=Monthly   | Brazil General Government Gross Domestic Deb
+     OK BZDPGER% Index           px=-0.14       asof=2006-04-30   freq=Monthly   | Brazil General Government External Receivabl
+     OK BZDPGID Index            px=1343.22     asof=2026-08-31   freq=Monthly   | Brazil General Government Gross Internationa
+     OK BZDPGIR% Index           px=-26.82      asof=2026-08-31   freq=Monthly   | Brazil General Government Internal Receivabl
+     OK HPDDBRAZ Index           px=73.69709    asof=2015-12-31   freq=Yearly    | IMF Gross Gov Debt to GDP ratios Brazil
+     OK BZPDNDT% Index           px=68.48       asof=2026-06-30   freq=Monthly   | Brazil Total Net Debt in % of GDP
+     OK BZDPNFD% Index           px=76.44       asof=2026-08-31   freq=Monthly   | Brazil Public Net Fiscal Debt % of GDP
+     OK BRFCND Index             px=63.65       asof=2024-06-07   freq=Daily     | Brazil Net Debt as % of GDP Median Market Ex
+     OK BZPDIRD% Index           px=0.0         asof=2026-06-30   freq=Monthly   | Brazil Net Domestic Restructured Debt in % o
+     OK BZPDBCB% Index           px=-0.81       asof=2026-06-30   freq=Monthly   | Brazilian Central Bank Debt in % of GDP
+     OK BZPDEBCB Index           px=-1807.85    asof=2026-06-30   freq=Monthly   | Brazilian Central Bank Debt to Foreigners
+     OK BZPDECIT Index           px=26.92       asof=2026-06-30   freq=Monthly   | Brazilian Cities Debt to Foreigners
+     OK BZPDEPUC Index           px=6.6899999999999995 asof=2026-06-30   freq=Monthly   | Brazilian Public Enterprises Debt to Foreign
+
+  ---- Interest servicing cost (% GDP and % revenue)  [interest_cost] ----
+     (no security matches from instrument search)
+
+  ---- Nominal GDP growth (for r-g; actual + consensus fcst)  [nominal_gdp_growth] ----
+     OK ECOXBRN Index            px=2384.37     asof=2026-03-31   freq=Quarterly | Brazil Nominal GDP (Billion USD) NSAAR
+     OK KALS4D30 Index           px=5.0         asof=2026-06-16   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALS5Q8Y Index           px=99.0        asof=2026-05-29   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALS8TI5 Index           px=90.0        asof=2026-05-29   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALSDKME Index           px=82.0        asof=2026-05-29   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALSGXKB Index           px=5.0         asof=2026-05-29   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALSHUJ3 Index           px=86.0        asof=2026-06-04   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALSKB46 Index           px=9.0         asof=2026-06-04   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALSLODV Index           px=97.0        asof=2026-08-02   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK KALSNLCB Index           px=29.0        asof=2026-05-29   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     -- KALSR8D9 Index           px=None        asof=             freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab  [no PX_LAST]
+     OK KALSVIJX Index           px=66.0        asof=2026-07-28   freq=Intraday  | Brazil Kalshi Brazil Nominal GDP in 2026? Ab
+     OK BZPBNO% Index            px=-9.99       asof=2026-06-30   freq=Monthly   | Brazil Public Nominal Budget Result % of GDP
+     OK BZPBNO%D Index           px=9.99        asof=2026-08-31   freq=Monthly   | Brazil Public Nominal Budget Deficit% of GDP
+     OK BZPBRI% Index            px=8.8         asof=2026-08-31   freq=Monthly   | Brazil Public Nominal Interest Payments % of
+     OK BZPBNMD% Index           px=-9.73       asof=2026-08-31   freq=Monthly   | Brazil Public Nominal Budget Result YTD % of
+     OK BZPBRMD% Index           px=8.53        asof=2026-08-31   freq=Monthly   | Brazil Public Nominal Interest Payments YTD 
+
+
+==================== ZA  (South Africa) ====================
+
+  ---- Fiscal balance % GDP (headline, general govt)  [fiscal_balance_pct_gdp] ----
+     OK EHBBZA Index             px=-4.25       asof=2026-03-31   freq=Quarterly | South Africa Budget Balance (% GDP)
+     -- ECBBZA Index             px=None        asof=             freq=Daily     | South Africa Budget Balance Forecast (% GDP)  [no PX_LAST]
+     OK ECBBZA 09 Index          px=-7.7        asof=2010-02-26   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 10 Index          px=-5.3        asof=2011-02-28   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 11 Index          px=-4.7        asof=2011-05-23   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 12 Index          px=-4.8        asof=2013-02-28   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 13 Index          px=-4.3        asof=2014-02-28   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 14 Index          px=-4.0        asof=2015-02-27   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 15 Index          px=-3.9        asof=2016-02-29   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 16 Index          px=-3.48       asof=2017-02-28   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 17 Index          px=-4.3        asof=2018-02-28   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK ECBBZA 18 Index          px=-4.0        asof=2019-02-28   freq=Daily     | South Africa Budget Balance Forecast (% GDP)
+     OK GGLBZAF Index            px=144.337     asof=2031-12-31   freq=Yearly    | IMF South Africa General Government Primary 
+
+  ---- Primary balance % GDP (ex-interest)  [primary_balance_pct_gdp] ----
+     OK OEEOZAPL Index           px=-2.48479    asof=2022-12-31   freq=Yearly    | OECD Eco Outlook South Africa Government Pri
+
+  ---- Gross general govt debt % GDP  [debt_pct_gdp] ----
+     OK SANDGRSP Index           px=78.5        asof=2026-03-31   freq=Quarterly | South Africa National Govt Debt Total Gross 
+     OK GDDBSOAF Index           px=76.2        asof=2022-12-31   freq=Yearly    | South Africa Debt as a Percentage of GDP
+     OK GDDI199C Index           px=76.36       asof=2024-12-31   freq=Yearly    | IMF GDD South Africa Central Government Debt
+     -- GDDI199G Index           px=None        asof=             freq=Yearly    | IMF GDD South Africa General Government Debt  [no PX_LAST]
+     OK IDH%ZAF Index            px=81.5        asof=2031-12-31   freq=Yearly    | IMF South Africa General Government Net Debt
+     OK IGS%ZAF Index            px=82.615      asof=2031-12-31   freq=Yearly    | IMF South Africa General Government Gross De
+     OK SANDNETP Index           px=75.7        asof=2026-03-31   freq=Quarterly | South Africa National Govt Debt Total Net Lo
+     OK WGPDCZAF Index           px=86.35       asof=2025-06-30   freq=Quarterly | World Bank South Africa General Government D
+     OK WGPDGZAF Index           px=82.6        asof=2025-06-30   freq=Quarterly | World Bank South Africa Central Government D
+     OK HELDZA01 Index           px=87456.01    asof=2025-06-30   freq=Quarterly | South Africa General Government Debt
+     OK HELDZA02 Index           px=0.0         asof=2025-06-30   freq=Quarterly | South Africa General Government Short Term D
+     OK HELDZA03 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Short Term C
+     OK HELDZA04 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Short Term D
+     OK HELDZA05 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Short Term L
+     OK HELDZA06 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Short Term T
+     OK HELDZA07 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Short Term O
+     OK HELDZA08 Index           px=87456.01    asof=2025-06-30   freq=Quarterly | South Africa General Government Long Term De
+     OK HELDZA09 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Long Term Sp
+     OK HELDZA10 Index           px=0.0         asof=2013-06-30   freq=Quarterly | South Africa General Government Long Term Cu
+     -- HELDZA11 Index           px=None        asof=             freq=Quarterly | South Africa General Government Long Term De  [no PX_LAST]
+     OK HPDDSAFR Index           px=49.77813    asof=2015-12-31   freq=Yearly    | IMF Gross Gov Debt to GDP ratios South Afric
+     OK SAFD%GDP Index           px=46.9        asof=2025-12-31   freq=Yearly    | South Africa Foreign Debt as % of GDP
+     OK SASVQDDI Index           px=62.2        asof=2026-03-31   freq=Quarterly | South Africa GDP Ratio Quarterly Debt to Dis
+     OK GDDI199M Index           px=7336.24     asof=2024-12-31   freq=Yearly    | IMF GDD South Africa Nominal Gross Domestic 
+     OK SASVQDCD Index           px=8.4         asof=2026-03-31   freq=Quarterly | South Africa GDP Ratio Quarterly Debt-servic
+     OK SASVYDCD Index           px=8.6         asof=2025-12-31   freq=Yearly    | South Africa GDP Ratio Annual Debt-service C
+     OK SASVYDDI Index           px=62.0        asof=2025-12-31   freq=Yearly    | South Africa GDP Ratio Annual Household Debt
+     OK FSIINMZA Index           px=5321009.59  asof=2021-03-31   freq=Monthly   | South Africa Households GDP used in Househol
+
+  ---- Interest servicing cost (% GDP and % revenue)  [interest_cost] ----
+     OK 199CI54 Index            px=16951.0     asof=2016-06-30   freq=Monthly   | IMF South Africa Govt Cash Payments Interest
+     OK 199CR009 Index           px=25255.0     asof=2016-06-30   freq=Quarterly | IMF South Africa Govt Cash Payments Interest
+
+  ---- Nominal GDP growth (for r-g; actual + consensus fcst)  [nominal_gdp_growth] ----
+     OK ZANNGDP Index            px=1924460.34  asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Expenditure on Gros
+     OK ECOXZAS Index            px=489.97      asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP (Billion USD) SAAR
+     OK ZANSGDP Index            px=8011409.19  asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Expenditure on Gros
+     OK ZANNGDPQ Index           px=-5.89       asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Expenditure on Gros
+     OK ZANSGDPQ Index           px=1.99        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Expenditure on Gros
+     OK ZANSGDPY Index           px=6.67        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Expenditure on Gros
+     OK GDDI199M Index           px=7336.24     asof=2024-12-31   freq=Yearly    | IMF GDD South Africa Nominal Gross Domestic 
+     OK OEZAN023 Index           px=69.3        asof=2010-06-30   freq=Quarterly | OECD South Africa Nominal GDP Total Agricult
+     OK OEZAN024 Index           px=87.0        asof=2010-06-30   freq=Quarterly | OECD South Africa Nominal GDP Industry Const
+     OK OEZAN025 Index           px=221.9       asof=2010-06-30   freq=Quarterly | OECD South Africa Nominal GDP Industry Const
+     OK OEZAN026 Index           px=346.5       asof=2010-06-30   freq=Quarterly | OECD South Africa Nominal GDP Industry Const
+     OK OEZAN027 Index           px=59.9        asof=2010-06-30   freq=Quarterly | OECD South Africa Nominal GDP Constr. Energy
+     OK ZANNCFCY Index           px=-9.91       asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Gross Fixed Capital
+     OK ZANNCFGY Index           px=7.58        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Gross Fixed Capital
+     OK ZANNCFPY Index           px=-0.09       asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Gross Fixed Capital
+     OK ZANNDEXY Index           px=3.7         asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Gross Domestic Expe
+     OK ZANNGCFY Index           px=0.01        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Gross Fixed Capital
+     OK ZANNGDPY Index           px=6.71        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Expenditure on Gros
+     OK ZANNMGSY Index           px=-4.11       asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Imports of Goods an
+     OK ZANNP3GY Index           px=7.19        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Final General Gover
+     OK ZANNP3HY Index           px=4.47        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Final Household Con
+     OK ZANNXGSY Index           px=5.85        asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Exports of Goods an
+     OK ZANSDEXY Index           px=3.7         asof=2026-03-31   freq=Quarterly | South Africa Nominal GDP Gross Domestic Expe
+
+
+########## (4) COVERAGE MATRIX  (resolved = BDP returned numeric PX_LAST) ##########
+
+country         fiscal_balance_  primary_balance  debt_pct_gdp     interest_cost    nominal_gdp_gro  
+-----------------------------------------------------------------------------------------------------
+US United State EHBBUS Index     OEEOUSAC Index   FDDSGDP Index    FGCRINPY Index   GDP CUR$ Index   
+DE Germany      EHBBDE Index     OEEODEAC Index   GRFIDEBT Index   OEEODEPV Index   EUGPDE Index     
+JP Japan        EHBBJPY Index    OEEOJPPL Index   GDDBJAPN Index   OEEOJPPV Index   ECOXJPS Index    
+BR Brazil       EHBBBR Index     FCBRBD Index     BZDPGDT% Index   EMPTY            ECOXBRN Index    
+ZA South Africa EHBBZA Index     OEEOZAPL Index   SANDGRSP Index   199CI54 Index    ZANNGDP Index    
+
+Legend: ticker shown = BBG resolved a live numeric value (best candidate).
+        EMPTY = no instrument-search candidate returned a numeric PX_LAST
+        -> those cells route to the IMF WEO / Eurostat fallback in the puller.
+
+
+########## (5) RESOLVED TICKERS PER COUNTRY x METRIC ##########
+
+US (United States):
+    fiscal_balance_pct_gdp  : EHBBUS Index (=-5.66, 2026-06-30), ECBBUS 26 Index (=-6.28, 2026-08-04), EHBBUSY Index (=-5.36, 2025-12-31), ECBBUS 27 Index (=-6.36, 2026-08-04)
+    primary_balance_pct_gdp : OEEOUSAC Index (=-3.19844, 2027-12-31), OEEOUSPL Index (=-3.59111, 2027-12-31), OEEOUSUB Index (=-3.19844, 2027-12-31), UKGIROXU Index (=82093.0, 2026-03-31)
+    debt_pct_gdp            : FDDSGDP Index (=-5.663, 2026-08-12), ECDBUS 14 Index (=74.1, 2015-02-27), ECDBUS 25 Index (=100.16, 2026-02-27), GDDBUNST Index (=114.8, 2023-12-31)
+    interest_cost           : FGCRINPY Index (=1247.0, 2026-08-26), OEEOUSPV Index (=4.26145, 2027-12-31), OEEOUSPP Index (=1448120000000.0, 2027-12-31), 111CR108 Index (=103.9, 2012-06-30)
+    nominal_gdp_growth      : GDP CUR$ Index (=32475.21, 2026-08-26), GDP CURY Index (=6.5, 2026-08-26), GDP$IPEQ Index (=798.3, 2026-08-26), GDP CRCH Index (=7.9, 2026-08-26)
+
+DE (Germany):
+    fiscal_balance_pct_gdp  : EHBBDE Index (=-3.08, 2026-03-31), EHBBDEY Index (=-2.7, 2025-12-31), WBBGGERM Index (=-2.2800000000000002, 2005-12-31), GRFIFINB Index (=-2.4, 2027-01-13)
+    primary_balance_pct_gdp : OEEODEAC Index (=-2.4804399999999998, 2027-12-31), OEEODEPL Index (=-3.10026, 2027-12-31), OEEODEUB Index (=-2.4804399999999998, 2027-12-31)
+    debt_pct_gdp            : GRFIDEBT Index (=63.5, 2025-12-31), EUDB60DE Index (=63.5, 2025-12-31), GDDI134G Index (=63.89, 2024-12-31), WGPDCDEU Index (=63.03, 2025-09-30)
+    interest_cost           : OEEODEPV Index (=0.91357, 2027-12-31), OEEODEPI Index (=62541987183.1088, 2027-12-31), OEEODEPP Index (=43951376672.0394, 2027-12-31), GRFIIPAY Index (=56.8, 2013-12-31)
+    nominal_gdp_growth      : EUGPDE Index (=4185550.0, 2023-12-31), GDPBGDYY Index (=3.8, 2026-08-21), GRGDNDGD Index (=1142.23, 2026-08-21), ECOXDES Index (=5231.3, 2026-03-31)
+
+JP (Japan):
+    fiscal_balance_pct_gdp  : EHBBJPY Index (=-1.6800000000000002, 2024-12-31), ECBBJP 26 Index (=-2.9, 2026-08-04), ECBBJP 27 Index (=-2.7, 2026-08-04), ECBBJP 28 Index (=-2.8, 2026-08-04)
+    primary_balance_pct_gdp : OEEOJPPL Index (=0.19947, 2027-12-31), OEEOJPAC Index (=-0.38562, 2027-12-31), OEEOJPUB Index (=-0.38562, 2027-12-31)
+    debt_pct_gdp            : GDDBJAPN Index (=215.9, 2022-12-31), IGS%JPN Index (=192.805, 2031-12-31), GDDI158G Index (=236.66, 2024-12-31), IDH%JPN Index (=122.76, 2031-12-31)
+    interest_cost           : OEEOJPPV Index (=1.24207, 2027-12-31), OEEOJPPI Index (=17214330000000.0, 2027-12-31), OEEOJPPP Index (=8446910000000.001, 2027-12-31), OEEOJPRX Index (=98516000000000.0, 1986-09-30)
+    nominal_gdp_growth      : ECOXJPS Index (=4307.95, 2026-03-31), KALS19KJ Index (=7.0, 2026-07-24), KALS2F39 Index (=7.0, 2026-08-01), KALS2G5I Index (=2.0, 2026-05-29)
+
+BR (Brazil):
+    fiscal_balance_pct_gdp  : EHBBBR Index (=-9.99, 2026-06-30), EHBBBRY Index (=-8.34, 2025-12-31), ECBBBR 26 Index (=-8.89, 2026-08-04), ECBBBR 27 Index (=-8.3, 2026-08-04)
+    primary_balance_pct_gdp : FCBRBD Index (=1.0, 2026-07-31), BRFCBD Index (=-0.7, 2024-06-07)
+    debt_pct_gdp            : BZDPGDT% Index (=81.94, 2026-08-31), BZDPNDT% Index (=68.48, 2026-08-31), IGS%BRA Index (=106.52, 2031-12-31), GDDBBRAZ Index (=83.0, 2023-12-31)
+    interest_cost           : EMPTY -> fallback
+    nominal_gdp_growth      : ECOXBRN Index (=2384.37, 2026-03-31), KALS4D30 Index (=5.0, 2026-06-16), KALS5Q8Y Index (=99.0, 2026-05-29), KALS8TI5 Index (=90.0, 2026-05-29)
+
+ZA (South Africa):
+    fiscal_balance_pct_gdp  : EHBBZA Index (=-4.25, 2026-03-31), ECBBZA 09 Index (=-7.7, 2010-02-26), ECBBZA 10 Index (=-5.3, 2011-02-28), ECBBZA 11 Index (=-4.7, 2011-05-23)
+    primary_balance_pct_gdp : OEEOZAPL Index (=-2.48479, 2022-12-31)
+    debt_pct_gdp            : SANDGRSP Index (=78.5, 2026-03-31), GDDBSOAF Index (=76.2, 2022-12-31), GDDI199C Index (=76.36, 2024-12-31), IDH%ZAF Index (=81.5, 2031-12-31)
+    interest_cost           : 199CI54 Index (=16951.0, 2016-06-30), 199CR009 Index (=25255.0, 2016-06-30)
+    nominal_gdp_growth      : ZANNGDP Index (=1924460.34, 2026-03-31), ECOXZAS Index (=489.97, 2026-03-31), ZANSGDP Index (=8011409.19, 2026-03-31), ZANNGDPQ Index (=-5.89, 2026-03-31)
+================================================================================================
