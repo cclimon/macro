@@ -21,7 +21,6 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
-import hashlib
 import logging
 import re
 from pathlib import Path
@@ -73,8 +72,8 @@ def _session():
 
 
 def _cache_path(ticker: str, field: str, start: str) -> Path:
-    key = hashlib.md5(f"{ticker}|{field}|{start}".encode()).hexdigest()[:16]
-    return CACHE_DIR / f"{key}.parquet"
+    safe = re.sub(r"[^\w\-+.]", "_", f"{ticker}__{field}__{start}")
+    return CACHE_DIR / f"{safe}.parquet"
 
 
 # --------------------------------------------------------------------------
@@ -208,6 +207,58 @@ def frame(
     return pd.DataFrame(cols).sort_index()
 
 
+def stitch(
+    primary: str,
+    fallback: str,
+    field: str = "PX_LAST",
+    start: str = "2010-01-01",
+    end: Optional[str] = None,
+    use_cache: bool = True,
+) -> pd.Series:
+    """Merge two series: primary where available, fallback for earlier dates.
+
+    Used when a series was relaunched under a new ticker (e.g. AUD monthly CPI
+    replacing the quarterly one). Primary takes precedence in any overlap period
+    so the more current source always wins.
+
+    The stitched result is cached under a combined key and updated via the same
+    delta-fetch logic as history() — on subsequent calls only the primary tail
+    is fetched from Bloomberg.
+    """
+    end = end or dt.date.today().isoformat()
+    end_date = dt.date.fromisoformat(end)
+    cache = _cache_path(f"{primary}+{fallback}", field, start)
+
+    cached: pd.Series | None = None
+    if use_cache and cache.exists():
+        cached = pd.read_parquet(cache).iloc[:, 0].rename(primary)
+        if cached.index[-1].date() >= end_date:
+            return cached.loc[:end].rename(primary)
+        # Only the primary series can have new data — fallback is historical
+        delta_start = (cached.index[-1].date() + dt.timedelta(days=1)).isoformat()
+        delta = history(primary, field, delta_start, end, use_cache=False)
+        if not delta.empty:
+            out = pd.concat([cached, delta]).sort_index()
+            out = out[~out.index.duplicated(keep="last")]
+            if use_cache:
+                out.to_frame().to_parquet(cache)
+            return out.loc[:end].rename(primary)
+        return cached.loc[:end].rename(primary)
+
+    # Cold fetch — get both series and merge; primary wins in overlap
+    s_primary = history(primary, field, start, end, use_cache=False)
+    s_fallback = history(fallback, field, start, end, use_cache=False)
+    if s_primary.empty and s_fallback.empty:
+        FAILED[primary] = "both primary and fallback returned no data"
+        return pd.Series(dtype=float, name=primary)
+
+    out = pd.concat([s_fallback, s_primary]).sort_index()
+    out = out[~out.index.duplicated(keep="last")]   # last = primary wins
+    if use_cache:
+        out.to_frame().to_parquet(cache)
+    return out.loc[:end].rename(primary)
+
+
 def reference(tickers: Iterable[str], field: str = "PX_LAST") -> pd.Series:
     """Snapshot reference data (BDP equivalent)."""
     tickers = list(tickers)
@@ -275,9 +326,9 @@ def fwd_points_ticker(root: str, tenor: str = "3M", ccy: str | None = None) -> s
     else falls back to the generic BGN outright form.
     """
     if ccy:
-        from config import FWD_TICKERS
-        if ccy in FWD_TICKERS:
-            return FWD_TICKERS[ccy]
+        from config import FWD_CONVENTIONS
+        if ccy in FWD_CONVENTIONS:
+            return FWD_CONVENTIONS[ccy][0]
     return f"{root}{tenor} BGN Curncy"
 
 
@@ -313,7 +364,7 @@ def validate_universe(start: str = "2023-01-01") -> pd.DataFrame:
     # points is not flagged alongside a daily swap series with 130. Staleness
     # is judged on the LAST DATE, which is what actually matters.
     STALE_DAYS = {
-        "cpi_yoy": 120, "ca_gdp": 200, "cot": 30, "reer": 120, "tot": 15,
+        "cpi_yoy": 120, "ca_gdp": 200, "cot_long": 30, "cot_short": 30, "reer": 120, "tot": 15,
     }
     DEFAULT_STALE_DAYS = 15
 
@@ -345,7 +396,7 @@ def validate_universe(start: str = "2023-01-01") -> pd.DataFrame:
         check(fwd_points_ticker(p.name, "3M", p.ccy), p.ccy, "fwd_points")
         for role, tk in vol_tickers(p.vol_root, VOL_TENOR).items():
             check(tk, p.ccy, f"vol_{role}")
-        for role in ("swap2y", "cpi_yoy", "cds5y", "reer", "tot", "cot", "cesi", "ca_gdp"):
+        for role in ("swap2y", "cpi_yoy", "cds5y", "reer", "tot", "cot_long", "cot_short", "cesi", "ca_gdp"):
             check(getattr(p, role), p.ccy, role)
 
     for role, tk in REGIME_TICKERS.items():
