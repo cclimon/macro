@@ -371,6 +371,10 @@ def validate_universe(start: str = "2023-01-01") -> pd.DataFrame:
     def check(ticker, owner, role):
         if not ticker:
             return
+        # Tuple = stitched pair (primary, fallback) — validate primary only
+        if isinstance(ticker, tuple):
+            check(ticker[0], owner, role)
+            return
         if ticker.startswith(("VERIFY_", "PROBE_")):
             rows.append({"ticker": ticker, "owner": owner, "role": role,
                          "status": "PLACEHOLDER", "obs": 0, "last_date": None,
