@@ -117,7 +117,7 @@ def _p(ccy, bloc, ticker, usd_base, **kw) -> Pair:
 # Universe
 # --------------------------------------------------------------------------
 # USD leg tickers used by several pillars
-USD_SWAP2Y = "USOSFR2 Curncy"
+USD_SWAP2Y = "USOSFR2 BGN Curncy"
 USD_CPI = "CPI YOY Index"
 USD_CESI = "CESIUSD Index"
 
