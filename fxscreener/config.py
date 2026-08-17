@@ -32,12 +32,12 @@ from typing import Optional
 HORIZON = "core"            # 1-3 month signal horizon
 CARRY_TENOR_DAYS = 91       # 3M forward used for carry
 VOL_TENOR = "3M"            # ATM vol / RR / BF tenor
-TS_Z_WINDOW = 1260          # 5y rolling window for time-series z
-TS_Z_MIN_OBS = 250          # minimum obs before a TS z is emitted
+TS_Z_WINDOW = 756           # 3y rolling window for time-series z
+TS_Z_MIN_OBS = 126          # minimum obs before a TS z is emitted (~6m)
 XS_TS_BLEND = 0.50          # 0 = pure time-series z, 1 = pure cross-sectional z
 WINSOR_SIGMA = 3.0
 FAIR_VALUE_WINDOW = 504     # 2y rolling window for STEER-lite regression
-BEER_WINDOW = 1260          # 5y rolling window for BEER-lite regression
+BEER_WINDOW = 756           # 3y rolling window for BEER-lite regression
 
 # Equal weight across the seven pillars. Deliberately naive for v1 —
 # do not tune these until the IC study in backtest.py has run out of sample.

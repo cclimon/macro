@@ -224,7 +224,7 @@ class MarketData:
             out[ccy] = prem * (365.0 / CARRY_TENOR_DAYS) * 100.0 * (-p.sign)
         return pd.DataFrame(out)
 
-    def _risk_beta(self, window: int = 252) -> pd.DataFrame:
+    def _risk_beta(self, window: int = 126) -> pd.DataFrame:
         """Rolling beta of each currency's return to a risk-off factor.
 
         Positive beta = the currency rallies when credit widens (JPY, CHF).
@@ -238,8 +238,8 @@ class MarketData:
         out = {}
         for ccy in self.ret.columns:
             y = self.ret[ccy]
-            cov = y.rolling(window, min_periods=120).cov(factor)
-            var = factor.rolling(window, min_periods=120).var()
+            cov = y.rolling(window, min_periods=60).cov(factor)
+            var = factor.rolling(window, min_periods=60).var()
             out[ccy] = cov / var.replace(0, np.nan)
         b = pd.DataFrame(out)
         return np.tanh(b / b.abs().stack().std())      # squash to (-1, 1)
@@ -352,10 +352,10 @@ def trend(md: MarketData) -> pd.DataFrame:
 
     m3 = (_mom(md.spot, 63).mul(sgn, axis=1)).div(rv)
     m6 = (_mom(md.spot, 126).mul(sgn, axis=1)).div(rv)
-    m12 = (_mom(md.spot, 252).mul(sgn, axis=1)).div(rv)
+    m9 = (_mom(md.spot, 189).mul(sgn, axis=1)).div(rv)
 
-    ma200 = md.spot.rolling(200, min_periods=120).mean()
-    dist = ((md.spot / ma200 - 1.0).mul(sgn, axis=1)).div(rv)
+    ma126 = md.spot.rolling(126, min_periods=80).mean()
+    dist = ((md.spot / ma126 - 1.0).mul(sgn, axis=1)).div(rv)
 
     ema12 = md.spot.ewm(span=12).mean()
     ema26 = md.spot.ewm(span=26).mean()
@@ -365,10 +365,10 @@ def trend(md: MarketData) -> pd.DataFrame:
     return combine({
         "m3": normalise_panel(m3, BLOCS),
         "m6": normalise_panel(m6, BLOCS),
-        "m12": normalise_panel(m12, BLOCS),
-        "dist_200d": normalise_panel(dist, BLOCS),
+        "m9": normalise_panel(m9, BLOCS),
+        "dist_126d": normalise_panel(dist, BLOCS),
         "macd_hist": normalise_panel(hist, BLOCS),
-    }, weights={"m3": 1.5, "m6": 1.5, "m12": 1.0, "dist_200d": 1.0, "macd_hist": 0.5})
+    }, weights={"m3": 1.5, "m6": 1.5, "m9": 1.0, "dist_126d": 1.0, "macd_hist": 0.5})
 
 
 # ==========================================================================
