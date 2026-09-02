@@ -1,4 +1,4 @@
-# Macro FX Journal
+claude# Macro FX Journal
 
 Sell-side FX desk tool. Captures unstructured market colour through the
 trading day, files it under a trading date, answers ad-hoc questions from
