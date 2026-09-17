@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brazil 2026 presidential poll tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F4; --surface:#FFFFFF; --ink:#17202A; --muted:#5E6773; --rule:#D6DBE0;
+  --lula:#BF2A30; --flavio:#1E58A3; --band:rgba(23,32,42,.07); --avg:#17202A; --grey:#A7AFB8;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#11151B; --surface:#181E26; --ink:#E7EAEE; --muted:#9BA4AF; --rule:#2C3440;
+    --lula:#EE6A6F; --flavio:#6EA2E6; --band:rgba(231,234,238,.08); --avg:#E7EAEE; --grey:#5B6572;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11151B; --surface:#181E26; --ink:#E7EAEE; --muted:#9BA4AF; --rule:#2C3440;
+  --lula:#EE6A6F; --flavio:#6EA2E6; --band:rgba(231,234,238,.08); --avg:#E7EAEE; --grey:#5B6572;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:16px; line-height:1.5; font-variant-numeric:tabular-nums;
+}
+.wrap{max-width:1040px; margin:0 auto; padding:28px 20px 48px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--flavio); outline-offset:2px}
+
+.top{display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap;
+  border-bottom:1px solid var(--rule); padding-bottom:14px}
+.title{margin:0; font-size:1.05rem; font-weight:650; letter-spacing:.005em}
+.meta{display:flex; gap:18px; color:var(--muted); font-size:.9rem}
+.meta strong{color:var(--ink); font-weight:650}
+
+.hero{padding:34px 0 30px}
+.verdict{margin:0; font-stretch:72%; font-weight:760; font-size:clamp(2.3rem,6.4vw,4.4rem); line-height:1; letter-spacing:-.01em}
+.sub{margin:12px 0 0; color:var(--muted); max-width:62ch}
+.split{margin-top:30px}
+.split-nums{display:flex; justify-content:space-between; align-items:flex-end}
+.cand{display:flex; flex-direction:column}
+.cand.right{align-items:flex-end; text-align:right}
+.cand .name{font-size:.95rem; font-weight:600}
+.cand .pct{font-stretch:66%; font-weight:780; font-size:clamp(3.2rem,11vw,6.2rem); line-height:.9}
+.cand.left .pct,.cand.left .name{color:var(--lula)}
+.cand.right .pct,.cand.right .name{color:var(--flavio)}
+.bar{position:relative; height:18px; margin-top:12px; display:flex; background:var(--rule)}
+.bar .l{background:var(--lula)}
+.bar .r{background:var(--flavio); margin-left:auto}
+.bar .mid{position:absolute; left:50%; top:-8px; bottom:-8px; width:2px; background:var(--ink); transform:translateX(-1px)}
+.twoway{display:flex; justify-content:space-between; margin-top:10px; color:var(--muted); font-size:.9rem}
+
+.block{background:var(--surface); border:1px solid var(--rule); padding:20px 20px 16px; margin-top:18px}
+.block h2{margin:0; font-size:1.15rem; font-weight:680}
+.note{margin:4px 0 12px; color:var(--muted); font-size:.9rem; max-width:70ch}
+.two{display:grid; grid-template-columns:1fr; gap:0 18px}
+@media (min-width:860px){.two{grid-template-columns:1.25fr 1fr}}
+svg{display:block; width:100%; height:auto; max-width:100%}
+svg text{fill:var(--ink); font-family:inherit}
+svg .muted{fill:var(--muted)}
+
+.deltas{list-style:none; margin:0; padding:0}
+.deltas li{display:grid; grid-template-columns:1fr auto auto; gap:14px; padding:9px 0; border-top:1px solid var(--rule); align-items:baseline}
+.deltas li:first-child{border-top:0}
+.deltas .h{font-weight:600}
+.deltas .h small{display:block; color:var(--muted); font-weight:400; font-size:.8rem}
+.deltas .v{font-size:.95rem; white-space:nowrap}
+.deltas .lv{color:var(--lula)} .deltas .fv{color:var(--flavio)}
+
+.scroll{overflow-x:auto}
+table{border-collapse:collapse; width:100%; min-width:760px; font-size:.9rem}
+th,td{padding:8px 10px; text-align:right; border-bottom:1px solid var(--rule); white-space:nowrap}
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td:nth-child(3){text-align:left}
+th{font-weight:600; color:var(--muted); font-size:.82rem}
+td .l{color:var(--lula)} td .f{color:var(--flavio)}
+tr.new td{background:var(--band)}
+.approx{color:var(--muted)}
+
+.notes{margin-top:26px; color:var(--muted); font-size:.85rem; max-width:78ch}
+.notes p{margin:0 0 8px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <h1 class="title">Brazil 2026 presidential polls</h1>
+    <div class="meta"><span id="asof"></span><span id="countdown"></span></div>
+  </header>
+
+  <section class="hero" aria-live="polite">
+    <p class="verdict" id="verdict"></p>
+    <p class="sub" id="verdictSub"></p>
+    <div class="split">
+      <div class="split-nums">
+        <div class="cand left"><span class="name">Lula (PT)</span><span class="pct" id="lAvg"></span></div>
+        <div class="cand right"><span class="name">Flávio Bolsonaro (PL)</span><span class="pct" id="fAvg"></span></div>
+      </div>
+      <div class="bar" role="img" id="bar"><div class="l" id="barL"></div><div class="r" id="barR"></div><div class="mid"></div></div>
+      <div class="twoway"><span id="twL"></span><span>50% line</span><span id="twF"></span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Runoff margin by pollster</h2>
+    <p class="note">Latest runoff poll from each house released in the last 14 days. The shaded band is a rough range on the lead, twice the stated margin of error.</p>
+    <div id="stripR2"></div>
+  </section>
+
+  <div class="two">
+    <section class="block">
+      <h2>First round</h2>
+      <p class="note">Gap between Lula and Flávio in each house's latest first-round poll. Lula leads in every house but one.</p>
+      <div id="stripR1"></div>
+    </section>
+    <section class="block">
+      <h2>Change since previous round</h2>
+      <p class="note">Runoff, same pollster, in points.</p>
+      <ul class="deltas" id="deltas"></ul>
+    </section>
+  </div>
+
+  <section class="block">
+    <h2>Runoff margin over time</h2>
+    <p class="note">Grey lines connect rounds from the same pollster. The dark line is the average of each house's latest poll within the preceding 14 days. The dashed line marks the first round on 4 October.</p>
+    <div id="trend"></div>
+  </section>
+
+  <section class="block">
+    <h2>Every poll logged</h2>
+    <p class="note">Newest first. Highlighted rows were added in the latest update.</p>
+    <div class="scroll"><table id="log">
+      <thead><tr><th>Released</th><th>Pollster</th><th>Fieldwork</th><th>Sample</th><th>MoE</th><th>1st round L / F</th><th>Runoff L / F</th><th>Runoff lead</th><th>Source</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+
+  <footer class="notes">
+    <p>The headline average is unweighted: one poll per house, the most recent runoff simulation released in the 14 days to the data date. Houses differ in interview mode and in how they report blank, null and undecided voters, so levels are not strictly comparable across pollsters.</p>
+    <p>Two-way share is Lula ÷ (Lula + Flávio), a rough proxy for valid votes. Dates marked ~ are approximate release dates.</p>
+    <p id="updated"></p>
+  </footer>
+</main>
+
+<script>
+const DATA = {
+  asOf: "2026-09-17",
+  firstRound: "2026-10-04",
+  runoff: "2026-10-25",
+  lastUpdateAdded: ["2026-09-17|AtlasIntel/Bloomberg"],
+  polls: [
+    {house:"AtlasIntel/Bloomberg", released:"2026-09-17", field:"11–16 Sep", n:5018, moe:1, r1:{L:44.1,F:41.7}, r2:{L:46.8,F:47.2}, src:"https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-472-contra-468-de-lula-no-2o-turno-diz-pesquisa/"},
+    {house:"AtlasIntel/Bloomberg", released:"2026-09-10", field:"", n:null, moe:1, r1:null, r2:{L:46.2,F:46.4}, src:"https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026"},
+    {house:"Indexa/Broadcast", released:"2026-09-15", field:"10–13 Sep", n:2000, moe:2.2, r1:{L:38,F:34}, r2:{L:43,F:42}, src:"https://exame.com/brasil/pesquisa-indexa-broadcast-lula-e-flavio-bolsonaro-empatam-no-2o-turno/"},
+    {house:"Indexa/Broadcast", released:"2026-08-27", approx:true, field:"", n:null, moe:null, r1:null, r2:{L:46,F:41}, src:"https://www.jota.info/eleicoes/eleicoes-2026/indexa-broadcast-lula-marca-46-contra-41-de-flavio-bolsonaro-no-2o-turno"},
+    {house:"CNT/MDA", released:"2026-09-15", field:"9–13 Sep", n:2002, moe:2.2, r1:{L:40.5,F:30.4}, r2:{L:47.3,F:40.0}, prev:{label:"Aug", r1:{L:42,F:29}, r2:{L:48,F:39}}, src:"https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/cnt-mda-presidente-setembro-2026/"},
+    {house:"Quaest", released:"2026-09-14", field:"10–13 Sep", n:2004, moe:2, r1:{L:36,F:31}, r2:{L:40,F:42}, src:"https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026-3/"},
+    {house:"Quaest", released:"2026-09-02", field:"30 Aug–1 Sep", n:2004, moe:2, r1:{L:37,F:30}, r2:null, src:"https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/quaest-presidente-setembro-2026/"},
+    {house:"Datafolha", released:"2026-09-11", field:"8–10 Sep", n:2002, moe:2, r1:{L:39,F:35}, r2:{L:46,F:44}, src:"https://www.brasildefato.com.br/2026/09/11/datafolha-lula-tem-39-flavio-bolsonaro-35-no-primeiro-turno/"},
+    {house:"Datafolha", released:"2026-09-03", field:"1–3 Sep", n:2002, moe:2, r1:{L:38,F:32}, r2:{L:46,F:44}, src:"https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/datafolha-presidente-setembro-2026/"},
+    {house:"Datafolha", released:"2026-08-21", field:"", n:null, moe:2, r1:{L:39,F:33}, r2:{L:47,F:43}, src:"https://www.brasildefato.com.br/2026/08/21/datafolha-no-segundo-turno-lula-tem-47-flavio-bolsonaro-tem-43/"},
+    {house:"Futura/100% Cidades", released:"2026-09-11", field:"4–10 Sep", n:2000, moe:2.2, r1:null, r2:{L:45.0,F:45.4}, src:"https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-454-contra-45-de-lula-no-2o-turno-diz-pesquisa/"},
+    {house:"PoderData/Aya", released:"2026-09-10", field:"", n:null, moe:null, r1:{L:38,F:36}, r2:{L:45,F:47}, src:"https://www.poder360.com.br/poderdata/flavio-tem-47-e-lula-45-no-2o-turno-diz-poderdata-aya/"},
+    {house:"PoderData/Aya", released:"2026-09-03", approx:true, field:"30 Aug–2 Sep", n:3000, moe:null, r1:null, r2:{L:44,F:45}, src:"https://www.poder360.com.br/poderdata/flavio-tem-45-e-lula-registra-44-no-2o-turno-diz-poderdata-aya/"},
+    {house:"Gerp", released:"2026-09-09", field:"3–8 Sep", n:2400, moe:2, r1:{L:34.4,F:36.6}, r2:{L:40,F:47}, src:"https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-47-ante-40-de-lula-no-2o-turno-diz-pesquisa/"},
+    {house:"Gerp", released:"2026-08-26", field:"21–25 Aug", n:2400, moe:null, r1:null, r2:{L:42,F:47}, src:"https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-47-e-lula-42-em-2o-turno-diz-pesquisa/"},
+    {house:"Real Time Big Data", released:"2026-09-03", approx:true, field:"", n:null, moe:null, r1:{L:38,F:30}, r2:{L:44,F:44}, src:"https://www.poder360.com.br/poder-eleicoes-2026/lula-e-flavio-bolsonaro-empatam-com-44-no-2o-turno-diz-pesquisa/"},
+    {house:"Vox Brasil", released:"2026-08-29", field:"25–27 Aug", n:2100, moe:2.15, r1:null, r2:{L:44.5,F:45.1}, src:"https://www.poder360.com.br/poder-eleicoes-2026/flavio-e-lula-empatam-no-2o-turno-diz-pesquisa-3/"}
+  ]
+};
+
+const DAY = 864e5;
+const D = s => new Date(s + "T12:00:00Z");
+const iso = d => d.toISOString().slice(0,10);
+const fmtDate = (s, yr) => D(s).toLocaleDateString("en-GB", {day:"numeric", month:"short", year: yr ? "numeric" : undefined, timeZone:"UTC"});
+const num = x => (x == null ? "" : (Number.isInteger(x) ? String(x) : x.toFixed(1)));
+const lead = m => m === 0 ? "Tied" : (m > 0 ? "Flávio +" : "Lula +") + num(Math.round(Math.abs(m)*10)/10);
+const signed = x => (x > 0 ? "+" : x < 0 ? "−" : "±") + num(Math.round(Math.abs(x)*10)/10);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+function latestPer(round, asOf, windowDays){
+  const end = D(asOf).getTime(), start = end - windowDays*DAY;
+  const best = {};
+  for (const p of DATA.polls){
+    if (!p[round]) continue;
+    const t = D(p.released).getTime();
+    if (t > end || t < start) continue;
+    if (!best[p.house] || D(best[p.house].released) < D(p.released)) best[p.house] = p;
+  }
+  return Object.values(best);
+}
+
+function renderHero(){
+  const set = latestPer("r2", DATA.asOf, 14);
+  const L = set.reduce((a,p)=>a+p.r2.L,0)/set.length;
+  const F = set.reduce((a,p)=>a+p.r2.F,0)/set.length;
+  const m = F - L;
+  const verdict = Math.abs(m) < 1 ? "The runoff is a dead heat"
+    : (m > 0 ? "Flávio leads the runoff" : "Lula leads the runoff") + " by " + num(Math.round(Math.abs(m)*10)/10) + " points";
+  document.getElementById("verdict").textContent = verdict;
+  const aheadF = set.filter(p => p.r2.F > p.r2.L).length;
+  document.getElementById("verdictSub").textContent =
+    `Average of ${set.length} pollsters' latest runoff polls. Flávio is numerically ahead in ${aheadF} of ${set.length}; the average gap is ${lead(m).toLowerCase().replace("flávio","Flávio").replace("lula","Lula")}.`;
+  document.getElementById("lAvg").textContent = num(Math.round(L*10)/10);
+  document.getElementById("fAvg").textContent = num(Math.round(F*10)/10);
+  const shareL = L/(L+F)*100;
+  document.getElementById("barL").style.width = shareL + "%";
+  document.getElementById("barR").style.width = (100-shareL) + "%";
+  document.getElementById("bar").setAttribute("aria-label", `Two-way share: Lula ${shareL.toFixed(1)}%, Flávio ${(100-shareL).toFixed(1)}%`);
+  document.getElementById("twL").textContent = "Two-way " + shareL.toFixed(1) + "%";
+  document.getElementById("twF").textContent = (100-shareL).toFixed(1) + "% two-way";
+
+  document.getElementById("asof").innerHTML = "Data as of <strong>" + fmtDate(DATA.asOf, true) + "</strong>";
+  const today = new Date(); today.setUTCHours(12,0,0,0);
+  const days = Math.round((D(DATA.firstRound) - today)/DAY);
+  document.getElementById("countdown").innerHTML = days > 0
+    ? "<strong>" + days + "</strong> days to the first round"
+    : (days === 0 ? "<strong>First round today</strong>" : "First round held 4 Oct");
+}
+
+function strip(el, round){
+  const set = latestPer(round, DATA.asOf, 14)
+    .map(p => ({p, m: p[round].F - p[round].L}))
+    .sort((a,b) => a.m - b.m);
+  const W = 720, rowH = 32, top = 34, labelW = 190, x0 = labelW, x1 = W - 20;
+  const H = top + set.length*rowH + 10;
+  const lim = 12;
+  const X = v => x0 + (v + lim)/(2*lim)*(x1 - x0);
+  const lula = cssVar("--lula"), flavio = cssVar("--flavio"), rule = cssVar("--rule"), band = cssVar("--band"), ink = cssVar("--ink");
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${round==="r2"?"Runoff":"First round"} margin by pollster">`;
+  for (const t of [-10,-5,0,5,10]){
+    s += `<line x1="${X(t)}" x2="${X(t)}" y1="${top-8}" y2="${H-6}" stroke="${t===0?ink:rule}" stroke-width="${t===0?1.5:1}"/>`;
+    s += `<text x="${X(t)}" y="${top-14}" text-anchor="middle" font-size="12" class="muted">${t===0?"0":(t<0?"L+":"F+")+Math.abs(t)}</text>`;
+  }
+  s += `<text x="${x0}" y="12" font-size="12" fill="${lula}" style="fill:${lula}">Lula ahead</text>`;
+  s += `<text x="${x1}" y="12" font-size="12" text-anchor="end" style="fill:${flavio}">Flávio ahead</text>`;
+  set.forEach(({p,m}, i) => {
+    const y = top + i*rowH + rowH/2;
+    const c = m > 0 ? flavio : m < 0 ? lula : ink;
+    s += `<text x="0" y="${y+4}" font-size="13">${esc(p.house)}</text>`;
+    if (p.moe){
+      const r = 2*p.moe;
+      s += `<rect x="${X(Math.max(-lim,m-r))}" y="${y-7}" width="${X(Math.min(lim,m+r))-X(Math.max(-lim,m-r))}" height="14" fill="${band}"/>`;
+    }
+    s += `<circle cx="${X(m)}" cy="${y}" r="6" fill="${c}"><title>${esc(p.house)}, ${fmtDate(p.released)}: Lula ${num(p[round].L)}, Flávio ${num(p[round].F)}</title></circle>`;
+    const right = X(m) > x1 - 60;
+    s += `<text x="${X(m) + (right?-11:11)}" y="${y+4}" font-size="12" text-anchor="${right?"end":"start"}" class="muted">${lead(m)}</text>`;
+  });
+  s += `</svg>`;
+  el.innerHTML = s;
+}
+
+function renderDeltas(){
+  const houses = [...new Set(DATA.polls.map(p => p.house))];
+  const rows = [];
+  for (const h of houses){
+    const ps = DATA.polls.filter(p => p.house === h && p.r2).sort((a,b) => D(b.released) - D(a.released));
+    if (!ps.length) continue;
+    const cur = ps[0];
+    let prev = null, label = "";
+    if (ps.length > 1){ prev = ps[1].r2; label = fmtDate(ps[1].released); }
+    else if (cur.prev && cur.prev.r2){ prev = cur.prev.r2; label = cur.prev.label; }
+    if (!prev) continue;
+    rows.push({h, cur, prev, label});
+  }
+  rows.sort((a,b) => D(b.cur.released) - D(a.cur.released));
+  document.getElementById("deltas").innerHTML = rows.map(({h,cur,prev,label}) => {
+    const dL = cur.r2.L - prev.L, dF = cur.r2.F - prev.F;
+    return `<li><span class="h">${esc(h)}<small>${fmtDate(cur.released)} vs ${esc(label)}</small></span>
+      <span class="v lv">Lula ${signed(dL)}</span><span class="v fv">Flávio ${signed(dF)}</span></li>`;
+  }).join("");
+}
+
+function renderTrend(){
+  const W = 720, H = 330, ml = 44, mr = 16, mt = 16, mb = 34;
+  const t0 = D("2026-08-18").getTime(), t1 = D(DATA.firstRound).getTime() + 2*DAY;
+  const lim = 9;
+  const X = t => ml + (t - t0)/(t1 - t0)*(W - ml - mr);
+  const Y = v => mt + (lim - v)/(2*lim)*(H - mt - mb);
+  const lula = cssVar("--lula"), flavio = cssVar("--flavio"), rule = cssVar("--rule"), grey = cssVar("--grey"), avg = cssVar("--avg"), ink = cssVar("--ink");
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Runoff margin over time">`;
+  for (const v of [-8,-4,0,4,8]){
+    s += `<line x1="${ml}" x2="${W-mr}" y1="${Y(v)}" y2="${Y(v)}" stroke="${v===0?ink:rule}" stroke-width="${v===0?1.2:1}"/>`;
+    s += `<text x="${ml-8}" y="${Y(v)+4}" text-anchor="end" font-size="11" class="muted">${v===0?"0":(v<0?"L+":"F+")+Math.abs(v)}</text>`;
+  }
+  s += `<text x="${ml+6}" y="${Y(lim)+12}" font-size="12" style="fill:${flavio}">Flávio ahead</text>`;
+  s += `<text x="${ml+6}" y="${Y(-lim)-6}" font-size="12" style="fill:${lula}">Lula ahead</text>`;
+  for (const d of ["2026-08-20","2026-09-01","2026-09-15","2026-10-01"]){
+    s += `<text x="${X(D(d).getTime())}" y="${H-12}" text-anchor="middle" font-size="11" class="muted">${fmtDate(d)}</text>`;
+  }
+  const xe = X(D(DATA.firstRound).getTime());
+  s += `<line x1="${xe}" x2="${xe}" y1="${mt}" y2="${H-mb}" stroke="${ink}" stroke-dasharray="4 4"/>`;
+  s += `<text x="${xe-6}" y="${mt+12}" text-anchor="end" font-size="11" class="muted">1st round</text>`;
+
+  const houses = [...new Set(DATA.polls.map(p => p.house))];
+  for (const h of houses){
+    const ps = DATA.polls.filter(p => p.house === h && p.r2).sort((a,b) => D(a.released) - D(b.released));
+    if (ps.length > 1){
+      s += `<polyline fill="none" stroke="${grey}" stroke-width="1.2" points="${ps.map(p => X(D(p.released).getTime())+","+Y(p.r2.F-p.r2.L)).join(" ")}"/>`;
+    }
+    for (const p of ps){
+      const m = p.r2.F - p.r2.L;
+      s += `<circle cx="${X(D(p.released).getTime())}" cy="${Y(m)}" r="3.5" fill="${grey}"><title>${esc(h)}, ${fmtDate(p.released)}: ${lead(m)}</title></circle>`;
+    }
+  }
+  const pts = [];
+  for (let t = D("2026-08-29").getTime(); t <= D(DATA.asOf).getTime(); t += DAY){
+    const set = latestPer("r2", iso(new Date(t)), 14);
+    if (set.length < 3) continue;
+    const m = set.reduce((a,p) => a + (p.r2.F - p.r2.L), 0)/set.length;
+    pts.push([t, m, set.length]);
+  }
+  if (pts.length){
+    s += `<polyline fill="none" stroke="${avg}" stroke-width="3" stroke-linejoin="round" points="${pts.map(([t,m]) => X(t)+","+Y(m)).join(" ")}"/>`;
+    const [tl, ml2, nl] = pts[pts.length-1];
+    s += `<circle cx="${X(tl)}" cy="${Y(ml2)}" r="5" fill="${avg}"><title>Average on ${fmtDate(iso(new Date(tl)))}: ${lead(ml2)} (${nl} houses)</title></circle>`;
+    s += `<text x="${X(tl)+9}" y="${Y(ml2)+4}" font-size="12" font-weight="650">${lead(ml2)}</text>`;
+  }
+  s += `</svg>`;
+  document.getElementById("trend").innerHTML = s;
+}
+
+function renderLog(){
+  const added = new Set(DATA.lastUpdateAdded);
+  const rows = [...DATA.polls].sort((a,b) => D(b.released) - D(a.released) || a.house.localeCompare(b.house));
+  document.querySelector("#log tbody").innerHTML = rows.map(p => {
+    const pair = r => r ? `<span class="l">${num(r.L)}</span> / <span class="f">${num(r.F)}</span>` : "";
+    const key = p.released + "|" + p.house;
+    return `<tr class="${added.has(key) ? "new" : ""}">
+      <td>${p.approx ? '<span class="approx">~</span>' : ""}${fmtDate(p.released)}</td>
+      <td>${esc(p.house)}</td>
+      <td>${esc(p.field || "")}</td>
+      <td>${p.n ? p.n.toLocaleString("en-GB") : ""}</td>
+      <td>${p.moe ? "±" + num(p.moe) : ""}</td>
+      <td>${pair(p.r1)}</td>
+      <td>${pair(p.r2)}</td>
+      <td>${p.r2 ? lead(p.r2.F - p.r2.L) : ""}</td>
+      <td><a href="${esc(p.src)}" target="_blank" rel="noopener">Link</a></td>
+    </tr>`;
+  }).join("");
+  document.getElementById("updated").textContent =
+    `${DATA.polls.length} national polls logged. Page updated ${fmtDate(DATA.asOf, true)}.`;
+}
+
+function renderAll(){
+  renderHero();
+  strip(document.getElementById("stripR2"), "r2");
+  strip(document.getElementById("stripR1"), "r1");
+  renderDeltas();
+  renderTrend();
+  renderLog();
+}
+renderAll();
+if (window.matchMedia) window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", renderAll);
+new MutationObserver(renderAll).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+</script>
+</body>
+</html>
